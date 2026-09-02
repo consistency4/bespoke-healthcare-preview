@@ -23,7 +23,7 @@
   var mode = 'start'; // 'start' (membership) or 'app' (iOS app)
 
   var COPY = {
-    start: { eyebrow: 'Launching soon', title: 'We are launching publicly soon.', body: 'Leave your email and we will let you know the moment memberships open.', done: 'We will email you as soon as Shifu Health opens to the public.', plan: 'launch-notify' },
+    start: { eyebrow: 'Launching soon', title: 'We are launching publicly soon.', body: 'Leave your email and we will let you know the moment memberships open.', done: 'We will email you as soon as Bespoke Healthcare opens to the public.', plan: 'launch-notify' },
     app: { eyebrow: 'iOS app · closed beta', title: 'We are in closed beta, but are opening our app to the public soon.', body: 'Leave your email and we will let you know the moment it opens.', done: 'We will email you as soon as the app opens to the public.', plan: 'ios-app-notify' }
   };
 
@@ -44,7 +44,7 @@
     ].join(';'));
     overlay.setAttribute('role', 'dialog');
     overlay.setAttribute('aria-modal', 'true');
-    overlay.setAttribute('aria-label', 'Get notified when Shifu Health launches');
+    overlay.setAttribute('aria-label', 'Get notified when Bespoke Healthcare launches');
 
     var card = el('div', [
       'background:#FFFFFF', 'border-radius:12px', 'max-width:460px', 'width:100%',
