@@ -1,7 +1,8 @@
-/* "Start Today" -> launch-notification signup.
+/* "Start Today" and "iOS app" -> launch-notification signup.
  *
- * Every start CTA in these pages is an sms: link. Until the public launch those should not
- * open a text thread, so this intercepts them and collects an email instead. Submissions go
+ * Every start CTA in these pages is an sms: link and every app CTA points at the App Store. Until
+ * the public launch neither should open, so this intercepts both and collects an email instead
+ * (plan "launch-notify" for membership, "ios-app-notify" for the app). Submissions go
  * to the same waitlist endpoint the main site uses (api/waitlist/submit), which accepts
  * { email, name, plan, page } and allows shifu.health, *.vercel.app and localhost origins.
  */
@@ -15,8 +16,15 @@
   var MONO = "'IBM Plex Mono',monospace";
 
   var overlay = null, emailInput = null, statusEl = null, submitBtn = null, formEl = null, doneEl = null;
+  var eyebrowEl = null, titleEl = null, bodyEl = null, doneBodyEl = null;
   var lastFocused = null;
   var context = '';
+  var mode = 'start'; // 'start' (membership) or 'app' (iOS app)
+
+  var COPY = {
+    start: { eyebrow: 'Launching soon', title: 'We are launching publicly soon.', body: 'Leave your email and we will let you know the moment memberships open.', done: 'We will email you as soon as Shifu Health opens to the public.', plan: 'launch-notify' },
+    app: { eyebrow: 'iOS app · coming soon', title: 'The iOS app is coming soon.', body: 'Leave your email and we will let you know the moment it is in the App Store.', done: 'We will email you as soon as the app is in the App Store.', plan: 'ios-app-notify' }
+  };
 
   function endpoint() {
     // only shifu.health has the API alongside these pages; previews (vercel.app, localhost) post to the live site
@@ -57,19 +65,22 @@
     close.addEventListener('click', hide);
     card.appendChild(close);
 
-    card.appendChild(el('div', [
+    eyebrowEl = el('div', [
       'font-family:' + MONO, 'font-size:0.6875rem', 'letter-spacing:0.12em',
       'text-transform:uppercase', 'color:' + ORANGE, 'margin-bottom:16px'
-    ].join(';'), 'Launching soon'));
+    ].join(';'), COPY.start.eyebrow);
+    card.appendChild(eyebrowEl);
 
-    card.appendChild(el('div', [
+    titleEl = el('div', [
       'font-size:1.75rem', 'font-weight:600', 'letter-spacing:-0.03em',
       'line-height:1.1', 'margin-bottom:12px'
-    ].join(';'), 'We are launching publicly soon.'));
+    ].join(';'), COPY.start.title);
+    card.appendChild(titleEl);
 
-    card.appendChild(el('p', [
+    bodyEl = el('p', [
       'font-size:1rem', 'line-height:1.5', 'color:' + MUTED, 'margin-bottom:24px'
-    ].join(';'), 'Leave your email and we will let you know the moment memberships open.'));
+    ].join(';'), COPY.start.body);
+    card.appendChild(bodyEl);
 
     formEl = document.createElement('form');
     formEl.setAttribute('style', 'display:flex;flex-direction:column;gap:12px');
@@ -122,9 +133,10 @@
     doneEl.appendChild(el('div', [
       'font-size:1.125rem', 'font-weight:600', 'margin-bottom:8px'
     ].join(';'), 'You are on the list.'));
-    doneEl.appendChild(el('p', [
+    doneBodyEl = el('p', [
       'font-size:0.9375rem', 'line-height:1.5', 'color:' + MUTED
-    ].join(';'), 'We will email you as soon as Shifu Health opens to the public.'));
+    ].join(';'), COPY.start.done);
+    doneEl.appendChild(doneBodyEl);
     card.appendChild(doneEl);
 
     overlay.appendChild(card);
@@ -138,9 +150,14 @@
     if (e.key === 'Escape') hide();
   }
 
-  function show(ctx) {
+  function show(ctx, which) {
     if (!overlay) build();
     context = ctx || '';
+    mode = which === 'app' ? 'app' : 'start';
+    eyebrowEl.textContent = COPY[mode].eyebrow;
+    titleEl.textContent = COPY[mode].title;
+    bodyEl.textContent = COPY[mode].body;
+    doneBodyEl.textContent = COPY[mode].done;
     lastFocused = document.activeElement;
     formEl.style.display = 'flex';
     doneEl.style.display = 'none';
@@ -178,7 +195,7 @@
       body: JSON.stringify({
         email: email,
         website: potValue || '',
-        plan: 'launch-notify',
+        plan: COPY[mode].plan,
         page: window.location.pathname + (context ? ' :: ' + context : '')
       })
     }).then(function (res) {
@@ -202,10 +219,12 @@
 
   // the design files render client side, so catch clicks at the document level
   document.addEventListener('click', function (e) {
-    var link = e.target && e.target.closest ? e.target.closest('a[href^="sms:"]') : null;
+    // Start links (sms:) and App Store links both collect an email until launch
+    var link = e.target && e.target.closest ? e.target.closest('a[href^="sms:"], a[href^="https://apps.apple.com"], a[href^="http://apps.apple.com"]') : null;
     if (!link) return;
     e.preventDefault();
-    show((link.textContent || '').trim());
+    var href = link.getAttribute('href') || '';
+    show((link.textContent || '').trim(), href.indexOf('sms:') === 0 ? 'start' : 'app');
   }, true);
 
   window.ShifuStartModal = { open: show, close: hide };

@@ -241,7 +241,7 @@ Current design (this folder):
 - `Logo Ideas.dc.html` — logo exploration (reference only)
 - `assets/` — logo.png, favicon.png, `team/` photos
 - `shifu-team.js`, `team.json` — the care-team roster (generated); `team-overlay.json` + `gen-team.mjs` — its source and generator
-- `support.js`, `image-slot.js` — prototype runtime, needed only to open the `.dc.html` files in a browser; `start-modal.js` — intercepts every `sms:` Start link and collects an email for the launch list instead (remove when the SMS flow goes live)
+- `support.js`, `image-slot.js` — prototype runtime, needed only to open the `.dc.html` files in a browser; `start-modal.js` — intercepts every `sms:` Start link and every App Store "iOS app" link and shows a coming-soon modal that collects an email for the launch list instead (plans `launch-notify` / `ios-app-notify`; remove when the SMS flow and the app go live)
 
 `archive/` — superseded iterations, for history only: `Bespoke Healthcare.dc.html`, `Bespoke Healthcare v2.dc.html`, `Bespoke Exercise.dc.html`, `Bespoke Nutrition.dc.html`, and `Shifu Health Website.dc.html` / `v2` (the earlier "Shifu Health" direction: Instrument Serif + DM Sans, orange chat bubbles; depends on `archive/_ds/`).
 
