@@ -72,6 +72,9 @@ html.profile-open nav, html.profile-open .site-menu-btn, html.profile-open .site
 }
 
 @media (max-width: 480px) {
+  /* nav breadcrumb ("/ Coverage") gives way to the mark + wordmark on narrow phones */
+  .nav-wordmark > span { display: none !important; }
+
   /* card grids that only just fit at 720 go single column on narrow phones */
   [style*="minmax(300px"] { grid-template-columns: 1fr !important; }
   [style*="minmax(280px"] { grid-template-columns: 1fr !important; }

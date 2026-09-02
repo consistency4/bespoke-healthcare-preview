@@ -37,9 +37,12 @@ const assetVersion = Object.fromEntries(ASSETS.map((f) => [f, createHash('sha1')
 // employer logos too: they change occasionally and Cloudflare caches images for hours
 const employerLogos = readdirSync(join(HERE, 'assets/employers')).filter((f) => f.endsWith('.svg'));
 const logoVersion = Object.fromEntries(employerLogos.map((f) => [f, createHash('sha1').update(readFileSync(join(HERE, 'assets/employers', f))).digest('hex').slice(0, 8)]));
+const brandFiles = readdirSync(join(HERE, 'assets/brand'));
+const brandVersion = Object.fromEntries(brandFiles.map((f) => [f, createHash('sha1').update(readFileSync(join(HERE, 'assets/brand', f))).digest('hex').slice(0, 8)]));
 const stamp = (html) => {
   let out = ASSETS.reduce((h, f) => h.split('"/' + f + '"').join('"/' + f + '?v=' + assetVersion[f] + '"'), html);
   for (const f of employerLogos) out = out.split('"/assets/employers/' + f + '"').join('"/assets/employers/' + f + '?v=' + logoVersion[f] + '"');
+  for (const f of brandFiles) out = out.split('"/assets/brand/' + f + '"').join('"/assets/brand/' + f + '?v=' + brandVersion[f] + '"');
   return out;
 };
 
