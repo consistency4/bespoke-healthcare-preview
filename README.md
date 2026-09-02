@@ -244,7 +244,7 @@ Current design (this folder):
 - `Coverage.dc.html` — coverage and team profiles
 - `Manifesto.dc.html` — manifesto, founding team, care team & supporters
 - `Goal - *.dc.html` × 12 — goal landing pages
-- `Logo Ideas.dc.html` — logo exploration (reference only)
+- `Logo Ideas.dc.html` — logo exploration, turns 1 and 2 (reference only); `Logo Ideas v2.dc.html` — turn 3 (2026-09-02): eight directions from the integrated-care definition, served at `/logo-ideas-v2/`, generated marks (overlap, second voice, thread, open door, hand-off, dial, broken template, wordmark). None approved.
 - `assets/` — logo.png, favicon.png, `team/` photos
 - `shifu-team.js`, `team.json` — the care-team roster (generated); `team-overlay.json` + `gen-team.mjs` — its source and generator
 - `support.js`, `image-slot.js` — prototype runtime, needed only to open the `.dc.html` files in a browser; `profile-modal.js` — in-place profile popup for every person link; `strip.js` — on touch devices the home team strips become finger-draggable scrollers that keep gliding (pause while touched, resume 1.6s after; a swipe never opens a profile); `site-nav.js` — phone menu: below 1000px a ☰ button next to the Start button opens a dropdown of Home · Nutrition · Exercise · Coverage · Manifesto · Plans (appended to `<body>` outside the runtime tree, positioned from the Start link); `start-modal.js` — intercepts every `sms:` Start link and every App Store "iOS app" link and shows a coming-soon modal that collects an email for the launch list instead (plans `launch-notify` / `ios-app-notify`; remove when the SMS flow and the app go live)

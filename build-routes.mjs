@@ -24,6 +24,7 @@ export const ROUTES = {
   '/coverage': 'Coverage.dc.html',
   '/manifesto': 'Manifesto.dc.html',
   '/logo-ideas': 'Logo Ideas.dc.html',
+  '/logo-ideas-v2': 'Logo Ideas v2.dc.html',
   '/legal': 'Legal.dc.html',
   ...Object.fromEntries(['privacy', 'terms', 'eula', 'subscription', 'open-source'].map((s) => ['/legal/' + s, 'Legal - ' + s + '.dc.html'])),
   ...Object.fromEntries(GOALS.map((s) => ['/goals/' + s, 'Goal - ' + s + '.dc.html'])),
