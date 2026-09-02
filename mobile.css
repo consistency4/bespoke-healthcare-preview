@@ -39,6 +39,9 @@
   /* day timeline times row: six labels need a smaller mono size to fit */
   [style*="justify-content:space-between;margin-top:16px"], [style*="justify-content: space-between; margin-top: 16px"] { font-size: 0.5625rem !important; }
 
+  /* footer link rows wrap instead of running past the edge */
+  [style*="display:flex;gap:24px"], [style*="display: flex; gap: 24px"] { flex-wrap: wrap; gap: 12px 20px !important; }
+
   /* profile modal: photo above the name on phones */
   [role="dialog"] { padding: 28px 20px !important; }
   [role="dialog"] > div:first-of-type { padding-right: 32px !important; flex-direction: column !important; gap: 16px !important; }
