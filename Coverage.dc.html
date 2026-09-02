@@ -207,10 +207,10 @@ class Component extends DCLogic {
       if (id && roster.some(m => m.id === id)) { this.openedFromLink = true; this.openProfile(id); }
     } catch (e) {}
   }
-  componentWillUnmount() { document.removeEventListener("keydown", this.onKey); document.body.style.overflow = ""; }
-  openProfile(id) { document.body.style.overflow = "hidden"; this.setState({ open: id }); }
+  componentWillUnmount() { document.removeEventListener("keydown", this.onKey); document.body.style.overflow = ""; document.documentElement.classList.remove("profile-open"); }
+  openProfile(id) { document.body.style.overflow = "hidden"; document.documentElement.classList.add("profile-open"); this.setState({ open: id }); }
   closeProfile() {
-    document.body.style.overflow = ""; this.setState({ open: null });
+    document.body.style.overflow = ""; document.documentElement.classList.remove("profile-open"); this.setState({ open: null });
     // opened straight from a link on another page of ours: closing goes back to that page
     if (this.openedFromLink) {
       this.openedFromLink = false;

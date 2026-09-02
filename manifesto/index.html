@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="/assets/favicon.png">
-  <link rel="stylesheet" href="/mobile.css?v=f284237b">
+  <link rel="stylesheet" href="/mobile.css?v=ff36b465">
   <script src="/image-slot.js?v=22a948e0"></script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -172,9 +172,9 @@ class Component extends DCLogic {
       if (id && roster.some(m => m.id === id)) this.openProfile(id);
     } catch (e) {}
   }
-  componentWillUnmount() { document.removeEventListener("keydown", this.onKey); document.body.style.overflow = ""; }
-  openProfile(id) { document.body.style.overflow = "hidden"; this.setState({ open: id }); }
-  closeProfile() { document.body.style.overflow = ""; this.setState({ open: null }); }
+  componentWillUnmount() { document.removeEventListener("keydown", this.onKey); document.body.style.overflow = ""; document.documentElement.classList.remove("profile-open"); }
+  openProfile(id) { document.body.style.overflow = "hidden"; document.documentElement.classList.add("profile-open"); this.setState({ open: id }); }
+  closeProfile() { document.body.style.overflow = ""; document.documentElement.classList.remove("profile-open"); this.setState({ open: null }); }
   renderVals() {
     // Everyone comes from shifu-team.js: care team and advisors from the live shifu.health roster,
     // founders from shifu.health/about (team-overlay.json "person"), investors from the live roster.

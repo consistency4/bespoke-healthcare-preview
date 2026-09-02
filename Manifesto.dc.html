@@ -170,9 +170,9 @@ class Component extends DCLogic {
       if (id && roster.some(m => m.id === id)) this.openProfile(id);
     } catch (e) {}
   }
-  componentWillUnmount() { document.removeEventListener("keydown", this.onKey); document.body.style.overflow = ""; }
-  openProfile(id) { document.body.style.overflow = "hidden"; this.setState({ open: id }); }
-  closeProfile() { document.body.style.overflow = ""; this.setState({ open: null }); }
+  componentWillUnmount() { document.removeEventListener("keydown", this.onKey); document.body.style.overflow = ""; document.documentElement.classList.remove("profile-open"); }
+  openProfile(id) { document.body.style.overflow = "hidden"; document.documentElement.classList.add("profile-open"); this.setState({ open: id }); }
+  closeProfile() { document.body.style.overflow = ""; document.documentElement.classList.remove("profile-open"); this.setState({ open: null }); }
   renderVals() {
     // Everyone comes from shifu-team.js: care team and advisors from the live shifu.health roster,
     // founders from shifu.health/about (team-overlay.json "person"), investors from the live roster.

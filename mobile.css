@@ -1,6 +1,9 @@
 /* Phone and small-tablet adjustments shared by every page (linked from each page's <helmet>).
    The pages use inline styles, so these rules override with !important and match on inline-style text. */
 
+/* While a profile popup is open the fixed nav and menu button step aside (WebKit draws the nav's blur above the backdrop). */
+html.profile-open nav, html.profile-open .site-menu-btn, html.profile-open .site-menu-panel { visibility: hidden !important; }
+
 /* Nav: below 1000px the mono links hide (the discipline pages also do this via state) and site-nav.js adds a menu button + dropdown. */
 @media (max-width: 1000px) {
   a.nav-link { display: none !important; }

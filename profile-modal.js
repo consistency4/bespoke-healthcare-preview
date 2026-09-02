@@ -130,6 +130,7 @@
     layer.appendChild(wrap);
     document.body.appendChild(layer);
     document.body.style.overflow = 'hidden';
+    document.documentElement.classList.add('profile-open'); // hides the nav: WebKit composites its blur above the backdrop
     document.addEventListener('keydown', onKey);
     return true;
   }
@@ -139,6 +140,7 @@
     layer.parentNode && layer.parentNode.removeChild(layer);
     layer = null;
     document.body.style.overflow = '';
+    document.documentElement.classList.remove('profile-open');
     document.removeEventListener('keydown', onKey);
     if (lastFocused && lastFocused.focus) { try { lastFocused.focus({ preventScroll: true }); } catch (e) {} }
   }
