@@ -469,34 +469,43 @@ window.SHIFU_SITE_TEAM = [
   {
     "id": "sarah-tappan",
     "kind": "n",
-    "name": "Sarah Tappan, RD",
-    "cred": "Registered Dietitian",
+    "name": "Sarah Tappan, RD, LDN",
+    "cred": "Registered Dietitian · LDN · clinical & medical nutrition therapy",
     "cardCred": "Registered Dietitian",
     "role": "Registered Dietitian",
-    "states": "Registered Dietitian (RD)",
-    "bio": "Registered dietitian who has practiced with Foodsmart, the telehealth nutrition network, providing insurance-covered nutrition counseling.",
+    "states": "Licensed: PA · FL",
+    "bio": "Registered dietitian who spent nearly three years in hospital ICUs before moving to telehealth counseling with Foodsmart, where she works on diabetes, blood pressure, and weight management. Licensed in Pennsylvania and Florida.",
     "specs": [
+      "Type 2 diabetes",
+      "Prediabetes & A1c",
+      "Blood pressure",
       "Weight loss",
-      "Meal prep",
       "Eating well on a budget",
-      "Cutting sugar",
-      "Hydration"
+      "Meal prep"
     ],
     "img": "/assets/team/placeholder-sarah-tappan.svg",
     "liveImg": "",
     "profileUrl": "https://shifu.health/team/sarah-tappan/",
     "background": [
-      "Sarah is a Registered Dietitian who has practiced with Foodsmart, the national telehealth nutrition network, delivering personalized, insurance-covered nutrition counseling for everyday eating and weight goals."
+      "Sarah is a Registered Dietitian and Licensed Dietitian Nutritionist. She practices with Foodsmart, the telehealth nutrition network, delivering individualized counseling that turns evidence-based dietary guidelines into practical advice, with medical nutrition therapy for diabetes, hypertension, and weight management, and connecting patients facing food insecurity with resources for healthy food. She also works as a clinical dietitian with Main Line Health.",
+      "Before telehealth she spent nearly three years as a clinical dietitian at HCA Florida Largo Hospital, responsible for nutrition care in the neurosurgical and medical ICUs and on medical-surgical floors. She joined daily ICU rounds with attendings, pharmacists, fellows, and residents to guide enteral and parenteral nutrition, supplementation, and malnutrition care, and taught nutrition lectures to resident physicians.",
+      "Sarah completed her dietetic internship with Wellness Workdays, with clinical, foodservice, community, and nutrition-communications rotations, and earlier interned in performance nutrition with University of Delaware athletics. She holds a Bachelor of Science in Nutrition and Dietetics from the University of Delaware and is licensed in Pennsylvania and Florida."
     ],
-    "education": [],
+    "education": [
+      "BS: Nutrition and Dietetics, University of Delaware"
+    ],
     "credentials": [
-      "Registered Dietitian (RD)"
+      "Registered Dietitian (RD)",
+      "Licensed Dietitian Nutritionist (LDN), Pennsylvania and Florida"
     ],
     "links": {
       "linkedin": "https://www.linkedin.com/in/sarah-tappan/"
     },
     "dietitian": true,
-    "licensedStates": [],
+    "licensedStates": [
+      "Pennsylvania",
+      "Florida"
+    ],
     "advisorRole": "",
     "funFact": "",
     "disclaimer": ""
