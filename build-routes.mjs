@@ -7,7 +7,7 @@
  *
  * Usage: node build-routes.mjs   (run after editing any page, before committing)
  */
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, readdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -34,7 +34,14 @@ export const ROUTES = {
 // content-hash query; a changed file gets a new URL and phones pick it up on the next load.
 const ASSETS = ['shifu-team.js', 'support.js', 'start-modal.js', 'strip.js', 'site-nav.js', 'profile-modal.js', 'image-slot.js', 'mobile.css'];
 const assetVersion = Object.fromEntries(ASSETS.map((f) => [f, createHash('sha1').update(readFileSync(join(HERE, f))).digest('hex').slice(0, 8)]));
-const stamp = (html) => ASSETS.reduce((h, f) => h.split('"/' + f + '"').join('"/' + f + '?v=' + assetVersion[f] + '"'), html);
+// employer logos too: they change occasionally and Cloudflare caches images for hours
+const employerLogos = readdirSync(join(HERE, 'assets/employers')).filter((f) => f.endsWith('.svg'));
+const logoVersion = Object.fromEntries(employerLogos.map((f) => [f, createHash('sha1').update(readFileSync(join(HERE, 'assets/employers', f))).digest('hex').slice(0, 8)]));
+const stamp = (html) => {
+  let out = ASSETS.reduce((h, f) => h.split('"/' + f + '"').join('"/' + f + '?v=' + assetVersion[f] + '"'), html);
+  for (const f of employerLogos) out = out.split('"/assets/employers/' + f + '"').join('"/assets/employers/' + f + '?v=' + logoVersion[f] + '"');
+  return out;
+};
 
 let n = 0;
 for (const [route, file] of Object.entries(ROUTES)) {
