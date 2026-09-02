@@ -483,7 +483,7 @@ window.SHIFU_SITE_TEAM = [
       "Eating well on a budget",
       "Meal prep"
     ],
-    "img": "/assets/team/placeholder-sarah-tappan.svg",
+    "img": "/assets/team/coach-sarah-tappan.jpg",
     "liveImg": "",
     "profileUrl": "https://shifu.health/team/sarah-tappan/",
     "background": [
@@ -571,7 +571,7 @@ window.SHIFU_SITE_TEAM = [
       "Meal prep",
       "Hydration"
     ],
-    "img": "/assets/team/placeholder-alessandra-echeverria.svg",
+    "img": "/assets/team/coach-alessandra.jpg",
     "liveImg": "",
     "profileUrl": "https://shifu.health/team/alessandra-echeverria/",
     "background": [
