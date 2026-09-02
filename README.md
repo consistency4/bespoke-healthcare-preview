@@ -103,7 +103,7 @@ Body: Schibsted Grotesk, ink, `-webkit-font-smoothing: antialiased`. `text-wrap:
 - Content max-width **1200px**, page padding **32px** each side.
 - Fixed nav **64px**. Hero top padding 168px (home), 140px (all other pages).
 - Section rhythm: **120px** between sections (`padding: 0 32px 120px`). Dark "Private by design" band 96px. Footer 96px top / 40px bottom (80px top on coverage and goal pages).
-- Section header pattern: 1px ink rule on top, 36px padding-top, two-column grid `repeat(auto-fit, minmax(320px, 1fr))`, gap `32px 64px`, `align-items: end`. Left: eyebrow (20px margin-bottom) then H2. Right: intro paragraph. 36–56px to the section content.
+- Section header pattern: 1px ink rule on top, 36px padding-top, two-column grid `repeat(auto-fit, minmax(320px, 1fr))`, gap `32px 64px`, `align-items: end`. Left: H2 (no eyebrow: the small mono uppercase section labels were removed on 2026-09-02; the ones that remain are functional labels such as the hero "No insurance needed", the "From members" and "Questions" section markers, column and panel labels, and the goal-page meta row). Right: intro paragraph. 36–56px to the section content.
 - Grids: goal rows `minmax(220px,1fr)` gap 10px · discipline tiles `minmax(150px,1fr)` gap 12px · plan columns `minmax(260px,1fr)`, no gap, 1px line right borders · team faces `minmax(118px,1fr)` gap 16px · profile cards `minmax(300px,1fr)` gap 20px · privacy columns `minmax(200–220px,1fr)` · coverage topic rows `minmax(200px,0.8fr) minmax(0,2fr)` · day section `minmax(0,0.9fr) minmax(0,1.1fr)` gap 48px.
 - Small gaps: 8px chips · 10–12px stacked cards · 14–16px avatar to text · 24–28px nav links.
 
