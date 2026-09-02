@@ -13,7 +13,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
-const ORIGIN = 'https://shifu.health';
+const ORIGIN = 'https://bespoke.healthcare';
 
 export const GOALS = ['lower-blood-pressure', 'glp-1-guidance', 'managing-diabetes', 'losing-10-pounds', 'building-strength', 'a-half-marathon', 'eating-well-on-a-budget', 'recovering-from-an-injury', 'cutting-sugar', 'sleeping-better', 'moving-more', 'gut-health'];
 
