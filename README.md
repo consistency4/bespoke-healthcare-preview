@@ -40,6 +40,8 @@ The routes below are live: `node build-routes.mjs` copies each source file to `<
 | `/coverage` | `Coverage.dc.html` | Coverage |
 | `/manifesto` | `Manifesto.dc.html` | Manifesto |
 | `/goals/<slug>` ×12 | `Goal - <slug>.dc.html` | linked from home "How we help", discipline heroes, coverage |
+| `/legal` | `Legal.dc.html` | footer Privacy / Terms |
+| `/legal/privacy`, `/legal/terms`, `/legal/eula`, `/legal/subscription`, `/legal/open-source` | `Legal - <slug>.dc.html` | footer, legal index |
 
 Slugs: `lower-blood-pressure`, `glp-1-guidance`, `managing-diabetes`, `losing-10-pounds`, `building-strength`, `a-half-marathon`, `eating-well-on-a-budget`, `recovering-from-an-injury`, `cutting-sugar`, `sleeping-better`, `moving-more`, `gut-health`.
 
@@ -193,6 +195,9 @@ The company page: the problem, then everyone working on it. No product benefits,
 3. **Profile modal**: same layout and behavior as the Coverage modal (Escape, backdrop, ×, `?profile=<id>`), plus a surface "Fun fact" note for founders, a business-website button when present (Innovaccer), and booking buttons only for dietitians and coaches.
 4. **Footer** (dark) "Bring one goal. We'll build around it." Links Coverage · ← Home.
 
+### 4c. Legal — `Legal.dc.html` + `Legal - <slug>.dc.html` × 5
+The five documents from the previous shifu.health (Privacy, Terms of Use, EULA, Subscription Terms, Open Source), converted verbatim from that site's `/legal/*` pages on 2026-09-02 (drafting highlights removed, underlines rendered as emphasis, bold-only paragraphs promoted to headings). Index page: coverage-style H1 "Policies & terms." + intro, then one row per document (title + mono description) on a 1px ink rule. Document pages: "← All policies", H1 (Coverage size), mono "Last updated · Supamill Inc (DBA Shifu Health)" on a 1px ink rule, then the `.legal` article (max-width 720px, 0.9375rem lh 1.65; h2 1.25rem 600; lists, blockquotes as surface panels; Privacy is a details/summary FAQ styled like the discipline FAQ). Nav: Privacy · Terms · All policies · Start Today. Footer: dark, support@shifu.health line + Start Today. Footer links everywhere: Privacy → `/legal/privacy/`, Terms → `/legal/terms/`, Security → `/#privacy`, Contact → mailto:support@shifu.health; the home privacy section links to `/legal/privacy/`.
+
 ### 5. Goal pages — `Goal - <slug>.dc.html` × 12 (static apart from the care-team pair, which is read from the roster)
 Template (from `sleeping-better`; each file varies copy, team pair, result metric, timeline and consult content):
 1. **Hero** (140px top, 72px bottom). Mono meta row, 24px gap, wrap: "Concierge Exercise & Nutrition Therapy" · orange "Nutrition + Exercise" (or the single discipline) · "Live video calls & async check-ins" · "No insurance needed"; 32px below. H1 "Bespoke Care for<br><span orange>{goal}.</span>", max-width 1100px, 32px below. 2-col: intro 1.125rem muted (max-width 520px) | right-aligned "Start on {goal} →" primary + "iOS app" secondary. Care-team strip 36px below: 1px ink rule, 24px top, grid `minmax(260px,1fr)` gap 24px 40px: eyebrow "Your care team / coach / dietitian for this goal" + strapline "Licensed in your state · visible from day one" when a dietitian is on the pair, otherwise "Certified · every state · visible from day one" (lh 1.7) + two experts from the roster (72px photo radius 6 with 1px line border, name 0.9375rem 600, mono `cred`, 14px gap; each links to the Coverage profile modal). The pair is set per page in the logic (`ids`), chosen by Coverage topic: lower blood pressure Emily Levin + Jerome Bacon III · GLP-1 Nickie Patel + Jessica Weissman · diabetes Jessica Weissman + Nickie Patel · 10 pounds Kristina Bauer + Taylor Duckett · strength Taylor Duckett + Michael Hawkins · half marathon Spencer Tate (page-local entry, not in the roster) + Isabel Zimmermann · budget Emily Levin + Ashley Art · injury Jerome Bacon III + Katie Callo · sugar Kristina Bauer + Michelle Wolff · sleep Michaela Gleed + Nilüfer Ece Bozkan · moving more Michaela Gleed + Libby Thompson · gut health Michelle Wolff + Nilüfer Ece Bozkan. The first person answers the consult mock in section 2 (32px photo avatar, name, mono "REPLIED IN 6H · LICENSED IN YOUR STATE" for dietitians or "· CERTIFIED · ALL STATES" otherwise).
@@ -229,7 +234,6 @@ No data fetching beyond the optional lead POST. All content is static and can be
 ## Open items
 - Logo not chosen; wordmark is plain text.
 - Placeholder SMS number, App Store URL and lead endpoint.
-- Privacy, Terms, Security, Contact links are `#`.
 - The consult mocks (discipline pages section 2 and 3, goal pages section 2) attribute illustrative replies to real roster members. Confirm each named person is happy with that, or swap the name for a generic "Your dietitian" / "Your coach" label.
 - Spencer Tate appears on the Exercise live-call mock and the half-marathon goal page but is not in the live care-team roster (he is on shifu.health/about); his entry is hard-coded in that goal page's logic.
 
@@ -243,7 +247,7 @@ Current design (this folder):
 - `Logo Ideas.dc.html` — logo exploration (reference only)
 - `assets/` — logo.png, favicon.png, `team/` photos
 - `shifu-team.js`, `team.json` — the care-team roster (generated); `team-overlay.json` + `gen-team.mjs` — its source and generator
-- `support.js`, `image-slot.js` — prototype runtime, needed only to open the `.dc.html` files in a browser; `profile-modal.js` — in-place profile popup for every person link; `site-nav.js` — phone menu: below 1000px a ☰ button next to the Start button opens a dropdown of Home · Nutrition · Exercise · Coverage · Manifesto · Plans (appended to `<body>` outside the runtime tree, positioned from the Start link); `start-modal.js` — intercepts every `sms:` Start link and every App Store "iOS app" link and shows a coming-soon modal that collects an email for the launch list instead (plans `launch-notify` / `ios-app-notify`; remove when the SMS flow and the app go live)
+- `support.js`, `image-slot.js` — prototype runtime, needed only to open the `.dc.html` files in a browser; `profile-modal.js` — in-place profile popup for every person link; `strip.js` — on touch devices the home team strips become finger-draggable scrollers that keep gliding (pause while touched, resume 1.6s after; a swipe never opens a profile); `site-nav.js` — phone menu: below 1000px a ☰ button next to the Start button opens a dropdown of Home · Nutrition · Exercise · Coverage · Manifesto · Plans (appended to `<body>` outside the runtime tree, positioned from the Start link); `start-modal.js` — intercepts every `sms:` Start link and every App Store "iOS app" link and shows a coming-soon modal that collects an email for the launch list instead (plans `launch-notify` / `ios-app-notify`; remove when the SMS flow and the app go live)
 
 `archive/` — superseded iterations, for history only: `Bespoke Healthcare.dc.html`, `Bespoke Healthcare v2.dc.html`, `Bespoke Exercise.dc.html`, `Bespoke Nutrition.dc.html`, and `Shifu Health Website.dc.html` / `v2` (the earlier "Shifu Health" direction: Instrument Serif + DM Sans, orange chat bubbles; depends on `archive/_ds/`).
 

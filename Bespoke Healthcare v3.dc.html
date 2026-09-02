@@ -6,6 +6,7 @@
 <script src="/shifu-team.js"></script>
 <script src="/support.js"></script>
 <script src="/start-modal.js"></script>
+<script src="/strip.js"></script>
 <script src="/site-nav.js"></script>
 <script src="/profile-modal.js"></script>
 </head>
@@ -33,6 +34,11 @@
     .shifu-strip:hover .shifu-strip-track{animation-play-state:paused}
     @keyframes shifu-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
     @media (prefers-reduced-motion:reduce){.shifu-strip-track{animation:none}.shifu-strip{mask-image:none;-webkit-mask-image:none;overflow-x:auto}}
+    /* touch devices (strip.js): a real scroller the finger can drag; the glide is driven in JS */
+    .shifu-strip.is-manual{overflow-x:auto;overflow-y:hidden;mask-image:none;-webkit-mask-image:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:none;padding-bottom:4px}
+    .shifu-strip.is-manual::-webkit-scrollbar{display:none}
+    .shifu-strip.is-manual .shifu-strip-track{animation:none !important;transform:none !important}
+    .shifu-strip.is-manual .shifu-card{-webkit-tap-highlight-color:transparent}
   </style>
 </helmet>
 
@@ -201,7 +207,7 @@
       <div style="padding:32px 28px 32px 0;border-right:1px solid #E3E3E0;margin-right:28px;"><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#F1580D;margin-bottom:16px">Visible</div><div style="font-size:1.125rem;font-weight:600;letter-spacing:-0.02em;margin-bottom:8px">You see who sees it</div><div style="font-size:0.9375rem;line-height:1.5;color:#6B6B70">Every consult records which professional reviewed your case.</div></div>
       <div style="padding:32px 28px 32px 0;"><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#F1580D;margin-bottom:16px">Yours</div><div style="font-size:1.125rem;font-weight:600;letter-spacing:-0.02em;margin-bottom:8px">Export or delete anytime</div><div style="font-size:0.9375rem;line-height:1.5;color:#6B6B70">From the app. Connect or disconnect wearables and records whenever you like.</div></div>
     </div>
-    <div style="margin-top:20px"><a href="#" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;border-bottom:1px solid #E3E3E0" style-hover="color:#0B0B0C">Read the full privacy policy →</a></div>
+    <div style="margin-top:20px"><a href="/legal/privacy/" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;border-bottom:1px solid #E3E3E0" style-hover="color:#0B0B0C">Read the full privacy policy →</a></div>
   </div>
 </section>
 
@@ -212,7 +218,7 @@
     </div>
     <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:20px;padding-top:28px;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70">
       <span>© 2026 Supamill Inc (DBA Shifu Health) · General wellness guidance only. Not medical advice, diagnosis, or treatment.</span>
-      <div style="display:flex;gap:24px"><a href="/nutrition/" style="color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Nutrition</a><a href="/exercise/" style="color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Exercise</a><a href="/coverage/" style="color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Coverage</a><a href="/manifesto/" style="color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Manifesto</a><a href="#" style="color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Privacy</a><a href="#" style="color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Terms</a></div>
+      <div style="display:flex;gap:24px"><a href="/nutrition/" style="color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Nutrition</a><a href="/exercise/" style="color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Exercise</a><a href="/coverage/" style="color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Coverage</a><a href="/manifesto/" style="color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Manifesto</a><a href="/legal/privacy/" style="color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Privacy</a><a href="/legal/terms/" style="color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Terms</a></div>
     </div>
   </div>
 </footer>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/shifu-team.js"></script>
+<script src="/support.js"></script>
+<script src="/start-modal.js"></script>
+<script src="/site-nav.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="stylesheet" href="/mobile.css">
+  <script src="/image-slot.js"></script>
+  <title>Privacy at Shifu · Shifu Health</title>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Schibsted Grotesk',ui-sans-serif,system-ui,sans-serif;background:#FFFFFF;color:#0B0B0C;-webkit-font-smoothing:antialiased}
+    a{color:#F1580D}a:hover{color:#D44A08}
+    button{font-family:inherit}
+    /* legal document typography (content converted from the previous shifu.health) */
+    .legal{max-width:720px;font-size:0.9375rem;line-height:1.65;color:#0B0B0C}
+    .legal p{margin:0 0 16px}
+    .legal h2{font-size:1.25rem;font-weight:600;letter-spacing:-0.02em;line-height:1.25;margin:36px 0 12px}
+    .legal ul,.legal ol{margin:0 0 16px 22px}
+    .legal li{margin-bottom:8px}
+    .legal blockquote{margin:0 0 16px;padding:14px 18px;background:#F4F4F1;border-radius:8px}
+    .legal blockquote p:last-child{margin-bottom:0}
+    .legal strong{font-weight:600}
+    .legal a{color:#F1580D;text-decoration:none;border-bottom:1px solid #F1580D}
+    .legal details{border-top:1px solid #E3E3E0;padding:18px 0}
+    .legal details:last-of-type{border-bottom:1px solid #E3E3E0}
+    .legal summary{cursor:pointer;font-size:1.0625rem;font-weight:600;letter-spacing:-0.01em;list-style:none;display:flex;justify-content:space-between;gap:16px}
+    .legal summary::-webkit-details-marker{display:none}
+    .legal summary::after{content:"+";font-family:'IBM Plex Mono',monospace;font-size:1.25rem;color:#6B6B70;transition:transform 0.3s}
+    .legal details[open] summary::after{transform:rotate(45deg)}
+    .legal details>div{padding-top:12px;color:#6B6B70;max-width:620px}
+    .legal .privacy-lead{font-size:1.0625rem;color:#6B6B70;margin-bottom:28px}
+  </style>
+</helmet>
+
+<nav style="position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.88);backdrop-filter:blur(14px);border-bottom:1px solid #E3E3E0">
+  <div style="max-width:1200px;margin:0 auto;padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <div class="nav-wordmark" style="display:flex;align-items:baseline;gap:14px"><a href="/" style="font-weight:700;font-size:1rem;letter-spacing:-0.02em;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Shifu Health</a><span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;white-space:nowrap">/ Privacy</span></div>
+    <div style="display:flex;align-items:center;gap:28px">
+      <a class="nav-link" href="/legal/privacy/" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Privacy</a>
+      <a class="nav-link" href="/legal/terms/" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Terms</a>
+      <a class="nav-link" href="/legal/" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">All policies</a>
+      <a href="{{ startHref }}" style="padding:10px 18px;border-radius:6px;background:#0B0B0C;color:#FFFFFF;font-size:0.875rem;font-weight:600;text-decoration:none;white-space:nowrap" style-hover="background:#F1580D;color:#FFFFFF">Start Today</a>
+    </div>
+  </div>
+</nav>
+
+<section data-screen-label="Privacy at Shifu" style="padding:140px 32px 120px">
+  <div style="max-width:1200px;margin:0 auto">
+    <a href="/legal/" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">← All policies</a>
+    <h1 style="font-weight:600;font-size:clamp(2.5rem,5.5vw,4.5rem);line-height:0.98;letter-spacing:-0.045em;margin:28px 0 16px;max-width:900px">Privacy at Shifu</h1>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70;margin-bottom:40px;padding-bottom:24px;border-bottom:1px solid #0B0B0C">Last updated: July 27, 2026 · Supamill Inc (DBA Shifu Health)</div>
+    <div class="legal">
+<p class="privacy-lead">We take privacy seriously at Shifu Health. Here is how payments, subscriptions, AI, and communications work on our platform.</p>
+
+    <div class="privacy-faq">
+      <details class="privacy-faq-item" open>
+        <summary>How are payments processed?</summary>
+        <div class="privacy-faq-answer">
+          <p>All paid subscriptions are billed through Apple’s App Store (In-App Purchase). We do not collect your card or bank details, and there is no checkout on our website.</p>
+        </div>
+      </details>
+
+      <details class="privacy-faq-item">
+        <summary>How do renewals and cancellation work?</summary>
+        <div class="privacy-faq-answer">
+          <p>Apple shows the price, billing period, and renewal terms when you subscribe, and sends a confirmation email with cancellation instructions. You can cancel anytime in your Apple subscription settings, or from Shifu account settings, which opens Apple’s subscription management page. Before you subscribe, our paywall shows the plan name, duration, price, and links to Privacy and Terms.</p>
+        </div>
+      </details>
+
+      <details class="privacy-faq-item">
+        <summary>Where can I email about cancellation?</summary>
+        <div class="privacy-faq-answer">
+          <p>Email <a href="mailto:support@shifu.health">support@shifu.health</a> for help with subscriptions or your account.</p>
+        </div>
+      </details>
+
+      <details class="privacy-faq-item">
+        <summary>Do you train AI on my data?</summary>
+        <div class="privacy-faq-answer">
+          <p>No. We do not train or fine-tune AI models on your data. When AI helps power coaching, third-party providers (such as Google, Anthropic, and OpenAI) process only what is needed to deliver the service, and they are not allowed to use your data to train their models.</p>
+        </div>
+      </details>
+
+      <details class="privacy-faq-item">
+        <summary>Can Shifu text my friends for me?</summary>
+        <div class="privacy-faq-answer">
+          <p>No. If you invite a friend, you send a share link from your own device. We do not text your contacts for you.</p>
+        </div>
+      </details>
+
+      <details class="privacy-faq-item">
+        <summary>Who can contact me through Shifu?</summary>
+        <div class="privacy-faq-answer">
+          <p>You will only hear from Shifu (our AI coaching agent) and your coaches, through our own platform and number.</p>
+        </div>
+      </details>
+
+      <details class="privacy-faq-item">
+        <summary>Do you use open-source software?</summary>
+        <div class="privacy-faq-answer">
+          <p>Yes. Shifu includes open-source software. You can review attributions and licenses at <a href="/legal/open-source">shifu.health/legal/open-source</a>.</p>
+        </div>
+      </details>
+
+      <details class="privacy-faq-item">
+        <summary>How long do I have to raise a billing dispute?</summary>
+        <div class="privacy-faq-answer">
+          <p>You have 60 days to raise a billing dispute. Contact <a href="mailto:support@shifu.health">support@shifu.health</a> if you need help.</p>
+        </div>
+      </details>
+    </div>
+
+    <p class="privacy-footer-note">Have another question? Email <a href="mailto:support@shifu.health">support@shifu.health</a> or visit <a href="/support">Support</a>.</p>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#0B0B0C;color:#FFFFFF;padding:64px 32px 40px">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;padding-bottom:40px;border-bottom:1px solid #2A2A2E">
+      <div style="font-size:1.125rem;line-height:1.5;color:#8A8A90;max-width:560px">Questions about any of these documents? Email <a href="mailto:support@shifu.health" style="color:#FFFFFF;text-decoration:none;border-bottom:1px solid #F1580D">support@shifu.health</a>.</div>
+      <a href="{{ startHref }}" style="padding:16px 28px;border-radius:6px;background:#FFFFFF;color:#0B0B0C;font-weight:600;font-size:1rem;text-decoration:none;white-space:nowrap" style-hover="background:#F1580D;color:#FFFFFF">Start Today</a>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:20px;padding-top:28px;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#8A8A90">
+      <span>© 2026 Supamill Inc (DBA Shifu Health) · General wellness guidance only. Not medical advice, diagnosis, or treatment.</span>
+      <div style="display:flex;gap:24px"><a href="/legal/privacy/" style="color:#8A8A90;text-decoration:none" style-hover="color:#FFFFFF">Privacy</a><a href="/legal/terms/" style="color:#8A8A90;text-decoration:none" style-hover="color:#FFFFFF">Terms</a><a href="/" style="color:#8A8A90;text-decoration:none" style-hover="color:#FFFFFF">← Home</a></div>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;smsNumber&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;+10000000000&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Start flow&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { startHref: `sms:${this.props.smsNumber ?? "+10000000000"}?&body=${encodeURIComponent("Hi Shifu, I'd like to get started.")}` };
+  }
+}
+</script>
+</body>
+</html>

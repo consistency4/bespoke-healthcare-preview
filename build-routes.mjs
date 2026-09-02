@@ -24,12 +24,14 @@ export const ROUTES = {
   '/coverage': 'Coverage.dc.html',
   '/manifesto': 'Manifesto.dc.html',
   '/logo-ideas': 'Logo Ideas.dc.html',
+  '/legal': 'Legal.dc.html',
+  ...Object.fromEntries(['privacy', 'terms', 'eula', 'subscription', 'open-source'].map((s) => ['/legal/' + s, 'Legal - ' + s + '.dc.html'])),
   ...Object.fromEntries(GOALS.map((s) => ['/goals/' + s, 'Goal - ' + s + '.dc.html'])),
 };
 
 // Cloudflare caches static assets for hours, so every copy references scripts and styles with a
 // content-hash query; a changed file gets a new URL and phones pick it up on the next load.
-const ASSETS = ['shifu-team.js', 'support.js', 'start-modal.js', 'site-nav.js', 'profile-modal.js', 'image-slot.js', 'mobile.css'];
+const ASSETS = ['shifu-team.js', 'support.js', 'start-modal.js', 'strip.js', 'site-nav.js', 'profile-modal.js', 'image-slot.js', 'mobile.css'];
 const assetVersion = Object.fromEntries(ASSETS.map((f) => [f, createHash('sha1').update(readFileSync(join(HERE, f))).digest('hex').slice(0, 8)]));
 const stamp = (html) => ASSETS.reduce((h, f) => h.split('"/' + f + '"').join('"/' + f + '?v=' + assetVersion[f] + '"'), html);
 
