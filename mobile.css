@@ -1,8 +1,8 @@
 /* Phone and small-tablet adjustments shared by every page (linked from each page's <helmet>).
    The pages use inline styles, so these rules override with !important and match on inline-style text. */
 
-/* Nav: below 900px only the wordmark and the Start button stay (the discipline pages also do this via state). */
-@media (max-width: 900px) {
+/* Nav: below 1000px the mono links hide (the discipline pages also do this via state) and site-nav.js adds a menu button + dropdown. */
+@media (max-width: 1000px) {
   a.nav-link { display: none !important; }
 }
 

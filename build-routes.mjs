@@ -29,7 +29,7 @@ export const ROUTES = {
 
 // Cloudflare caches static assets for hours, so every copy references scripts and styles with a
 // content-hash query; a changed file gets a new URL and phones pick it up on the next load.
-const ASSETS = ['shifu-team.js', 'support.js', 'start-modal.js', 'image-slot.js', 'mobile.css'];
+const ASSETS = ['shifu-team.js', 'support.js', 'start-modal.js', 'site-nav.js', 'image-slot.js', 'mobile.css'];
 const assetVersion = Object.fromEntries(ASSETS.map((f) => [f, createHash('sha1').update(readFileSync(join(HERE, f))).digest('hex').slice(0, 8)]));
 const stamp = (html) => ASSETS.reduce((h, f) => h.split('"/' + f + '"').join('"/' + f + '?v=' + assetVersion[f] + '"'), html);
 
