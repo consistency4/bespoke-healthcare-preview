@@ -192,11 +192,11 @@
     <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#8A8A90;margin-bottom:40px">{{ rosterLabel }}</div>
     <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px 40px">
       <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70">Where they studied</div>
-      <img src="https://shifu.health/assets/logo-stanford.png" alt="Stanford" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
-      <img src="https://shifu.health/assets/logo-usc.svg" alt="USC" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
-      <img src="https://shifu.health/assets/logo-ucsf.png" alt="UCSF" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
-      <img src="https://shifu.health/assets/logo-johns-hopkins.png" alt="Johns Hopkins" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
-      <img src="https://shifu.health/assets/logo-upenn.png" alt="University of Pennsylvania" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="assets/universities/logo-stanford.png" alt="Stanford" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="assets/universities/logo-usc.svg" alt="USC" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="assets/universities/logo-ucsf.png" alt="UCSF" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="assets/universities/logo-johns-hopkins.png" alt="Johns Hopkins" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="assets/universities/logo-upenn.png" alt="University of Pennsylvania" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
     </div>
   </div>
 </section>
@@ -380,9 +380,9 @@ class Component extends DCLogic {
     const legend = (t) => ({ fontFamily: MONO, fontSize: "0.6875rem", letterSpacing: "0.1em", textTransform: "uppercase", padding: "6px 10px", borderRadius: 4, transition: "all 0.4s", border: "1px solid " + (am.type === t ? NAVY : LINE), background: am.type === t ? NAVY : "transparent", color: am.type === t ? "#FFFFFF" : MUTED });
     // quotes
     const quotes = [
-      { text: "Shifu picks my meals based on my macros, then texts a DoorDash link to the exact item. It picks healthier than I would on my own.", name: "Aakash Prasad", role: "Cofounder & CEO · InspectMind AI", img: "https://shifu.health/testimonials/aakash.png" },
-      { text: "It's always been my issue with nutrition apps: I'm too lazy to open them for everything. Texting fixes that.", name: "Matt Huntington", role: "PE Associate", img: "https://shifu.health/testimonials/matt.png" },
-      { text: "The ultimate second brain for my health. It learns from my habits and teaches me how to optimize my nutrition.", name: "Gunjan Chhablani", role: "Waymo", img: "https://shifu.health/assets/testimonials/gunjan.jpg" },
+      { text: "Shifu picks my meals based on my macros, then texts a DoorDash link to the exact item. It picks healthier than I would on my own.", name: "Aakash Prasad", role: "Cofounder & CEO · InspectMind AI", img: "assets/testimonials/aakash.png" },
+      { text: "It's always been my issue with nutrition apps: I'm too lazy to open them for everything. Texting fixes that.", name: "Matt Huntington", role: "PE Associate", img: "assets/testimonials/matt.png" },
+      { text: "The ultimate second brain for my health. It learns from my habits and teaches me how to optimize my nutrition.", name: "Gunjan Chhablani", role: "Waymo", img: "assets/testimonials/gunjan.jpg" },
     ];
     const qi = this.state.quoteIdx, q = quotes[qi];
     const quote = { text: q.text, name: q.name, role: q.role, photoStyle: { width: 40, height: 40, borderRadius: 6, backgroundImage: `url(${q.img})`, backgroundSize: "cover", backgroundPosition: "center" } };

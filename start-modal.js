@@ -9,8 +9,9 @@
 (function () {
   'use strict';
 
-  var API = '/api/waitlist/submit';
-  var REMOTE_API = 'https://shifu.health/api/waitlist/submit';
+  // The waitlist API lives on the Astro/Vercel deployment (Vercel project "docnition-landing"). These pages are
+  // static (GitHub Pages), so they always post cross-origin; the API allows shifu.health, *.vercel.app and localhost.
+  var REMOTE_API = 'https://docnition-landing.vercel.app/api/waitlist/submit';
   var INK = '#0B0B0C', ORANGE = '#F1580D', MUTED = '#6B6B70', LINE = '#E3E3E0', SURFACE = '#F4F4F1';
   var SANS = "'Schibsted Grotesk',ui-sans-serif,system-ui,sans-serif";
   var MONO = "'IBM Plex Mono',monospace";
@@ -26,12 +27,7 @@
     app: { eyebrow: 'iOS app · closed beta', title: 'We are in closed beta, but are opening our app to the public soon.', body: 'Leave your email and we will let you know the moment it opens.', done: 'We will email you as soon as the app opens to the public.', plan: 'ios-app-notify' }
   };
 
-  function endpoint() {
-    // only shifu.health has the API alongside these pages; previews (vercel.app, localhost) post to the live site
-    var host = window.location.hostname;
-    if (host === 'shifu.health' || host === 'www.shifu.health') return API;
-    return REMOTE_API;
-  }
+  function endpoint() { return REMOTE_API; }
 
   function el(tag, style, text) {
     var n = document.createElement(tag);

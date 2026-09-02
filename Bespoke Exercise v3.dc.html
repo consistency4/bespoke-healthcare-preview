@@ -191,11 +191,11 @@
     <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#8A8A90;margin-bottom:40px">{{ rosterLabel }}</div>
     <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px 40px">
       <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70">Where they studied</div>
-      <img src="https://shifu.health/assets/logo-stanford.png" alt="Stanford" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
-      <img src="https://shifu.health/assets/logo-usc.svg" alt="USC" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
-      <img src="https://shifu.health/assets/logo-ucsf.png" alt="UCSF" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
-      <img src="https://shifu.health/assets/logo-johns-hopkins.png" alt="Johns Hopkins" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
-      <img src="https://shifu.health/assets/logo-upenn.png" alt="University of Pennsylvania" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="assets/universities/logo-stanford.png" alt="Stanford" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="assets/universities/logo-usc.svg" alt="USC" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="assets/universities/logo-ucsf.png" alt="UCSF" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="assets/universities/logo-johns-hopkins.png" alt="Johns Hopkins" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="assets/universities/logo-upenn.png" alt="University of Pennsylvania" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
     </div>
   </div>
 </section>
@@ -379,9 +379,9 @@ class Component extends DCLogic {
     const legend = (t) => ({ fontFamily: MONO, fontSize: "0.6875rem", letterSpacing: "0.1em", textTransform: "uppercase", padding: "6px 10px", borderRadius: 4, transition: "all 0.4s", border: "1px solid " + (am.type === t ? NAVY : LINE), background: am.type === t ? NAVY : "transparent", color: am.type === t ? "#FFFFFF" : MUTED });
     // quotes
     const quotes = [
-      { text: "Getting nudges has been really helpful, especially when challenges get escalated to my human coach.", name: "Christian Pickett", role: "Cofounder · Orthogonal", img: "https://shifu.health/testimonials/christian.png" },
-      { text: "I focused more on chest for an upcoming event, and quickly adjusted when I sprained my knee. A great experience.", name: "Liam Redmond", role: "Founder & CEO · Yelo", img: "https://shifu.health/testimonials/liam.png" },
-      { text: "Shifu removed the confusion that comes with the gym. A tailored workout with instructional videos every day.", name: "Brock Eastman", role: "Doctor of Medicine, Dentistry", img: "https://shifu.health/testimonials/brock.png" },
+      { text: "Getting nudges has been really helpful, especially when challenges get escalated to my human coach.", name: "Christian Pickett", role: "Cofounder · Orthogonal", img: "assets/testimonials/christian.png" },
+      { text: "I focused more on chest for an upcoming event, and quickly adjusted when I sprained my knee. A great experience.", name: "Liam Redmond", role: "Founder & CEO · Yelo", img: "assets/testimonials/liam.png" },
+      { text: "Shifu removed the confusion that comes with the gym. A tailored workout with instructional videos every day.", name: "Brock Eastman", role: "Doctor of Medicine, Dentistry", img: "assets/testimonials/brock.png" },
     ];
     const qi = this.state.quoteIdx, q = quotes[qi];
     const quote = { text: q.text, name: q.name, role: q.role, photoStyle: { width: 40, height: 40, borderRadius: 6, backgroundImage: `url(${q.img})`, backgroundSize: "cover", backgroundPosition: "center" } };
