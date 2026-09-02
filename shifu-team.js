@@ -68,7 +68,7 @@ window.SHIFU_SITE_TEAM = [
     "profileUrl": "https://shifu.health/team/kristina-bauer/",
     "background": [
       "Kristina is a registered dietitian specializing in pediatric weight management at Cincinnati Children's Hospital Medical Center, where she works with the Healthworks! program. Her approach centers on meeting patients where they are, supporting healthy eating, fostering a positive relationship with food, and promoting Health at Every Size (HAES) and intuitive eating rather than restrictive dieting. She is licensed in both Ohio and Kentucky and sees families across Greater Cincinnati clinic locations.",
-      "She completed her dietetic internship rotations at Cincinnati Children's, Twin Towers Senior Living Community, Norwood City Schools / Milford School System, and Children's Hunger Alliance, building experience across clinical, school, senior living, and community nutrition settings. Earlier at the University of Cincinnati she supported collegiate athletes through Bearcat's Fuel Station, preparing individualized pre- and post-game nutrition and creating athlete nutrition content during COVID-19, and served as a teaching assistant and peer leader for first-year students.",
+      "She completed her dietetic internship rotations at Cincinnati Children's, Twin Towers Senior Living Community, Norwood City Schools / Milford School System, and Children's Hunger Alliance, building experience across clinical, school, senior living, and community nutrition settings. Earlier at the University of Cincinnati she supported collegiate athletes through Bearcat's Fuel Station, preparing individualized pre- and post-game nutrition and creating athlete nutrition content during COVID-19.",
       "Kristina holds a Master of Science in Dietetics and a Bachelor of Science in Dietetics from the University of Cincinnati, with a minor in psychology. She is passionate about helping children and adolescents build sustainable habits that support long-term well-being."
     ],
     "education": [
@@ -448,8 +448,8 @@ window.SHIFU_SITE_TEAM = [
     "liveImg": "https://shifu.health/assets/coach-nilufer.png",
     "profileUrl": "https://shifu.health/team/nilufer-ece-bozkan/",
     "background": [
-      "Since 2023, Nilüfer has run Wellness with Nilufer, a self-employed, remote coaching practice where she works one-on-one with clients to help them build sustainable habits, achievable goals, and personalized wellness plans. Her approach is whole-body and holistic, treating mental, physical, and spiritual health as interconnected and equally important to overall wellbeing. Through her practice she also offers a health and cooking blog and one-on-one coaching calls via her website.",
-      "Her movement and group-instruction experience includes planning lessons for varied skill levels and adapting in real time, drawing on a working understanding of anatomy and physiology to give clear cues for safe movement and hands-on adjustments, and creating space for emotional regulation and mindfulness before, during, and after class, supported by strong verbal instruction and public-speaking skills."
+      "Since 2023, Nilüfer has run Wellness with Nilufer, a remote coaching practice where she works one-on-one with clients to build sustainable habits, achievable goals, and personalized wellness plans. Her approach is whole-body and holistic, treating mental, physical, and everyday routines as interconnected parts of overall wellbeing. Through her practice she also publishes a health and cooking blog.",
+      "Her coaching draws on a certificate from the Institute for Integrative Nutrition and a psychology degree from Furman University, and centers on everyday nutrition: meals people can actually repeat, cutting back on sugar, staying hydrated, plant-forward and budget-friendly eating, and the sleep and recovery habits that make those changes stick."
     ],
     "education": [
       "Bachelors Degree: Psychology, Furman University"
@@ -487,8 +487,8 @@ window.SHIFU_SITE_TEAM = [
     "liveImg": "https://shifu.health/assets/coach-michaela.png",
     "profileUrl": "https://shifu.health/team/michaela-gleed/",
     "background": [
-      "Since 2020, Michaela has been the Founder and Lead Instructor of Habitual, a self-employed venture in South Carolina where she blends the mindfulness and breath work of yoga, the technique and control of Pilates, and the strength and discipline of high-intensity interval training to help clients build sustainable wellness routines. In parallel, she works as a private yoga instructor, credentialed through Yoga Alliance, teaching one-on-one sessions focused on meditation, movement, and breath work, currently serving the Greenville and Spartanburg area.",
-      "Her broader background spans operations, culinary, and fitness leadership. As Area Manager and Executive Chef at Southern Pressed Juicery (2022–2023), she oversaw two retail locations and a team of roughly 30, stepped into executive chef duties for four months (managing production, inventory, ordering, and menu development), ran in-store marketing events, and built front- and back-of-house operational systems to improve efficiency, grow sales, and reduce waste while managing labor and budget targets. She also worked as a Realtor with The Ponce Realty Group (2022–2023) and, earlier, as a personal trainer at 9Round Fitness (2019–2020)."
+      "Since 2020, Michaela has been the Founder and Lead Instructor of Habitual in South Carolina, where she blends the mindfulness and breath work of yoga, the technique and control of Pilates, and the strength and discipline of high-intensity interval training to help clients build sustainable wellness routines. In parallel, she works as a private yoga instructor, credentialed through Yoga Alliance, teaching one-on-one sessions focused on meditation, movement, and breath work in the Greenville and Spartanburg area.",
+      "Before Habitual she worked as a personal trainer at 9Round Fitness (2019–2020). She holds NASM Certified Personal Trainer and NASM Nutrition certifications, Mat Level 1 Pilates, and Yoga Alliance credentials."
     ],
     "education": [],
     "credentials": [
@@ -566,8 +566,8 @@ window.SHIFU_SITE_TEAM = [
     "liveImg": "https://shifu.health/assets/coach-libby.png",
     "profileUrl": "https://shifu.health/team/libby-thompson/",
     "background": [
-      "Libby currently lives in Columbus, Ohio, but spent the past four years in Cincinnati, Ohio. She began her career as an Exercise Physiologist in Cardiology at The Christ Hospital before joining Cincinnati Children's Hospital, where she spent three years working in an obesity management clinic. During her time at Cincinnati Children's, she earned her Master of Science in Health Administration (MSHA) from Northern Kentucky University while continuing to work.",
-      "Her position there was focused on helping patients and families build healthier lifestyles, and she also taught free exercise classes for children in the community. Most recently, she transitioned into a Marketing and Community Relations role with a pediatric dental organization. Her role is community outreach, partnership development, event planning, and patient engagement. She enjoys connecting with people and helping organizations make a meaningful impact in the communities they serve."
+      "Libby is an exercise physiologist who began her career in Cardiology at The Christ Hospital in Cincinnati before joining Cincinnati Children's Hospital, where she spent three years in an obesity management clinic.",
+      "There she worked with patients and families to build healthier lifestyles through structured exercise, and taught free community exercise classes for children. She holds a Bachelor of Science in Exercise Science from Bowling Green State University and is NASM certified."
     ],
     "education": [
       "Bachelors of Science: Exercise Science, Bowling Green State University",
@@ -606,8 +606,8 @@ window.SHIFU_SITE_TEAM = [
     "liveImg": "https://shifu.health/assets/coach-taylor.png",
     "profileUrl": "https://shifu.health/team/taylor-duckett/",
     "background": [
-      "Taylor is a personal trainer and fitness coach who turned her passion for health and fitness into a career. In 2015, halfway through her nursing program, she realized that path wasn't for her. Having always loved being active and being around people, she began personal training and teaching group exercise classes in college. Since then, she has worked with hundreds of clients of all ages and fitness levels to help them achieve their goals. She has recently expanded into online coaching, embracing the opportunity to reach and support people well beyond her local area.",
-      "Taylor lives in South Carolina with her husband Sam and their two dogs, Luna and Tywin. When she's not coaching, she can be found training for her own races, enjoying espresso martinis with friends, or going to concerts."
+      "Taylor is a personal trainer and strength coach who began personal training and teaching group exercise classes in college in 2015. Since then she has worked with hundreds of clients of all ages and fitness levels to help them reach their goals, and has recently expanded into online coaching to support people well beyond her local area.",
+      "Based in South Carolina, she trains for her own races between coaching sessions and holds a NASM Certified Strength Coach credential."
     ],
     "education": [
       "East Carolina University"
@@ -620,7 +620,7 @@ window.SHIFU_SITE_TEAM = [
     },
     "dietitian": false,
     "licensedStates": [],
-    "advisorRole": "Certified Strength Coach.",
+    "advisorRole": "",
     "funFact": "",
     "disclaimer": ""
   },
@@ -646,8 +646,8 @@ window.SHIFU_SITE_TEAM = [
     "profileUrl": "https://shifu.health/team/katie-callo/",
     "background": [
       "Katie is a certified personal trainer, group fitness instructor, and Pilates instructor with UCLA Recreation's FITWELL program in Los Angeles, and a Guinness World Record holder for the heaviest weighted hip thrust by a female (605 lbs). She leads GroupX classes that combine mat Pilates with total-body strength and conditioning, supports Workstrong candidates through virtual and in-person rehab and cross-training, and builds personalized programs for goals like weight loss, strength, hypertrophy, and cardiovascular health.",
-      "She is a Certified Personal Trainer and Certified Pilates Instructor through the International Sports Sciences Association (ISSA), and a Certified Diabetes Prevention Program coach through UCLA Health. Alongside coaching, she is Co-Founder of Refuel and previously served as President of CruX UCLA, UCLA's student neurotechnology organization, where she now remains an executive advisor.",
-      "Katie earned a Bachelor of Science in Computational Psychology and Human-Centered Artificial Intelligence from UCLA. Her coaching style sits at the intersection of performance, movement quality, and practical habit building."
+      "She is a Certified Personal Trainer and Certified Pilates Instructor through the International Sports Sciences Association (ISSA), and a Certified Diabetes Prevention Program coach through UCLA Health, which informs her work with clients managing prediabetes and type 2 diabetes.",
+      "Her coaching style sits at the intersection of performance, movement quality, and practical habit building."
     ],
     "education": [
       "Bachelors of Science: Computational Psychology and Human-Centered Artificial Intelligence, UCLA"
@@ -675,7 +675,7 @@ window.SHIFU_SITE_TEAM = [
     "cardCred": "Certified Strength Coach",
     "role": "Certified Strength Coach",
     "states": "All states",
-    "bio": "Certified strength coach with more than 25 years of dual experience in business and fitness, coaching people who have to fit training around a demanding schedule.",
+    "bio": "Certified strength coach with 25 years of consistent training who coaches people fitting workouts around a demanding career.",
     "specs": [
       "Building strength",
       "Busy-schedule programming",
@@ -687,8 +687,8 @@ window.SHIFU_SITE_TEAM = [
     "liveImg": "https://shifu.health/assets/coach-michael.png",
     "profileUrl": "https://shifu.health/team/michael-hawkins/",
     "background": [
-      "Michael brings over 25 years of dual experience in business development and fitness. Professionally, he specializes in equipment financing for the construction sector, having served as a Business Development Officer, Territory Manager, and Regional Sales Manager. In these roles, he partners with equipment dealers to streamline the financing process for their customers, emphasizing fast credit decisions, broad credit approvals, and ease of execution. His work is driven by a commitment to fostering strong client relationships and leveraging expertise in business relationship management and leadership, empowering dealers and their customers with tailored financial solutions that enable growth in the competitive construction industry.",
-      "Alongside his business career, Michael has maintained a 25-year commitment to fitness and overall wellness, supported by consistent training and deep knowledge of exercise techniques. He holds a Personal Training Certification through ISSA, with experience spanning strength training, conditioning, and developing structured fitness routines tailored to specific goals. He emphasizes discipline, proper form, and injury prevention, a background that has strengthened his work ethic, resilience, and ability to perform effectively in challenging environments."
+      "Michael is an ISSA-certified personal trainer with a 25-year commitment to strength training and overall wellness. He coaches people who have to fit training around a demanding career, something he has done himself across a long career in business, and his programming emphasizes discipline, proper form, and injury prevention.",
+      "His experience spans strength training, conditioning, and developing structured fitness routines tailored to specific goals."
     ],
     "education": [
       "New England College"

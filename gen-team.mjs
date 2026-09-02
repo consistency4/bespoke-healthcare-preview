@@ -73,13 +73,13 @@ const people = Object.entries(overlay).map(([id, card]) => {
     img: '/assets/team/' + file, // root-absolute: pages are served from clean routes like /nutrition/
     liveImg: LIVE_ORIGIN + livePhoto,
     profileUrl: LIVE_ORIGIN + '/team/' + id + '/',
-    background: src.background ?? [],
+    background: card.background ?? src.background ?? [], // overlay override: keep the text to the job they do here
     education: src.education ?? [],
     credentials: src.credentials ?? [],
     links: src.links ?? {},
     dietitian: !!src.dietitian,
     licensedStates: src.licensedStates ?? [],
-    advisorRole: src.advisorRole ?? '',
+    advisorRole: card.advisorRole ?? src.advisorRole ?? '',
     funFact: src.funFact ?? '',
     disclaimer: src.disclaimer ?? '',
   };

@@ -24,6 +24,11 @@
       "Meal prep",
       "Eating well on a budget",
       "Plateaus"
+    ],
+    "background": [
+      "Kristina is a registered dietitian specializing in pediatric weight management at Cincinnati Children's Hospital Medical Center, where she works with the Healthworks! program. Her approach centers on meeting patients where they are, supporting healthy eating, fostering a positive relationship with food, and promoting Health at Every Size (HAES) and intuitive eating rather than restrictive dieting. She is licensed in both Ohio and Kentucky and sees families across Greater Cincinnati clinic locations.",
+      "She completed her dietetic internship rotations at Cincinnati Children's, Twin Towers Senior Living Community, Norwood City Schools / Milford School System, and Children's Hunger Alliance, building experience across clinical, school, senior living, and community nutrition settings. Earlier at the University of Cincinnati she supported collegiate athletes through Bearcat's Fuel Station, preparing individualized pre- and post-game nutrition and creating athlete nutrition content during COVID-19.",
+      "Kristina holds a Master of Science in Dietetics and a Bachelor of Science in Dietetics from the University of Cincinnati, with a minor in psychology. She is passionate about helping children and adolescents build sustainable habits that support long-term well-being."
     ]
   },
   "brooke-caplinger": {
@@ -138,6 +143,10 @@
       "Hydration",
       "Plant-based",
       "Sleep & recovery"
+    ],
+    "background": [
+      "Since 2023, Nilüfer has run Wellness with Nilufer, a remote coaching practice where she works one-on-one with clients to build sustainable habits, achievable goals, and personalized wellness plans. Her approach is whole-body and holistic, treating mental, physical, and everyday routines as interconnected parts of overall wellbeing. Through her practice she also publishes a health and cooking blog.",
+      "Her coaching draws on a certificate from the Institute for Integrative Nutrition and a psychology degree from Furman University, and centers on everyday nutrition: meals people can actually repeat, cutting back on sugar, staying hydrated, plant-forward and budget-friendly eating, and the sleep and recovery habits that make those changes stick."
     ]
   },
   "michaela-gleed": {
@@ -151,6 +160,10 @@
       "Busy-schedule programming",
       "Beginner lifting",
       "Sleep & recovery"
+    ],
+    "background": [
+      "Since 2020, Michaela has been the Founder and Lead Instructor of Habitual in South Carolina, where she blends the mindfulness and breath work of yoga, the technique and control of Pilates, and the strength and discipline of high-intensity interval training to help clients build sustainable wellness routines. In parallel, she works as a private yoga instructor, credentialed through Yoga Alliance, teaching one-on-one sessions focused on meditation, movement, and breath work in the Greenville and Spartanburg area.",
+      "Before Habitual she worked as a personal trainer at 9Round Fitness (2019–2020). She holds NASM Certified Personal Trainer and NASM Nutrition certifications, Mat Level 1 Pilates, and Yoga Alliance credentials."
     ]
   },
   "jerome-bacon-iii": {
@@ -177,6 +190,10 @@
       "Hypertension-safe training",
       "Busy-schedule programming",
       "Mobility"
+    ],
+    "background": [
+      "Libby is an exercise physiologist who began her career in Cardiology at The Christ Hospital in Cincinnati before joining Cincinnati Children's Hospital, where she spent three years in an obesity management clinic.",
+      "There she worked with patients and families to build healthier lifestyles through structured exercise, and taught free community exercise classes for children. She holds a Bachelor of Science in Exercise Science from Bowling Green State University and is NASM certified."
     ]
   },
   "taylor-duckett": {
@@ -190,6 +207,11 @@
       "Home workouts",
       "Busy-schedule programming",
       "Body recomposition"
+    ],
+    "advisorRole": "",
+    "background": [
+      "Taylor is a personal trainer and strength coach who began personal training and teaching group exercise classes in college in 2015. Since then she has worked with hundreds of clients of all ages and fitness levels to help them reach their goals, and has recently expanded into online coaching to support people well beyond her local area.",
+      "Based in South Carolina, she trains for her own races between coaching sessions and holds a NASM Certified Strength Coach credential."
     ]
   },
   "katie-callo": {
@@ -204,19 +226,28 @@
       "Return from injury",
       "Type 2 diabetes",
       "Prediabetes & A1c"
+    ],
+    "background": [
+      "Katie is a certified personal trainer, group fitness instructor, and Pilates instructor with UCLA Recreation's FITWELL program in Los Angeles, and a Guinness World Record holder for the heaviest weighted hip thrust by a female (605 lbs). She leads GroupX classes that combine mat Pilates with total-body strength and conditioning, supports Workstrong candidates through virtual and in-person rehab and cross-training, and builds personalized programs for goals like weight loss, strength, hypertrophy, and cardiovascular health.",
+      "She is a Certified Personal Trainer and Certified Pilates Instructor through the International Sports Sciences Association (ISSA), and a Certified Diabetes Prevention Program coach through UCLA Health, which informs her work with clients managing prediabetes and type 2 diabetes.",
+      "Her coaching style sits at the intersection of performance, movement quality, and practical habit building."
     ]
   },
   "michael-hawkins": {
     "kind": "e",
     "cred": "ISSA Certified Strength Coach",
     "states": "All states",
-    "bio": "Certified strength coach with more than 25 years of dual experience in business and fitness, coaching people who have to fit training around a demanding schedule.",
+    "bio": "Certified strength coach with 25 years of consistent training who coaches people fitting workouts around a demanding career.",
     "specs": [
       "Building strength",
       "Busy-schedule programming",
       "Beginner lifting",
       "Home workouts",
       "Muscle gain"
+    ],
+    "background": [
+      "Michael is an ISSA-certified personal trainer with a 25-year commitment to strength training and overall wellness. He coaches people who have to fit training around a demanding career, something he has done himself across a long career in business, and his programming emphasizes discipline, proper form, and injury prevention.",
+      "His experience spans strength training, conditioning, and developing structured fitness routines tailored to specific goals."
     ]
   },
   "aaron-snyder": {
