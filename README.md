@@ -229,7 +229,7 @@ No data fetching beyond the optional lead POST. All content is static and can be
 - Bundled: `assets/logo.png` (red-panda "Shifu" mark, used only in Logo Ideas), `assets/favicon.png` (favicon on every page), `assets/team/` (every roster photo plus `coach-spencer.jpeg`, copied from the live site by `gen-team.mjs`; referenced as `assets/team/<file>` in `shifu-team.js`).
 - University logos are self-hosted in `assets/universities/`, testimonial photos in `assets/testimonials/`. Nothing hot-links to shifu.health any more (the old Astro site is being replaced by these pages at that domain; its Vercel deployment at `docnition-landing.vercel.app` keeps serving the waitlist API).
 - No team photos are missing any more; `<image-slot>` is no longer used for people.
-- Employer logos (Google, Apple, Rootly AI, Orthogonal, Asana, Waymo, Pivot Robotics) are SVGs in `assets/employers/`, shown 22px tall (Apple glyph 26px), grayscale, 60% opacity, like the university wall. They are the companies' own marks pulled from Wikimedia Commons and the companies' sites; confirm permission before shipping. The Apple glyph on "iOS app" is a 16px inline SVG in `currentColor`.
+- Employer logos (Google, Apple, Rootly AI, Orthogonal, Asana, Waymo, Pivot Robotics) are SVGs in `assets/employers/`, shown 22px tall (Apple glyph 26px), grayscale, 60% opacity, like the university wall. They are the companies' own marks pulled from Wikimedia Commons and the companies' sites (Orthogonal is orthogonal.com: its quarter-disc mark, redrawn as SVG, shown with the name beside it as on their site); confirm permission before shipping. The Apple glyph on "iOS app" is a 16px inline SVG in `currentColor`.
 
 ## Open items
 - Logo not chosen; wordmark is plain text.
