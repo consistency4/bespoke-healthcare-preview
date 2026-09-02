@@ -7,6 +7,9 @@
 }
 
 @media (max-width: 720px) {
+  /* belt and braces: nothing may widen the page on a phone */
+  html, body { overflow-x: hidden; max-width: 100vw; }
+
   /* heroes sit closer to the nav on phones (desktop: 168px home, 140px elsewhere) */
   [style*="padding:168px"], [style*="padding: 168px"], [style*="padding:140px"], [style*="padding: 140px"] { padding-top: 104px !important; }
 

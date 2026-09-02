@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="/assets/favicon.png">
-  <link rel="stylesheet" href="/mobile.css?v=519c79ea">
+  <link rel="stylesheet" href="/mobile.css?v=17028ed4">
   <script src="/image-slot.js?v=22a948e0"></script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -23,7 +23,7 @@
     body{font-family:'Schibsted Grotesk',ui-sans-serif,system-ui,sans-serif;background:#FFFFFF;color:#0B0B0C;-webkit-font-smoothing:antialiased}
     a{color:#F1580D}a:hover{color:#D44A08}
     button{font-family:inherit}
-    .shifu-strip{overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+    .shifu-strip{overflow:hidden;position:relative;min-width:0;width:100%;max-width:100%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
     .shifu-strip-track{display:flex;gap:20px;width:max-content;animation:shifu-scroll linear infinite;padding:4px 0 8px}
     .shifu-card{flex:0 0 min(200px,68vw);width:min(200px,68vw);text-decoration:none;color:inherit;transition:transform .2s ease}
     .shifu-card:hover{transform:translateY(-2px)}
@@ -92,8 +92,8 @@
 </section>
 
 <section data-screen-label="Two disciplines, live" style="padding:0 32px 120px">
-  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px">
-    <div style="display:flex;flex-direction:column;gap:14px">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:20px;min-width:0">
+    <div style="display:flex;flex-direction:column;gap:14px;min-width:0;max-width:100%;overflow:hidden">
     <a href="/nutrition/" style="display:flex;flex-direction:column;justify-content:space-between;min-height:320px;padding:32px;border-radius:12px;background:#0B0B0C;color:#FFFFFF;text-decoration:none" style-hover="background:#F1580D;color:#FFFFFF">
       <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.7"><span>Live now</span><span>Registered dietitians</span></div>
       <div><div style="font-size:clamp(1.75rem,3vw,2.5rem);font-weight:600;letter-spacing:-0.04em;line-height:1.02;margin-bottom:12px">Bespoke Nutrition</div><div style="font-size:1rem;line-height:1.5;opacity:0.8;max-width:420px">Medical nutrition therapy and everyday eating: GLP-1s, diabetes, blood pressure, budget meals, gut health.</div><div style="margin-top:20px;font-weight:600">Explore nutrition →</div></div>
@@ -111,7 +111,7 @@
       </div>
       <div style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;letter-spacing:0.12em;text-transform:uppercase;color:#8A8A90;text-align:center">{{ nutritionStripLabel }}</div>
     </div>
-    <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;flex-direction:column;gap:14px;min-width:0;max-width:100%;overflow:hidden">
     <a href="/exercise/" style="display:flex;flex-direction:column;justify-content:space-between;min-height:320px;padding:32px;border-radius:12px;border:1px solid #0B0B0C;color:#0B0B0C;text-decoration:none" style-hover="background:#F4F4F1;color:#0B0B0C">
       <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70"><span>Live now</span><span>Certified exercise coaches</span></div>
       <div><div style="font-size:clamp(1.75rem,3vw,2.5rem);font-weight:600;letter-spacing:-0.04em;line-height:1.02;margin-bottom:12px">Bespoke Exercise</div><div style="font-size:1rem;line-height:1.5;color:#6B6B70;max-width:420px">Strength, endurance, mobility, and return-to-sport, programmed around the week you actually have.</div><div style="margin-top:20px;font-weight:600;color:#F1580D">Explore exercise →</div></div>
