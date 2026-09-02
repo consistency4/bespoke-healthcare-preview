@@ -466,6 +466,126 @@ window.SHIFU_SITE_TEAM = [
     "funFact": "",
     "disclaimer": "Nilüfer Ece Bozkan is a certified health and wellness coach. Her work is in holistic wellness coaching, not licensed clinical care. She does not provide medical nutrition therapy, physical therapy, or any other clinical or medical service, and her coaching is intended to support general wellness rather than diagnose or treat any condition."
   },
+  {
+    "id": "sarah-tappan",
+    "kind": "n",
+    "name": "Sarah Tappan, RD",
+    "cred": "Registered Dietitian",
+    "cardCred": "Registered Dietitian",
+    "role": "Registered Dietitian",
+    "states": "Registered Dietitian (RD)",
+    "bio": "Registered dietitian who has practiced with Foodsmart, the telehealth nutrition network, providing insurance-covered nutrition counseling.",
+    "specs": [
+      "Weight loss",
+      "Meal prep",
+      "Eating well on a budget",
+      "Cutting sugar",
+      "Hydration"
+    ],
+    "img": "/assets/team/placeholder-sarah-tappan.svg",
+    "liveImg": "",
+    "profileUrl": "https://shifu.health/team/sarah-tappan/",
+    "background": [
+      "Sarah is a Registered Dietitian who has practiced with Foodsmart, the national telehealth nutrition network, delivering personalized, insurance-covered nutrition counseling for everyday eating and weight goals."
+    ],
+    "education": [],
+    "credentials": [
+      "Registered Dietitian (RD)"
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/sarah-tappan/"
+    },
+    "dietitian": true,
+    "licensedStates": [],
+    "advisorRole": "",
+    "funFact": "",
+    "disclaimer": ""
+  },
+  {
+    "id": "kyra-tywanick",
+    "kind": "n",
+    "name": "Kyra Tywanick, MS, RDN",
+    "cred": "Registered Dietitian Nutritionist · MS · diabetes & gut health",
+    "cardCred": "Registered Dietitian",
+    "role": "Registered Dietitian",
+    "states": "Licensed in 20+ states",
+    "bio": "Registered dietitian who came up through hospitals and inpatient rehab and now runs a private practice focused on diabetes, prediabetes and gut health. Licensed in more than 20 states.",
+    "specs": [
+      "Type 2 diabetes",
+      "Prediabetes & A1c",
+      "Insulin resistance",
+      "Gut health",
+      "IBS",
+      "Reflux",
+      "Weight loss",
+      "Cholesterol"
+    ],
+    "img": "/assets/team/coach-kyra.jpg",
+    "liveImg": "",
+    "profileUrl": "https://shifu.health/team/kyra-tywanick/",
+    "background": [
+      "Kyra is a Registered Dietitian Nutritionist and a diabetes and gut-health specialist. She began in clinical nutrition, working in hospitals and inpatient rehabilitation, and now runs a private practice, Nutrition with Kyra Tywanick RDN, seeing clients virtually across the more than 20 states where she is licensed and in person in New Jersey.",
+      "Her work centers on managing and preventing conditions through personalized, evidence-based nutrition: diabetes and prediabetes, insulin resistance, weight goals, heart and kidney health, and digestive concerns such as IBS and GERD. She favors pattern recognition and practical strategies over one-size-fits-all recommendations.",
+      "Kyra earned her Master of Science in Dietetics at Rutgers University. Her interest in nutrition started in middle school, when she noticed how what she ate changed her energy, focus, and performance in school and the gym."
+    ],
+    "education": [
+      "MS: Dietetics, Rutgers University"
+    ],
+    "credentials": [
+      "Registered Dietitian Nutritionist (RDN)"
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/kyra-tywanick-4030a4109/",
+      "business": "https://kyratywanick.com/",
+      "businessLabel": "Practice"
+    },
+    "dietitian": true,
+    "licensedStates": [],
+    "advisorRole": "",
+    "funFact": "",
+    "disclaimer": ""
+  },
+  {
+    "id": "alessandra-echeverria",
+    "kind": "n",
+    "name": "Alessandra Echeverria, MS, RD",
+    "cred": "Registered Dietitian · MS Nutrition · clinical & strength",
+    "cardCred": "Registered Dietitian",
+    "role": "Registered Dietitian",
+    "states": "Registered Dietitian (RD)",
+    "bio": "Registered dietitian with an MS in Nutrition from Georgia State and clinical experience in pediatric oncology and hematology at Children's Healthcare of Atlanta. A competitive strongwoman since 2018.",
+    "specs": [
+      "Muscle gain",
+      "Body recomposition",
+      "Building strength",
+      "Weight loss",
+      "Meal prep",
+      "Hydration"
+    ],
+    "img": "/assets/team/placeholder-alessandra-echeverria.svg",
+    "liveImg": "",
+    "profileUrl": "https://shifu.health/team/alessandra-echeverria/",
+    "background": [
+      "Alessandra is a Registered Dietitian with a Master of Science in Nutrition from Georgia State University. Her clinical background is in pediatric oncology and hematology nutrition at Children's Healthcare of Atlanta, and her current work is in home enteral nutrition.",
+      "She has competed in strongwoman since 2018, with a 315-pound deadlift and a 540-pound yoke carry, and brings that first-hand experience of fueling strength training to clients working on muscle gain, body recomposition, and performance.",
+      "Alessandra holds a bachelor's degree from Trinity College."
+    ],
+    "education": [
+      "MS: Nutrition, Georgia State University",
+      "BA: Trinity College"
+    ],
+    "credentials": [
+      "Registered Dietitian (RD)"
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/alessandra-echeverria-a57b1220/"
+    },
+    "dietitian": true,
+    "licensedStates": [],
+    "advisorRole": "",
+    "funFact": "",
+    "disclaimer": ""
+  },
   /* ---------- Exercise ---------- */
   {
     "id": "michaela-gleed",
@@ -698,6 +818,48 @@ window.SHIFU_SITE_TEAM = [
     ],
     "links": {
       "linkedin": "https://www.linkedin.com/in/michael-hawkins-070709b8/"
+    },
+    "dietitian": false,
+    "licensedStates": [],
+    "advisorRole": "",
+    "funFact": "",
+    "disclaimer": ""
+  },
+  {
+    "id": "michael-georgescu",
+    "kind": "e",
+    "name": "Michael Georgescu, CPT, CSCS",
+    "cred": "Certified Personal Trainer · CSCS · Corrective & Performance Enhancement Specialist",
+    "cardCred": "Certified Strength Coach",
+    "role": "Personal Trainer + Strength and Conditioning Specialist",
+    "states": "All states",
+    "bio": "Certified personal trainer and strength and conditioning specialist with corrective-exercise, performance-enhancement and yoga certifications, coaching strength, sports performance and conditioning in Savannah, Georgia.",
+    "specs": [
+      "Building strength",
+      "Beginner lifting",
+      "Muscle gain",
+      "Mobility",
+      "Return from injury",
+      "Home workouts",
+      "Busy-schedule programming"
+    ],
+    "img": "/assets/team/coach-michael-georgescu.jpg",
+    "liveImg": "",
+    "profileUrl": "https://shifu.health/team/michael-georgescu/",
+    "background": [
+      "Michael is a Certified Personal Trainer and Certified Strength and Conditioning Specialist who also holds Corrective Exercise Specialist, Performance Enhancement Specialist, and yoga instructor certifications. He coaches strength training, sports performance, conditioning, kettlebell and interval work, and mobility, in person in Savannah, Georgia and online.",
+      "He came to coaching from years in the weight room and competitive lacrosse, and describes his sessions as high-energy and matched to what each client wants from training, from body transformation to athletic performance."
+    ],
+    "education": [],
+    "credentials": [
+      "Certified Personal Trainer (CPT)",
+      "Certified Strength and Conditioning Specialist (CSCS)",
+      "Corrective Exercise Specialist (CES)",
+      "Performance Enhancement Specialist (PES)",
+      "Certified Yoga Instructor (CYI)"
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/michael-georgescu-cpt-ces-pes-cscs-cyi-2878b8226/"
     },
     "dietitian": false,
     "licensedStates": [],

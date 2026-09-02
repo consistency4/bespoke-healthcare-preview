@@ -134,7 +134,7 @@ class Component extends DCLogic {
   renderVals() {
     // Care team for this goal, by id from shifu-team.js (the live shifu.health roster). The first person
     // answers the consult mock below. Pick people whose Coverage topics match the goal.
-    const ids = ["michelle-wolff","nilufer-ece-bozkan"];
+    const ids = ["michelle-wolff","kyra-tywanick"];
     const extras = {};
     const roster = (typeof window !== "undefined" && window.SHIFU_SITE_TEAM) || [];
     const people = ids.map(id => roster.find(m => m.id === id) || extras[id]).filter(Boolean);

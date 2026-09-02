@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://shifu.health/goals/managing-diabetes/">
-<script src="/shifu-team.js?v=63b44981"></script>
+<script src="/shifu-team.js?v=11e04828"></script>
 <script src="/support.js?v=2e38395c"></script>
 <script src="/start-modal.js?v=0969cd9a"></script>
 <script src="/site-nav.js?v=629a6de5"></script>
@@ -136,7 +136,7 @@ class Component extends DCLogic {
   renderVals() {
     // Care team for this goal, by id from shifu-team.js (the live shifu.health roster). The first person
     // answers the consult mock below. Pick people whose Coverage topics match the goal.
-    const ids = ["jessica-weissman","nickie-patel"];
+    const ids = ["jessica-weissman","kyra-tywanick"];
     const extras = {};
     const roster = (typeof window !== "undefined" && window.SHIFU_SITE_TEAM) || [];
     const people = ids.map(id => roster.find(m => m.id === id) || extras[id]).filter(Boolean);

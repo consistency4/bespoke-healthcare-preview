@@ -58,8 +58,12 @@ const people = Object.entries(overlay).map(([id, card]) => {
   const src = roster.get(id) || card.person;
   const livePhoto = src.photo.split('?')[0]; // "/assets/coach-x.png"
   const file = basename(livePhoto);
-  copyFileSync(join(SITE_ROOT, livePhoto), join(PHOTO_DIR, file));
-  shrink(join(PHOTO_DIR, file));
+  if (src.photoLocal) {
+    // placeholder or hand-supplied photo already in assets/team/ (people not on the live site yet)
+  } else {
+    copyFileSync(join(SITE_ROOT, livePhoto), join(PHOTO_DIR, file));
+    shrink(join(PHOTO_DIR, file));
+  }
   return {
     id,
     kind: card.kind,
@@ -71,7 +75,7 @@ const people = Object.entries(overlay).map(([id, card]) => {
     bio: card.bio,
     specs: card.specs,
     img: '/assets/team/' + file, // root-absolute: pages are served from clean routes like /nutrition/
-    liveImg: LIVE_ORIGIN + livePhoto,
+    liveImg: src.photoLocal ? '' : LIVE_ORIGIN + livePhoto,
     profileUrl: LIVE_ORIGIN + '/team/' + id + '/',
     background: card.background ?? src.background ?? [], // overlay override: keep the text to the job they do here
     education: src.education ?? [],
