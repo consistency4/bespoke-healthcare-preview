@@ -70,7 +70,7 @@ const people = Object.entries(overlay).map(([id, card]) => {
     states: card.states,
     bio: card.bio,
     specs: card.specs,
-    img: 'assets/team/' + file,
+    img: '/assets/team/' + file, // root-absolute: pages are served from clean routes like /nutrition/
     liveImg: LIVE_ORIGIN + livePhoto,
     profileUrl: LIVE_ORIGIN + '/team/' + id + '/',
     background: src.background ?? [],

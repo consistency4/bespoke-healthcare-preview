@@ -1,0 +1,64 @@
+/* Phone and small-tablet adjustments shared by every page (linked from each page's <helmet>).
+   The pages use inline styles, so these rules override with !important and match on inline-style text. */
+
+/* Nav: below 900px only the wordmark and the Start button stay (the discipline pages also do this via state). */
+@media (max-width: 900px) {
+  a.nav-link { display: none !important; }
+}
+
+@media (max-width: 720px) {
+  /* tighter page gutters: 375px phones get 335px of content */
+  section, footer { padding-left: 20px !important; padding-right: 20px !important; }
+  nav > div { padding-left: 20px !important; padding-right: 20px !important; }
+  nav .nav-wordmark { gap: 10px !important; }
+
+  /* two-column headers and card pairs stack (a 320px minimum overflows a 320-360px phone) */
+  [style*="minmax(320px"] { grid-template-columns: 1fr !important; }
+  /* Coverage topic rows: label above the chips */
+  [style*="minmax(200px,0.8fr)"], [style*="minmax(200px, 0.8fr)"] { grid-template-columns: 1fr !important; }
+  /* discipline "day" section: Shifu panel under the copy */
+  [style*="minmax(0,0.9fr)"], [style*="minmax(0, 0.9fr)"] { grid-template-columns: 1fr !important; }
+  /* privacy columns: drop the right rules and margins when stacked */
+  [style*="padding:32px 28px 32px 0"], [style*="padding: 32px 28px 32px 0px"] { border-right: none !important; margin-right: 0 !important; padding: 24px 0 !important; }
+  /* plan columns: no right rule when stacked */
+  [style*="border-right:1px solid #E3E3E0"], [style*="border-right: 1px solid rgb(227, 227, 224)"] { border-right: none !important; }
+
+  /* discipline "day" section (the runtime writes 0 as 0px) */
+  [style*="minmax(0px, 0.9fr)"] { grid-template-columns: 1fr !important; }
+  /* segmented "Live video call | Async check-in" tabs: full width, sub-labels hidden */
+  [style*="width:fit-content;margin-bottom:32px"], [style*="width: fit-content; margin-bottom: 32px"] { width: 100% !important; }
+  [style*="width:fit-content;margin-bottom:32px"] > button, [style*="width: fit-content; margin-bottom: 32px"] > button { flex: 1 1 0; justify-content: center; padding: 12px 8px !important; }
+  [style*="opacity:0.7;margin-left:8px"], [style*="opacity: 0.7; margin-left: 8px"] { display: none !important; }
+
+  /* day timeline times row: six labels need a smaller mono size to fit */
+  [style*="justify-content:space-between;margin-top:16px"], [style*="justify-content: space-between; margin-top: 16px"] { font-size: 0.5625rem !important; }
+
+  /* profile modal: photo above the name on phones */
+  [role="dialog"] { padding: 28px 20px !important; }
+  [role="dialog"] > div:first-of-type { padding-right: 32px !important; flex-direction: column !important; gap: 16px !important; }
+  [role="dialog"] > div:first-of-type > img { width: 96px !important; height: 96px !important; }
+  /* dark "Private by design" band: no vertical rules when the columns stack */
+  [style*="border-right:1px solid #2A2A2E"], [style*="border-right: 1px solid rgb(42, 42, 46)"] { border-right: none !important; padding-right: 0 !important; }
+
+  /* hero and footer buttons go full width */
+  [style*="padding:16px 26px"], [style*="padding: 16px 26px"],
+  [style*="padding:16px 22px"], [style*="padding: 16px 22px"],
+  [style*="padding:16px 28px"], [style*="padding: 16px 28px"] { flex: 1 1 100%; text-align: center; justify-content: center; }
+
+  /* big type steps down a little more than the clamps allow */
+  h1 { font-size: clamp(2.25rem, 11vw, 3.25rem) !important; }
+  h2 { font-size: clamp(1.75rem, 8vw, 2.25rem) !important; }
+}
+
+@media (max-width: 480px) {
+  /* card grids that only just fit at 720 go single column on narrow phones */
+  [style*="minmax(300px"] { grid-template-columns: 1fr !important; }
+  [style*="minmax(280px"] { grid-template-columns: 1fr !important; }
+  [style*="minmax(260px"] { grid-template-columns: 1fr !important; }
+  [style*="minmax(250px"] { grid-template-columns: 1fr !important; }
+  /* face grids: three across */
+  [style*="minmax(170px"], [style*="minmax(150px"], [style*="minmax(118px"] { grid-template-columns: repeat(3, 1fr) !important; }
+  [style*="minmax(110px"] { grid-template-columns: repeat(3, 1fr) !important; }
+  /* home discipline tiles: two across */
+  [style*="minmax(150px,1fr));gap:12px"], [style*="minmax(150px, 1fr)); gap: 12px"] { grid-template-columns: repeat(2, 1fr) !important; }
+}

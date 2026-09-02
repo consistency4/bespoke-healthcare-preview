@@ -3,17 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./shifu-team.js"></script>
-<script src="./support.js"></script>
-<script src="./start-modal.js"></script>
+<script src="/shifu-team.js"></script>
+<script src="/support.js"></script>
+<script src="/start-modal.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <script src="./image-slot.js"></script>
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="stylesheet" href="/mobile.css">
+  <script src="/image-slot.js"></script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
@@ -37,11 +38,11 @@
   <div style="max-width:1200px;margin:0 auto;padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px">
     <a href="#" style="font-weight:700;font-size:1rem;letter-spacing:-0.02em;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Shifu Health</a>
     <div style="display:flex;align-items:center;gap:28px">
-      <a href="Bespoke Nutrition v3.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Nutrition</a>
-      <a href="Bespoke Exercise v3.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Exercise</a>
-      <a href="Coverage.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Coverage</a>
-      <a href="Manifesto.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Manifesto</a>
-      <a href="#plans" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Plans</a>
+      <a class="nav-link" href="/nutrition/" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Nutrition</a>
+      <a class="nav-link" href="/exercise/" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Exercise</a>
+      <a class="nav-link" href="/coverage/" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Coverage</a>
+      <a class="nav-link" href="/manifesto/" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Manifesto</a>
+      <a class="nav-link" href="#plans" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Plans</a>
       <a href="{{ startHref }}" style="padding:10px 18px;border-radius:6px;background:#0B0B0C;color:#FFFFFF;font-size:0.875rem;font-weight:600;text-decoration:none;white-space:nowrap" style-hover="background:#F1580D;color:#FFFFFF">Start Today</a>
     </div>
   </div>
@@ -62,7 +63,7 @@
     </div>
     <div style="width:100%;margin-top:88px;padding:24px 0;border-top:1px solid #E3E3E0;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px 40px">
       <span style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70">Trusted by employees at</span>
-      <img src="assets/employers/google.svg" alt="Google" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6"><img src="assets/employers/apple.svg" alt="Apple" style="height:26px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6"><img src="assets/employers/rootly.svg" alt="Rootly AI" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6"><img src="assets/employers/orthogonal.svg" alt="Orthogonal" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6"><img src="assets/employers/asana.svg" alt="Asana" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6"><img src="assets/employers/waymo.svg" alt="Waymo" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6"><img src="assets/employers/pivot-robotics.svg" alt="Pivot Robotics" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="/assets/employers/google.svg" alt="Google" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6"><img src="/assets/employers/apple.svg" alt="Apple" style="height:26px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6"><img src="/assets/employers/rootly.svg" alt="Rootly AI" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6"><img src="/assets/employers/orthogonal.svg" alt="Orthogonal" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6"><img src="/assets/employers/asana.svg" alt="Asana" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6"><img src="/assets/employers/waymo.svg" alt="Waymo" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6"><img src="/assets/employers/pivot-robotics.svg" alt="Pivot Robotics" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6">
     </div>
   </div>
 </section>
@@ -91,7 +92,7 @@
 <section data-screen-label="Two disciplines, live" style="padding:0 32px 120px">
   <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px">
     <div style="display:flex;flex-direction:column;gap:14px">
-    <a href="Bespoke Nutrition v3.dc.html" style="display:flex;flex-direction:column;justify-content:space-between;min-height:320px;padding:32px;border-radius:12px;background:#0B0B0C;color:#FFFFFF;text-decoration:none" style-hover="background:#F1580D;color:#FFFFFF">
+    <a href="/nutrition/" style="display:flex;flex-direction:column;justify-content:space-between;min-height:320px;padding:32px;border-radius:12px;background:#0B0B0C;color:#FFFFFF;text-decoration:none" style-hover="background:#F1580D;color:#FFFFFF">
       <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.7"><span>Live now</span><span>Registered dietitians</span></div>
       <div><div style="font-size:clamp(1.75rem,3vw,2.5rem);font-weight:600;letter-spacing:-0.04em;line-height:1.02;margin-bottom:12px">Bespoke Nutrition</div><div style="font-size:1rem;line-height:1.5;opacity:0.8;max-width:420px">Medical nutrition therapy and everyday eating: GLP-1s, diabetes, blood pressure, budget meals, gut health.</div><div style="margin-top:20px;font-weight:600">Explore nutrition →</div></div>
     </a>
@@ -109,7 +110,7 @@
       <div style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;letter-spacing:0.12em;text-transform:uppercase;color:#8A8A90;text-align:center">{{ nutritionStripLabel }}</div>
     </div>
     <div style="display:flex;flex-direction:column;gap:14px">
-    <a href="Bespoke Exercise v3.dc.html" style="display:flex;flex-direction:column;justify-content:space-between;min-height:320px;padding:32px;border-radius:12px;border:1px solid #0B0B0C;color:#0B0B0C;text-decoration:none" style-hover="background:#F4F4F1;color:#0B0B0C">
+    <a href="/exercise/" style="display:flex;flex-direction:column;justify-content:space-between;min-height:320px;padding:32px;border-radius:12px;border:1px solid #0B0B0C;color:#0B0B0C;text-decoration:none" style-hover="background:#F4F4F1;color:#0B0B0C">
       <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70"><span>Live now</span><span>Certified exercise coaches</span></div>
       <div><div style="font-size:clamp(1.75rem,3vw,2.5rem);font-weight:600;letter-spacing:-0.04em;line-height:1.02;margin-bottom:12px">Bespoke Exercise</div><div style="font-size:1rem;line-height:1.5;color:#6B6B70;max-width:420px">Strength, endurance, mobility, and return-to-sport, programmed around the week you actually have.</div><div style="margin-top:20px;font-weight:600;color:#F1580D">Explore exercise →</div></div>
     </a>
@@ -136,20 +137,20 @@
       <p style="font-size:1.0625rem;line-height:1.5;color:#6B6B70">Each example shows Shifu and a licensed expert working the same goal, side by side.</p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px">
-      <a href="Goal - lower-blood-pressure.dc.html" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid #E3E3E0;border-radius:6px;color:#0B0B0C;text-decoration:none;font-weight:600" style-hover="border-color:#0B0B0C;color:#0B0B0C"><span>Lower blood pressure</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">RD + COACH</span></a>
-      <a href="Goal - glp-1-guidance.dc.html" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid #E3E3E0;border-radius:6px;color:#0B0B0C;text-decoration:none;font-weight:600" style-hover="border-color:#0B0B0C;color:#0B0B0C"><span>GLP-1 guidance</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">RD</span></a>
-      <a href="Goal - managing-diabetes.dc.html" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid #E3E3E0;border-radius:6px;color:#0B0B0C;text-decoration:none;font-weight:600" style-hover="border-color:#0B0B0C;color:#0B0B0C"><span>Managing diabetes</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">RD</span></a>
-      <a href="Goal - losing-10-pounds.dc.html" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid #E3E3E0;border-radius:6px;color:#0B0B0C;text-decoration:none;font-weight:600" style-hover="border-color:#0B0B0C;color:#0B0B0C"><span>Losing 10 pounds</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">RD + COACH</span></a>
-      <a href="Goal - building-strength.dc.html" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid #E3E3E0;border-radius:6px;color:#0B0B0C;text-decoration:none;font-weight:600" style-hover="border-color:#0B0B0C;color:#0B0B0C"><span>Building strength</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">COACH</span></a>
-      <a href="Goal - a-half-marathon.dc.html" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid #E3E3E0;border-radius:6px;color:#0B0B0C;text-decoration:none;font-weight:600" style-hover="border-color:#0B0B0C;color:#0B0B0C"><span>A half marathon</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">COACH</span></a>
-      <a href="Goal - eating-well-on-a-budget.dc.html" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid #E3E3E0;border-radius:6px;color:#0B0B0C;text-decoration:none;font-weight:600" style-hover="border-color:#0B0B0C;color:#0B0B0C"><span>Eating well on a budget</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">RD</span></a>
-      <a href="Goal - recovering-from-an-injury.dc.html" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid #E3E3E0;border-radius:6px;color:#0B0B0C;text-decoration:none;font-weight:600" style-hover="border-color:#0B0B0C;color:#0B0B0C"><span>Recovering from an injury</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">COACH</span></a>
-      <a href="Goal - cutting-sugar.dc.html" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid #E3E3E0;border-radius:6px;color:#0B0B0C;text-decoration:none;font-weight:600" style-hover="border-color:#0B0B0C;color:#0B0B0C"><span>Cutting sugar</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">RD</span></a>
-      <a href="Goal - sleeping-better.dc.html" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid #E3E3E0;border-radius:6px;color:#0B0B0C;text-decoration:none;font-weight:600" style-hover="border-color:#0B0B0C;color:#0B0B0C"><span>Sleeping better</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">RD + COACH</span></a>
-      <a href="Goal - moving-more.dc.html" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid #E3E3E0;border-radius:6px;color:#0B0B0C;text-decoration:none;font-weight:600" style-hover="border-color:#0B0B0C;color:#0B0B0C"><span>Moving more</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">COACH</span></a>
-      <a href="Goal - gut-health.dc.html" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid #E3E3E0;border-radius:6px;color:#0B0B0C;text-decoration:none;font-weight:600" style-hover="border-color:#0B0B0C;color:#0B0B0C"><span>Gut health</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">RD</span></a>
+      <a href="/goals/lower-blood-pressure/" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid #E3E3E0;border-radius:6px;color:#0B0B0C;text-decoration:none;font-weight:600" style-hover="border-color:#0B0B0C;color:#0B0B0C"><span>Lower blood pressure</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">RD + COACH</span></a>
+      <a href="/goals/glp-1-guidance/" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid #E3E3E0;border-radius:6px;color:#0B0B0C;text-decoration:none;font-weight:600" style-hover="border-color:#0B0B0C;color:#0B0B0C"><span>GLP-1 guidance</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">RD</span></a>
+      <a href="/goals/managing-diabetes/" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid #E3E3E0;border-radius:6px;color:#0B0B0C;text-decoration:none;font-weight:600" style-hover="border-color:#0B0B0C;color:#0B0B0C"><span>Managing diabetes</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">RD</span></a>
+      <a href="/goals/losing-10-pounds/" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid #E3E3E0;border-radius:6px;color:#0B0B0C;text-decoration:none;font-weight:600" style-hover="border-color:#0B0B0C;color:#0B0B0C"><span>Losing 10 pounds</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">RD + COACH</span></a>
+      <a href="/goals/building-strength/" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid #E3E3E0;border-radius:6px;color:#0B0B0C;text-decoration:none;font-weight:600" style-hover="border-color:#0B0B0C;color:#0B0B0C"><span>Building strength</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">COACH</span></a>
+      <a href="/goals/a-half-marathon/" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid #E3E3E0;border-radius:6px;color:#0B0B0C;text-decoration:none;font-weight:600" style-hover="border-color:#0B0B0C;color:#0B0B0C"><span>A half marathon</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">COACH</span></a>
+      <a href="/goals/eating-well-on-a-budget/" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid #E3E3E0;border-radius:6px;color:#0B0B0C;text-decoration:none;font-weight:600" style-hover="border-color:#0B0B0C;color:#0B0B0C"><span>Eating well on a budget</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">RD</span></a>
+      <a href="/goals/recovering-from-an-injury/" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid #E3E3E0;border-radius:6px;color:#0B0B0C;text-decoration:none;font-weight:600" style-hover="border-color:#0B0B0C;color:#0B0B0C"><span>Recovering from an injury</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">COACH</span></a>
+      <a href="/goals/cutting-sugar/" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid #E3E3E0;border-radius:6px;color:#0B0B0C;text-decoration:none;font-weight:600" style-hover="border-color:#0B0B0C;color:#0B0B0C"><span>Cutting sugar</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">RD</span></a>
+      <a href="/goals/sleeping-better/" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid #E3E3E0;border-radius:6px;color:#0B0B0C;text-decoration:none;font-weight:600" style-hover="border-color:#0B0B0C;color:#0B0B0C"><span>Sleeping better</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">RD + COACH</span></a>
+      <a href="/goals/moving-more/" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid #E3E3E0;border-radius:6px;color:#0B0B0C;text-decoration:none;font-weight:600" style-hover="border-color:#0B0B0C;color:#0B0B0C"><span>Moving more</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">COACH</span></a>
+      <a href="/goals/gut-health/" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid #E3E3E0;border-radius:6px;color:#0B0B0C;text-decoration:none;font-weight:600" style-hover="border-color:#0B0B0C;color:#0B0B0C"><span>Gut health</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">RD</span></a>
     </div>
-    <div style="margin-top:20px"><a href="Coverage.dc.html" style="font-weight:600;font-size:0.9375rem;text-decoration:none;border-bottom:1px solid #F1580D">Everything we cover, and the full team →</a></div>
+    <div style="margin-top:20px"><a href="/coverage/" style="font-weight:600;font-size:0.9375rem;text-decoration:none;border-bottom:1px solid #F1580D">Everything we cover, and the full team →</a></div>
   </div>
 </section>
 
@@ -209,7 +210,7 @@
     </div>
     <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:20px;padding-top:28px;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70">
       <span>© 2026 Supamill Inc (DBA Shifu Health) · General wellness guidance only. Not medical advice, diagnosis, or treatment.</span>
-      <div style="display:flex;gap:24px"><a href="Bespoke Nutrition v3.dc.html" style="color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Nutrition</a><a href="Bespoke Exercise v3.dc.html" style="color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Exercise</a><a href="Coverage.dc.html" style="color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Coverage</a><a href="Manifesto.dc.html" style="color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Manifesto</a><a href="#" style="color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Privacy</a><a href="#" style="color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Terms</a></div>
+      <div style="display:flex;gap:24px"><a href="/nutrition/" style="color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Nutrition</a><a href="/exercise/" style="color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Exercise</a><a href="/coverage/" style="color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Coverage</a><a href="/manifesto/" style="color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Manifesto</a><a href="#" style="color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Privacy</a><a href="#" style="color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Terms</a></div>
     </div>
   </div>
 </footer>
@@ -222,8 +223,8 @@ class Component extends DCLogic {
   renderVals() {
     const INK = "#0B0B0C", NAVY = "#F1580D", MUTED = "#6B6B70", LINE = "#E3E3E0", MONO = "'IBM Plex Mono',monospace";
     const defs = [
-      { name: "Nutrition", status: "Live", who: "Registered dietitians", headline: "Medical nutrition therapy and everyday eating, from a dietitian who also sees your training.", body: "GLP-1 support, diabetes, blood pressure, cholesterol, gut health, budget meals. Written check-ins or live video calls. Shifu handles meals, groceries, and logging in between.", href: "Bespoke Nutrition v3.dc.html", linkLabel: "Explore Bespoke Nutrition →" },
-      { name: "Exercise", status: "Live", who: "Certified exercise coaches", headline: "Programming that fits the week you have, from a coach who also sees your meals.", body: "Strength, endurance, mobility, return-to-sport. Shifu moves sessions around your calendar, tracks pain and sleep, and knows when to bring your coach in.", href: "Bespoke Exercise v3.dc.html", linkLabel: "Explore Bespoke Exercise →" },
+      { name: "Nutrition", status: "Live", who: "Registered dietitians", headline: "Medical nutrition therapy and everyday eating, from a dietitian who also sees your training.", body: "GLP-1 support, diabetes, blood pressure, cholesterol, gut health, budget meals. Written check-ins or live video calls. Shifu handles meals, groceries, and logging in between.", href: "/nutrition/", linkLabel: "Explore Bespoke Nutrition →" },
+      { name: "Exercise", status: "Live", who: "Certified exercise coaches", headline: "Programming that fits the week you have, from a coach who also sees your meals.", body: "Strength, endurance, mobility, return-to-sport. Shifu moves sessions around your calendar, tracks pain and sleep, and knows when to bring your coach in.", href: "/exercise/", linkLabel: "Explore Bespoke Exercise →" },
       { name: "Physical therapy", status: "Next", who: "Licensed physical therapists", headline: "Rehab that talks to your training plan, from a PT who sees what your coach sees.", body: "Injury assessment, return-to-activity progressions, and pain tracking, shared with your coach so training never conflicts with rehab.", href: "", linkLabel: "" },
       { name: "Mental health", status: "Planned", who: "Licensed clinicians", headline: "The same model, extended to mental health: prepared context, a licensed human, one plan.", body: "Clinical psychologists join as a separate tier when we can meet the same standard. Until then, anything clinical is flagged and referred at no charge.", href: "", linkLabel: "" },
       { name: "Clinical care", status: "Planned", who: "Nurse practitioners", headline: "The disciplines that need a license to prescribe or diagnose, added when the model is ready for them.", body: "Every consult is recorded: who saw it, what changed, and why. That record is the foundation for clinical care and, later, reimbursement.", href: "", linkLabel: "" },
@@ -237,7 +238,7 @@ class Component extends DCLogic {
       const list = roster.filter(m => m.kind === kind);
       // the track scrolls exactly half its width, so the list has to be laid out twice
       return list.concat(list).map(m => ({
-        name: m.name, cred: m.cardCred || m.cred, img: m.img, href: "Coverage.dc.html?profile=" + m.id + "#team",
+        name: m.name, cred: m.cardCred || m.cred, img: m.img, href: "/coverage/?profile=" + m.id + "#team",
       }));
     };
     const countLabel = (kind, plural) => {

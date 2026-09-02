@@ -23,7 +23,7 @@ window.SHIFU_SITE_TEAM = [
       "Meal prep",
       "Body recomposition"
     ],
-    "img": "assets/team/coach-isabel.png",
+    "img": "/assets/team/coach-isabel.png",
     "liveImg": "https://shifu.health/assets/coach-isabel.png",
     "profileUrl": "https://shifu.health/team/isabel-zimmermann/",
     "background": [
@@ -63,7 +63,7 @@ window.SHIFU_SITE_TEAM = [
       "Eating well on a budget",
       "Plateaus"
     ],
-    "img": "assets/team/coach-kristina.png",
+    "img": "/assets/team/coach-kristina.png",
     "liveImg": "https://shifu.health/assets/coach-kristina.png",
     "profileUrl": "https://shifu.health/team/kristina-bauer/",
     "background": [
@@ -107,7 +107,7 @@ window.SHIFU_SITE_TEAM = [
       "Meal prep",
       "Beginner lifting"
     ],
-    "img": "assets/team/coach-brooke.png",
+    "img": "/assets/team/coach-brooke.png",
     "liveImg": "https://shifu.health/assets/coach-brooke.png",
     "profileUrl": "https://shifu.health/team/brooke-caplinger/",
     "background": [
@@ -154,7 +154,7 @@ window.SHIFU_SITE_TEAM = [
       "Body recomposition",
       "Meal prep"
     ],
-    "img": "assets/team/coach-nickie.png",
+    "img": "/assets/team/coach-nickie.png",
     "liveImg": "https://shifu.health/assets/coach-nickie.png",
     "profileUrl": "https://shifu.health/team/nickie-patel/",
     "background": [
@@ -213,7 +213,7 @@ window.SHIFU_SITE_TEAM = [
       "Cholesterol",
       "Blood pressure"
     ],
-    "img": "assets/team/coach-emily-levin.png",
+    "img": "/assets/team/coach-emily-levin.png",
     "liveImg": "https://shifu.health/assets/coach-emily-levin.png",
     "profileUrl": "https://shifu.health/team/emily-levin/",
     "background": [
@@ -253,7 +253,7 @@ window.SHIFU_SITE_TEAM = [
       "Weight loss",
       "Hydration"
     ],
-    "img": "assets/team/coach-ashley-art.png",
+    "img": "/assets/team/coach-ashley-art.png",
     "liveImg": "https://shifu.health/assets/coach-ashley-art.png",
     "profileUrl": "https://shifu.health/team/ashley-art/",
     "background": [
@@ -297,7 +297,7 @@ window.SHIFU_SITE_TEAM = [
       "Eating out & travel",
       "Hydration"
     ],
-    "img": "assets/team/coach-michelle-wolff.png",
+    "img": "/assets/team/coach-michelle-wolff.png",
     "liveImg": "https://shifu.health/assets/coach-michelle-wolff.png",
     "profileUrl": "https://shifu.health/team/michelle-wolff/",
     "background": [
@@ -356,7 +356,7 @@ window.SHIFU_SITE_TEAM = [
       "Plateaus",
       "Beginner lifting"
     ],
-    "img": "assets/team/coach-jessica-weissman.png",
+    "img": "/assets/team/coach-jessica-weissman.png",
     "liveImg": "https://shifu.health/assets/coach-jessica-weissman.png",
     "profileUrl": "https://shifu.health/team/jessica-weissman/",
     "background": [
@@ -403,7 +403,7 @@ window.SHIFU_SITE_TEAM = [
       "Hydration",
       "Meal prep"
     ],
-    "img": "assets/team/coach-christopher-peterson.png",
+    "img": "/assets/team/coach-christopher-peterson.png",
     "liveImg": "https://shifu.health/assets/coach-christopher-peterson.png",
     "profileUrl": "https://shifu.health/team/christopher-peterson/",
     "background": [
@@ -444,7 +444,7 @@ window.SHIFU_SITE_TEAM = [
       "Plant-based",
       "Sleep & recovery"
     ],
-    "img": "assets/team/coach-nilufer.png",
+    "img": "/assets/team/coach-nilufer.png",
     "liveImg": "https://shifu.health/assets/coach-nilufer.png",
     "profileUrl": "https://shifu.health/team/nilufer-ece-bozkan/",
     "background": [
@@ -483,7 +483,7 @@ window.SHIFU_SITE_TEAM = [
       "Beginner lifting",
       "Sleep & recovery"
     ],
-    "img": "assets/team/coach-michaela.png",
+    "img": "/assets/team/coach-michaela.png",
     "liveImg": "https://shifu.health/assets/coach-michaela.png",
     "profileUrl": "https://shifu.health/team/michaela-gleed/",
     "background": [
@@ -522,7 +522,7 @@ window.SHIFU_SITE_TEAM = [
       "Return from injury",
       "Busy-schedule programming"
     ],
-    "img": "assets/team/coach-jerome.png",
+    "img": "/assets/team/coach-jerome.png",
     "liveImg": "https://shifu.health/assets/coach-jerome.png",
     "profileUrl": "https://shifu.health/team/jerome-bacon-iii/",
     "background": [
@@ -562,7 +562,7 @@ window.SHIFU_SITE_TEAM = [
       "Busy-schedule programming",
       "Mobility"
     ],
-    "img": "assets/team/coach-libby.png",
+    "img": "/assets/team/coach-libby.png",
     "liveImg": "https://shifu.health/assets/coach-libby.png",
     "profileUrl": "https://shifu.health/team/libby-thompson/",
     "background": [
@@ -602,7 +602,7 @@ window.SHIFU_SITE_TEAM = [
       "Busy-schedule programming",
       "Body recomposition"
     ],
-    "img": "assets/team/coach-taylor.png",
+    "img": "/assets/team/coach-taylor.png",
     "liveImg": "https://shifu.health/assets/coach-taylor.png",
     "profileUrl": "https://shifu.health/team/taylor-duckett/",
     "background": [
@@ -641,7 +641,7 @@ window.SHIFU_SITE_TEAM = [
       "Type 2 diabetes",
       "Prediabetes & A1c"
     ],
-    "img": "assets/team/coach-katie-callo.png",
+    "img": "/assets/team/coach-katie-callo.png",
     "liveImg": "https://shifu.health/assets/coach-katie-callo.png",
     "profileUrl": "https://shifu.health/team/katie-callo/",
     "background": [
@@ -683,7 +683,7 @@ window.SHIFU_SITE_TEAM = [
       "Home workouts",
       "Muscle gain"
     ],
-    "img": "assets/team/coach-michael.png",
+    "img": "/assets/team/coach-michael.png",
     "liveImg": "https://shifu.health/assets/coach-michael.png",
     "profileUrl": "https://shifu.health/team/michael-hawkins/",
     "background": [
@@ -720,7 +720,7 @@ window.SHIFU_SITE_TEAM = [
       "Mobility",
       "Running injuries"
     ],
-    "img": "assets/team/coach-aaron.jpg",
+    "img": "/assets/team/coach-aaron.jpg",
     "liveImg": "https://shifu.health/assets/coach-aaron.jpg",
     "profileUrl": "https://shifu.health/team/aaron-snyder/",
     "background": [
@@ -760,7 +760,7 @@ window.SHIFU_SITE_TEAM = [
       "Mobility",
       "Building strength"
     ],
-    "img": "assets/team/coach-eric.png",
+    "img": "/assets/team/coach-eric.png",
     "liveImg": "https://shifu.health/assets/coach-eric.png",
     "profileUrl": "https://shifu.health/team/eric-lee/",
     "background": [
@@ -800,7 +800,7 @@ window.SHIFU_SITE_TEAM = [
       "Mobility",
       "Return from injury"
     ],
-    "img": "assets/team/coach-hannah.png",
+    "img": "/assets/team/coach-hannah.png",
     "liveImg": "https://shifu.health/assets/coach-hannah.png",
     "profileUrl": "https://shifu.health/team/hannah-todd/",
     "background": [
@@ -839,7 +839,7 @@ window.SHIFU_SITE_TEAM = [
       "Pregnancy & postpartum",
       "PCOS"
     ],
-    "img": "assets/team/coach-dena.png",
+    "img": "/assets/team/coach-dena.png",
     "liveImg": "https://shifu.health/assets/coach-dena.png",
     "profileUrl": "https://shifu.health/team/dena-kranzberg/",
     "background": [
@@ -879,7 +879,7 @@ window.SHIFU_SITE_TEAM = [
     "specs": [
       "Sleep & recovery"
     ],
-    "img": "assets/team/coach-grace-berger.png",
+    "img": "/assets/team/coach-grace-berger.png",
     "liveImg": "https://shifu.health/assets/coach-grace-berger.png",
     "profileUrl": "https://shifu.health/team/grace-berger/",
     "background": [
@@ -918,7 +918,7 @@ window.SHIFU_SITE_TEAM = [
     "specs": [
       "Sleep & recovery"
     ],
-    "img": "assets/team/coach-kiahlei.png",
+    "img": "/assets/team/coach-kiahlei.png",
     "liveImg": "https://shifu.health/assets/coach-kiahlei.png",
     "profileUrl": "https://shifu.health/team/kiahlei-yaste/",
     "background": [
@@ -953,7 +953,7 @@ window.SHIFU_SITE_TEAM = [
     "states": "Furman University · cross country & track",
     "bio": "Division I cross country and track at Furman, coached by national champions. A 2:28 marathoner who has coached athletes from beginner to advanced.",
     "specs": [],
-    "img": "assets/team/coach-spencer.jpeg",
+    "img": "/assets/team/coach-spencer.jpeg",
     "liveImg": "https://shifu.health/assets/coach-spencer.jpeg",
     "profileUrl": "https://shifu.health/team/spencer-tate/",
     "background": [
@@ -980,7 +980,7 @@ window.SHIFU_SITE_TEAM = [
     "states": "Georgia Tech · Emory Hospital",
     "bio": "Former lead wellness developer at Georgia Tech with an MS in computer science focused on AI. Spent two years at Emory Hospital researching women's preventive health.",
     "specs": [],
-    "img": "assets/team/coach-nemath.jpg",
+    "img": "/assets/team/coach-nemath.jpg",
     "liveImg": "https://shifu.health/assets/coach-nemath.jpg",
     "profileUrl": "https://shifu.health/team/nemath-ahmed/",
     "background": [
@@ -1007,7 +1007,7 @@ window.SHIFU_SITE_TEAM = [
     "states": "UNC Chapel Hill",
     "bio": "Previously at Elliot Davis. PhD student in history at UNC Chapel Hill studying the 2008 financial crisis.",
     "specs": [],
-    "img": "assets/team/alan.jpg",
+    "img": "/assets/team/alan.jpg",
     "liveImg": "https://shifu.health/assets/alan.jpg",
     "profileUrl": "https://shifu.health/team/alan-bi/",
     "background": [
@@ -1035,7 +1035,7 @@ window.SHIFU_SITE_TEAM = [
     "states": "Investor",
     "bio": "Serial entrepreneur, early Uber investor, host of This Week in Startups and co-host of the All-In Podcast. Founder & CEO of LAUNCH.",
     "specs": [],
-    "img": "assets/team/coach-jason.png",
+    "img": "/assets/team/coach-jason.png",
     "liveImg": "https://shifu.health/assets/coach-jason.png",
     "profileUrl": "https://shifu.health/team/jason-calacanis/",
     "background": [
@@ -1065,7 +1065,7 @@ window.SHIFU_SITE_TEAM = [
     "states": "Investor",
     "bio": "Founder and General Partner of z21 Ventures, founding member of Innovaccer, former McKinsey consultant, PhD from UC Berkeley.",
     "specs": [],
-    "img": "assets/team/coach-raj.png",
+    "img": "/assets/team/coach-raj.png",
     "liveImg": "https://shifu.health/assets/coach-raj.png",
     "profileUrl": "https://shifu.health/team/raj-shekhar-singh/",
     "background": [
@@ -1100,7 +1100,7 @@ window.SHIFU_SITE_TEAM = [
     "states": "Investor",
     "bio": "Co-Founder and CEO of Innovaccer, the healthtech company behind the Innovaccer Health Cloud, and Co-Founder of z21 Ventures.",
     "specs": [],
-    "img": "assets/team/coach-abhinav.png",
+    "img": "/assets/team/coach-abhinav.png",
     "liveImg": "https://shifu.health/assets/coach-abhinav.png",
     "profileUrl": "https://shifu.health/team/abhinav-shashank/",
     "background": [

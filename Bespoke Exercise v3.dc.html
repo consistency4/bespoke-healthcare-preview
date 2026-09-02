@@ -3,17 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./shifu-team.js"></script>
-<script src="./support.js"></script>
-<script src="./start-modal.js"></script>
+<script src="/shifu-team.js"></script>
+<script src="/support.js"></script>
+<script src="/start-modal.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <script src="./image-slot.js"></script>
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="stylesheet" href="/mobile.css">
+  <script src="/image-slot.js"></script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
@@ -28,13 +29,13 @@
 
 <nav style="position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.88);backdrop-filter:blur(14px);border-bottom:1px solid #E3E3E0">
   <div style="max-width:1200px;margin:0 auto;padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px">
-    <div style="display:flex;align-items:baseline;gap:14px"><a href="#" style="font-weight:700;font-size:1rem;letter-spacing:-0.02em;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Bespoke Exercise</a><a href="Bespoke Healthcare v3.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">by Shifu Health →</a></div>
+    <div class="nav-wordmark" style="display:flex;align-items:baseline;gap:14px"><a href="#" style="font-weight:700;font-size:1rem;letter-spacing:-0.02em;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Bespoke Exercise</a><a class="nav-link" href="/" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">by Shifu Health →</a></div>
     <div style="display:flex;align-items:center;gap:28px">
       <sc-if value="{{ wideNav }}" hint-placeholder-val="{{ true }}">
-        <a href="#coach" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Coach</a>
-        <a href="#day" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Shifu</a>
-        <a href="#team" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Full Coaching Team</a>
-        <a href="#plans" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Plans</a>
+        <a class="nav-link" href="#coach" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Coach</a>
+        <a class="nav-link" href="#day" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Shifu</a>
+        <a class="nav-link" href="#team" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Full Coaching Team</a>
+        <a class="nav-link" href="#plans" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Plans</a>
       </sc-if>
       <a href="{{ startHref }}" style="padding:10px 18px;border-radius:6px;background:#0B0B0C;color:#FFFFFF;font-size:0.875rem;font-weight:600;text-decoration:none;white-space:nowrap" style-hover="background:#F1580D;color:#FFFFFF">Start Today</a>
     </div>
@@ -48,14 +49,14 @@
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px 64px;align-items:end;margin-bottom:36px">
       <p style="font-size:1.125rem;line-height:1.5;color:#6B6B70;max-width:460px">Certified exercise coaches who program your training and adjust it as life happens. Shifu, our AI assistant, handles scheduling and reminders. From $49 a month.</p>
       <div style="display:flex;flex-wrap:wrap;gap:8px">
-        <a href="Goal - lower-blood-pressure.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.02em;border-radius:6px;padding:9px 12px;border:1px solid #E3E3E0;background:#FFFFFF;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="border-color:#0B0B0C;background:#0B0B0C;color:#FFFFFF">lower blood pressure</a>
-                        <a href="Goal - losing-10-pounds.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.02em;border-radius:6px;padding:9px 12px;border:1px solid #E3E3E0;background:#FFFFFF;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="border-color:#0B0B0C;background:#0B0B0C;color:#FFFFFF">losing 10 pounds</a>
-        <a href="Goal - building-strength.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.02em;border-radius:6px;padding:9px 12px;border:1px solid #E3E3E0;background:#FFFFFF;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="border-color:#0B0B0C;background:#0B0B0C;color:#FFFFFF">building strength</a>
-        <a href="Goal - a-half-marathon.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.02em;border-radius:6px;padding:9px 12px;border:1px solid #E3E3E0;background:#FFFFFF;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="border-color:#0B0B0C;background:#0B0B0C;color:#FFFFFF">a half marathon</a>
-                <a href="Goal - recovering-from-an-injury.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.02em;border-radius:6px;padding:9px 12px;border:1px solid #E3E3E0;background:#FFFFFF;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="border-color:#0B0B0C;background:#0B0B0C;color:#FFFFFF">recovering from an injury</a>
-                <a href="Goal - sleeping-better.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.02em;border-radius:6px;padding:9px 12px;border:1px solid #E3E3E0;background:#FFFFFF;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="border-color:#0B0B0C;background:#0B0B0C;color:#FFFFFF">sleeping better</a>
-        <a href="Goal - moving-more.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.02em;border-radius:6px;padding:9px 12px;border:1px solid #E3E3E0;background:#FFFFFF;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="border-color:#0B0B0C;background:#0B0B0C;color:#FFFFFF">moving more</a>
-                <a href="Coverage.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.02em;border-radius:6px;padding:9px 12px;border:1px dashed #A0A0A5;color:#F1580D;text-decoration:none;white-space:nowrap" style-hover="border-color:#F1580D;color:#F1580D">See everything we cover →</a>
+        <a href="/goals/lower-blood-pressure/" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.02em;border-radius:6px;padding:9px 12px;border:1px solid #E3E3E0;background:#FFFFFF;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="border-color:#0B0B0C;background:#0B0B0C;color:#FFFFFF">lower blood pressure</a>
+                        <a href="/goals/losing-10-pounds/" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.02em;border-radius:6px;padding:9px 12px;border:1px solid #E3E3E0;background:#FFFFFF;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="border-color:#0B0B0C;background:#0B0B0C;color:#FFFFFF">losing 10 pounds</a>
+        <a href="/goals/building-strength/" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.02em;border-radius:6px;padding:9px 12px;border:1px solid #E3E3E0;background:#FFFFFF;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="border-color:#0B0B0C;background:#0B0B0C;color:#FFFFFF">building strength</a>
+        <a href="/goals/a-half-marathon/" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.02em;border-radius:6px;padding:9px 12px;border:1px solid #E3E3E0;background:#FFFFFF;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="border-color:#0B0B0C;background:#0B0B0C;color:#FFFFFF">a half marathon</a>
+                <a href="/goals/recovering-from-an-injury/" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.02em;border-radius:6px;padding:9px 12px;border:1px solid #E3E3E0;background:#FFFFFF;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="border-color:#0B0B0C;background:#0B0B0C;color:#FFFFFF">recovering from an injury</a>
+                <a href="/goals/sleeping-better/" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.02em;border-radius:6px;padding:9px 12px;border:1px solid #E3E3E0;background:#FFFFFF;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="border-color:#0B0B0C;background:#0B0B0C;color:#FFFFFF">sleeping better</a>
+        <a href="/goals/moving-more/" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.02em;border-radius:6px;padding:9px 12px;border:1px solid #E3E3E0;background:#FFFFFF;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="border-color:#0B0B0C;background:#0B0B0C;color:#FFFFFF">moving more</a>
+                <a href="/coverage/" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.02em;border-radius:6px;padding:9px 12px;border:1px dashed #A0A0A5;color:#F1580D;text-decoration:none;white-space:nowrap" style-hover="border-color:#F1580D;color:#F1580D">See everything we cover →</a>
       </div>
     </div>
     <sc-if value="{{ hasPick }}" hint-placeholder-val="{{ false }}">
@@ -86,10 +87,10 @@
     </div>
     <div style="margin-top:56px;padding:24px 0;border-top:1px solid #E3E3E0;border-bottom:1px solid #E3E3E0;display:flex;flex-wrap:wrap;align-items:center;gap:16px 40px">
       <span style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70">Trusted by employees at</span>
-      <img src="assets/employers/google.svg" alt="Google" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6">
-      <img src="assets/employers/apple.svg" alt="Apple" style="height:26px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6">
-      <img src="assets/employers/rootly.svg" alt="Rootly AI" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6">
-      <img src="assets/employers/orthogonal.svg" alt="Orthogonal" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6"><img src="assets/employers/asana.svg" alt="Asana" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6"><img src="assets/employers/waymo.svg" alt="Waymo" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6"><img src="assets/employers/pivot-robotics.svg" alt="Pivot Robotics" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="/assets/employers/google.svg" alt="Google" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="/assets/employers/apple.svg" alt="Apple" style="height:26px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="/assets/employers/rootly.svg" alt="Rootly AI" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="/assets/employers/orthogonal.svg" alt="Orthogonal" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6"><img src="/assets/employers/asana.svg" alt="Asana" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6"><img src="/assets/employers/waymo.svg" alt="Waymo" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6"><img src="/assets/employers/pivot-robotics.svg" alt="Pivot Robotics" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6">
     </div>
   </div>
 </section>
@@ -108,7 +109,7 @@
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:48px 64px;align-items:center">
       <sc-if value="{{ isLive }}" hint-placeholder-val="{{ true }}">
-        <div style="position:relative;aspect-ratio:16/10;border-radius:12px;overflow:hidden;background:#0B0B0C url(assets/team/coach-spencer.jpeg) center/cover;box-shadow:0 30px 80px rgba(11,11,12,0.25)">
+        <div style="position:relative;aspect-ratio:16/10;border-radius:12px;overflow:hidden;background:#0B0B0C url(/assets/team/coach-spencer.jpeg) center/cover;box-shadow:0 30px 80px rgba(11,11,12,0.25)">
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.35) 0%,rgba(0,0,0,0) 35%,rgba(0,0,0,0) 60%,rgba(0,0,0,0.55) 100%)"></div>
           <div style="position:absolute;top:16px;left:16px;display:flex;align-items:center;gap:8px;background:rgba(0,0,0,0.45);backdrop-filter:blur(8px);border-radius:6px;padding:6px 10px;color:#FFFFFF;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem"><span style="width:7px;height:7px;border-radius:50%;background:#FF4D4D;animation:pulse 1.4s infinite"></span>LIVE · {{ callClock }}</div>
           <div style="position:absolute;top:16px;right:16px;background:rgba(0,0,0,0.45);backdrop-filter:blur(8px);border-radius:6px;padding:6px 10px;color:#FFFFFF;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem">ENCRYPTED</div>
@@ -181,7 +182,7 @@
       <div>
         <h2 style="font-weight:600;font-size:clamp(2rem,4.2vw,3.25rem);line-height:1.02;letter-spacing:-0.04em">Licensed. Certified. Visible from day one.</h2>
       </div>
-      <div><p style="font-size:1.0625rem;line-height:1.5;color:#6B6B70;margin-bottom:16px">NASM, ACSM and ISSA certified coaches, strength coaches and exercise physiologists. Available in every state. Nothing behind a paywall.</p><a href="Coverage.dc.html" style="font-weight:600;font-size:0.9375rem;color:#F1580D;text-decoration:none;border-bottom:1px solid #F1580D" style-hover="color:#D44A08">See full profiles and everything we cover →</a></div>
+      <div><p style="font-size:1.0625rem;line-height:1.5;color:#6B6B70;margin-bottom:16px">NASM, ACSM and ISSA certified coaches, strength coaches and exercise physiologists. Available in every state. Nothing behind a paywall.</p><a href="/coverage/" style="font-weight:600;font-size:0.9375rem;color:#F1580D;text-decoration:none;border-bottom:1px solid #F1580D" style-hover="color:#D44A08">See full profiles and everything we cover →</a></div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:20px 16px;margin-bottom:16px">
       <sc-for list="{{ roster }}" as="m" hint-placeholder-count="6">
@@ -191,11 +192,11 @@
     <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#8A8A90;margin-bottom:40px">{{ rosterLabel }}</div>
     <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px 40px">
       <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70">Where they studied</div>
-      <img src="assets/universities/logo-stanford.png" alt="Stanford" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
-      <img src="assets/universities/logo-usc.svg" alt="USC" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
-      <img src="assets/universities/logo-ucsf.png" alt="UCSF" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
-      <img src="assets/universities/logo-johns-hopkins.png" alt="Johns Hopkins" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
-      <img src="assets/universities/logo-upenn.png" alt="University of Pennsylvania" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="/assets/universities/logo-stanford.png" alt="Stanford" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="/assets/universities/logo-usc.svg" alt="USC" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="/assets/universities/logo-ucsf.png" alt="UCSF" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="/assets/universities/logo-johns-hopkins.png" alt="Johns Hopkins" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="/assets/universities/logo-upenn.png" alt="University of Pennsylvania" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
     </div>
   </div>
 </section>
@@ -338,7 +339,7 @@ class Component extends DCLogic {
     // Roster from shifu-team.js (the live shifu.health profiles), filtered to this discipline.
     const rosterAll = (typeof window !== "undefined" && window.SHIFU_SITE_TEAM) || [];
     const team = rosterAll.filter(m => m.kind === "e").map(m => ({ id: m.id, name: m.name, role: m.cardCred || m.cred, kind: m.kind, img: m.img }));
-    const rosterCards = team.map(m => ({ name: m.name, cardCred: m.role, img: m.img, href: "Coverage.dc.html?profile=" + m.id + "#team" }));
+    const rosterCards = team.map(m => ({ name: m.name, cardCred: m.role, img: m.img, href: "/coverage/?profile=" + m.id + "#team" }));
     const rosterLabel = team.length ? `${team.length} certified exercise coaches · live today` : "";
     // People shown in the live-call and written-reply mocks (illustrative consults, names from the roster)
     const live = team[0] ? { name: team[0].name, cred: team[0].role } : { name: "", cred: "" };
@@ -379,9 +380,9 @@ class Component extends DCLogic {
     const legend = (t) => ({ fontFamily: MONO, fontSize: "0.6875rem", letterSpacing: "0.1em", textTransform: "uppercase", padding: "6px 10px", borderRadius: 4, transition: "all 0.4s", border: "1px solid " + (am.type === t ? NAVY : LINE), background: am.type === t ? NAVY : "transparent", color: am.type === t ? "#FFFFFF" : MUTED });
     // quotes
     const quotes = [
-      { text: "Getting nudges has been really helpful, especially when challenges get escalated to my human coach.", name: "Christian Pickett", role: "Cofounder · Orthogonal", img: "assets/testimonials/christian.png" },
-      { text: "I focused more on chest for an upcoming event, and quickly adjusted when I sprained my knee. A great experience.", name: "Liam Redmond", role: "Founder & CEO · Yelo", img: "assets/testimonials/liam.png" },
-      { text: "Shifu removed the confusion that comes with the gym. A tailored workout with instructional videos every day.", name: "Brock Eastman", role: "Doctor of Medicine, Dentistry", img: "assets/testimonials/brock.png" },
+      { text: "Getting nudges has been really helpful, especially when challenges get escalated to my human coach.", name: "Christian Pickett", role: "Cofounder · Orthogonal", img: "/assets/testimonials/christian.png" },
+      { text: "I focused more on chest for an upcoming event, and quickly adjusted when I sprained my knee. A great experience.", name: "Liam Redmond", role: "Founder & CEO · Yelo", img: "/assets/testimonials/liam.png" },
+      { text: "Shifu removed the confusion that comes with the gym. A tailored workout with instructional videos every day.", name: "Brock Eastman", role: "Doctor of Medicine, Dentistry", img: "/assets/testimonials/brock.png" },
     ];
     const qi = this.state.quoteIdx, q = quotes[qi];
     const quote = { text: q.text, name: q.name, role: q.role, photoStyle: { width: 40, height: 40, borderRadius: 6, backgroundImage: `url(${q.img})`, backgroundSize: "cover", backgroundPosition: "center" } };

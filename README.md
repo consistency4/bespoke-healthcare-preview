@@ -18,7 +18,7 @@ Everything here is a **design reference written in HTML**: prototypes that show 
 ### How to read a `.dc.html` file
 Each file is one self-contained page. To view it, serve this folder over HTTP (`npx serve .`) and open the file; `file://` will not work. Inside `<x-dc>…</x-dc>` is ordinary HTML with a few conventions:
 
-- All styling is inline `style="…"`. There are no classes. `style-hover="…"` is the `:hover` state.
+- All styling is inline `style="…"`. `style-hover="…"` is the `:hover` state. The only classes are `nav-link` / `nav-wordmark` on the nav and the home-page strip classes; `mobile.css` (linked from every helmet) holds the phone rules, matching inline-style text with `[style*=…]` selectors: nav links hide under 900px, gutters drop to 20px, two-column grids stack and cards go single-column under 720px, face grids go three across under 480px.
 - `{{ name }}` is a value supplied by the `class Component` in the `<script data-dc-script>` at the bottom of the file. Its `renderVals()` returns every `{{ }}` value: text, computed style objects (camelCase CSS, bare numbers = px) and click handlers. Read it for all data (team members, FAQ, day timeline, plan calculator) and interaction logic.
 - `<sc-for list="{{ items }}" as="x">` is `items.map(x => …)`; `<sc-if value="{{ flag }}">` is a conditional; `$index` is the loop index.
 - `<image-slot>` is an image placeholder the client has not filled yet (see Assets). Render a real `<img>` there.
@@ -30,7 +30,9 @@ Each file is one self-contained page. To view it, serve this folder over HTTP (`
 **High-fidelity.** Colors, type, spacing, copy and interactions are final. Recreate pixel-accurately. Use the copy in the files verbatim.
 
 ## Site map
-| Route (suggested) | Design file | In nav as |
+The routes below are live: `node build-routes.mjs` copies each source file to `<route>/index.html` (GitHub Pages serves directories), so links and assets in the sources are root-absolute (`/nutrition/`, `/coverage/?profile=<id>#team`, `/assets/...`). Run the build after editing any page and commit the generated folders with it.
+
+| Route | Design file | In nav as |
 |---|---|---|
 | `/` | `Bespoke Healthcare v3.dc.html` | wordmark "Shifu Health" |
 | `/nutrition` | `Bespoke Nutrition v3.dc.html` | Nutrition |

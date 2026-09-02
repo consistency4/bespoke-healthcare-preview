@@ -3,17 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./shifu-team.js"></script>
-<script src="./support.js"></script>
-<script src="./start-modal.js"></script>
+<script src="/shifu-team.js"></script>
+<script src="/support.js"></script>
+<script src="/start-modal.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <script src="./image-slot.js"></script>
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="stylesheet" href="/mobile.css">
+  <script src="/image-slot.js"></script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Schibsted Grotesk',ui-sans-serif,system-ui,sans-serif;background:#FFFFFF;color:#0B0B0C;-webkit-font-smoothing:antialiased}
@@ -23,10 +24,10 @@
 
 <nav style="position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.88);backdrop-filter:blur(14px);border-bottom:1px solid #E3E3E0">
   <div style="max-width:1200px;margin:0 auto;padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px">
-    <div style="display:flex;align-items:baseline;gap:14px"><a href="Bespoke Healthcare v3.dc.html" style="font-weight:700;font-size:1rem;letter-spacing:-0.02em;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Shifu Health</a><span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;white-space:nowrap">/ cutting sugar</span></div>
+    <div class="nav-wordmark" style="display:flex;align-items:baseline;gap:14px"><a href="/" style="font-weight:700;font-size:1rem;letter-spacing:-0.02em;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Shifu Health</a><span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;white-space:nowrap">/ cutting sugar</span></div>
     <div style="display:flex;align-items:center;gap:28px">
-      <a href="Coverage.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">All coverage</a>
-      <a href="Bespoke Healthcare v3.dc.html#plans" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Plans</a>
+      <a class="nav-link" href="/coverage/" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">All coverage</a>
+      <a class="nav-link" href="/#plans" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Plans</a>
       <a href="sms:+10000000000?&amp;body=Hi%20Shifu%20%E2%80%94%20I%20want%20to%20work%20on%20cutting%20sugar." style="padding:10px 18px;border-radius:6px;background:#0B0B0C;color:#FFFFFF;font-size:0.875rem;font-weight:600;text-decoration:none;white-space:nowrap" style-hover="background:#F1580D;color:#FFFFFF">Start free</a>
     </div>
   </div>
@@ -104,7 +105,7 @@
 
 <section data-screen-label="Plans" style="padding:0 32px 120px">
   <div style="max-width:1200px;margin:0 auto">
-    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap;margin-bottom:28px"><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70">Plans · month to month · first consult on us</div><a href="Bespoke Healthcare v3.dc.html#plans" style="font-size:0.9375rem;font-weight:600;text-decoration:none;border-bottom:1px solid #F1580D">Compare plans →</a></div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap;margin-bottom:28px"><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70">Plans · month to month · first consult on us</div><a href="/#plans" style="font-size:0.9375rem;font-weight:600;text-decoration:none;border-bottom:1px solid #F1580D">Compare plans →</a></div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));border-top:1px solid #0B0B0C">
       <div style="padding:28px 24px 28px 0;border-right:1px solid #E3E3E0"><div style="font-weight:600;margin-bottom:12px">Free</div><div style="font-size:2rem;font-weight:600;letter-spacing:-0.04em;line-height:1">$0</div><div style="font-size:0.875rem;color:#6B6B70;margin-top:10px;line-height:1.5">Shifu, plans &amp; logging. 1 consult on signup.</div></div>
       <div style="padding:28px 24px;border-right:1px solid #E3E3E0"><div style="font-weight:600;margin-bottom:12px">Core</div><div style="font-size:2rem;font-weight:600;letter-spacing:-0.04em;line-height:1">$49<span style="font-size:0.875rem;letter-spacing:0;color:#6B6B70;font-weight:500"> /mo</span></div><div style="font-size:0.875rem;color:#6B6B70;margin-top:10px;line-height:1.5">4 consults a month. Live video calls · 2.</div></div>
@@ -121,7 +122,7 @@
     </div>
     <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:20px;padding-top:28px;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#8A8A90">
       <span>© 2026 Supamill Inc (DBA Shifu Health) · General wellness guidance only. Not medical advice, diagnosis, or treatment. Results shown are illustrative.</span>
-      <div style="display:flex;gap:24px"><a href="Coverage.dc.html" style="color:#8A8A90;text-decoration:none" style-hover="color:#FFFFFF">All coverage</a><a href="Bespoke Healthcare v3.dc.html" style="color:#8A8A90;text-decoration:none" style-hover="color:#FFFFFF">← Home</a></div>
+      <div style="display:flex;gap:24px"><a href="/coverage/" style="color:#8A8A90;text-decoration:none" style-hover="color:#FFFFFF">All coverage</a><a href="/" style="color:#8A8A90;text-decoration:none" style-hover="color:#FFFFFF">← Home</a></div>
     </div>
   </div>
 </footer>
@@ -135,7 +136,7 @@ class Component extends DCLogic {
     const extras = {};
     const roster = (typeof window !== "undefined" && window.SHIFU_SITE_TEAM) || [];
     const people = ids.map(id => roster.find(m => m.id === id) || extras[id]).filter(Boolean);
-    const card = (m) => ({ name: m.name, cred: m.cred, img: m.img, href: m.href || ("Coverage.dc.html?profile=" + m.id + "#team"),
+    const card = (m) => ({ name: m.name, cred: m.cred, img: m.img, href: m.href || ("/coverage/?profile=" + m.id + "#team"),
       replyMeta: "REPLIED IN 6H · " + (m.dietitian ? "LICENSED IN YOUR STATE" : "CERTIFIED · ALL STATES") });
     const lead = people.length ? card(people[0]) : { name: "", cred: "", img: "", href: "#", replyMeta: "" };
     // dietitians work under state licenses; coaches and nutritionists are certified and available everywhere
