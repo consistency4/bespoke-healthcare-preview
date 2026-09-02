@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./shifu-team.js"></script>
+<script src="./support.js"></script>
+<script src="./start-modal.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <script src="./image-slot.js"></script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Schibsted Grotesk',ui-sans-serif,system-ui,sans-serif;background:#FFFFFF;color:#0B0B0C;-webkit-font-smoothing:antialiased}
+    a{color:#F1580D}a:hover{color:#D44A08}
+    button{font-family:inherit}
+    input[type=range]{appearance:none;height:2px;background:#E3E3E0;outline:none}
+    input[type=range]::-webkit-slider-thumb{appearance:none;width:22px;height:22px;border-radius:50%;background:#0B0B0C;border:3px solid #FFFFFF;box-shadow:0 0 0 1px #0B0B0C;cursor:pointer}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.35}}
+  </style>
+</helmet>
+
+<nav style="position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.88);backdrop-filter:blur(14px);border-bottom:1px solid #E3E3E0">
+  <div style="max-width:1200px;margin:0 auto;padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <div style="display:flex;align-items:baseline;gap:14px"><a href="#" style="font-weight:700;font-size:1rem;letter-spacing:-0.02em;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Bespoke Exercise</a><a href="Bespoke Healthcare v3.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">by Shifu Health →</a></div>
+    <div style="display:flex;align-items:center;gap:28px">
+      <sc-if value="{{ wideNav }}" hint-placeholder-val="{{ true }}">
+        <a href="#coach" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Coach</a>
+        <a href="#day" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Shifu</a>
+        <a href="#team" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Full Coaching Team</a>
+        <a href="#plans" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Plans</a>
+      </sc-if>
+      <a href="{{ startHref }}" style="padding:10px 18px;border-radius:6px;background:#0B0B0C;color:#FFFFFF;font-size:0.875rem;font-weight:600;text-decoration:none;white-space:nowrap" style-hover="background:#F1580D;color:#FFFFFF">Start Today</a>
+    </div>
+  </div>
+</nav>
+
+<section data-screen-label="Hero" style="padding:140px 32px 0">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70;margin-bottom:36px">No insurance needed</div>
+    <h1 style="font-weight:600;font-size:clamp(2.75rem,7vw,6rem);line-height:0.98;letter-spacing:-0.045em;max-width:1100px;margin-bottom:32px;text-wrap:balance">Exercise Coaching.</h1>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px 64px;align-items:end;margin-bottom:36px">
+      <p style="font-size:1.125rem;line-height:1.5;color:#6B6B70;max-width:460px">Certified exercise coaches who program your training and adjust it as life happens. Shifu, our AI assistant, handles scheduling and reminders. From $49 a month.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <a href="Goal - lower-blood-pressure.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.02em;border-radius:6px;padding:9px 12px;border:1px solid #E3E3E0;background:#FFFFFF;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="border-color:#0B0B0C;background:#0B0B0C;color:#FFFFFF">lower blood pressure</a>
+                        <a href="Goal - losing-10-pounds.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.02em;border-radius:6px;padding:9px 12px;border:1px solid #E3E3E0;background:#FFFFFF;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="border-color:#0B0B0C;background:#0B0B0C;color:#FFFFFF">losing 10 pounds</a>
+        <a href="Goal - building-strength.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.02em;border-radius:6px;padding:9px 12px;border:1px solid #E3E3E0;background:#FFFFFF;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="border-color:#0B0B0C;background:#0B0B0C;color:#FFFFFF">building strength</a>
+        <a href="Goal - a-half-marathon.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.02em;border-radius:6px;padding:9px 12px;border:1px solid #E3E3E0;background:#FFFFFF;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="border-color:#0B0B0C;background:#0B0B0C;color:#FFFFFF">a half marathon</a>
+                <a href="Goal - recovering-from-an-injury.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.02em;border-radius:6px;padding:9px 12px;border:1px solid #E3E3E0;background:#FFFFFF;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="border-color:#0B0B0C;background:#0B0B0C;color:#FFFFFF">recovering from an injury</a>
+                <a href="Goal - sleeping-better.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.02em;border-radius:6px;padding:9px 12px;border:1px solid #E3E3E0;background:#FFFFFF;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="border-color:#0B0B0C;background:#0B0B0C;color:#FFFFFF">sleeping better</a>
+        <a href="Goal - moving-more.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.02em;border-radius:6px;padding:9px 12px;border:1px solid #E3E3E0;background:#FFFFFF;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="border-color:#0B0B0C;background:#0B0B0C;color:#FFFFFF">moving more</a>
+                <a href="Coverage.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.02em;border-radius:6px;padding:9px 12px;border:1px dashed #A0A0A5;color:#F1580D;text-decoration:none;white-space:nowrap" style-hover="border-color:#F1580D;color:#F1580D">See everything we cover →</a>
+      </div>
+    </div>
+    <sc-if value="{{ hasPick }}" hint-placeholder-val="{{ false }}">
+      <div style="border-top:1px solid #0B0B0C;padding:24px 0 8px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:24px;align-items:start">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70;line-height:1.7">{{ teamHeadline }}<br>Visible from day one</div>
+        <sc-for list="{{ matchedTeam }}" as="m">
+          <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+            <sc-if value="{{ m.hasPhoto }}"><div style="{{ m.photoStyle }}"></div></sc-if>
+            <sc-if value="{{ m.needsSlot }}"><image-slot id="{{ m.slotId }}" shape="rounded" radius="6" style="width:100%;aspect-ratio:1;min-width:0;overflow:hidden" placeholder="Photo"></image-slot></sc-if>
+            <div><div style="font-size:0.9375rem;font-weight:600">{{ m.name }}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;line-height:1.5;margin-top:3px">{{ m.role }}</div></div>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+    <div style="border-top:1px solid #E3E3E0;margin-top:24px;padding:28px 0 0;display:flex;flex-wrap:wrap;align-items:center;gap:14px 16px">
+      <a href="{{ startHref }}" style="padding:16px 26px;border-radius:6px;background:#0B0B0C;color:#FFFFFF;font-weight:600;font-size:1rem;text-decoration:none" style-hover="background:#F1580D;color:#FFFFFF">{{ startLabel }}</a>
+      <a href="{{ appStoreUrl }}" style="display:inline-flex;align-items:center;gap:10px;padding:15px 22px;border-radius:6px;border:1px solid #0B0B0C;color:#0B0B0C;font-weight:600;font-size:1rem;text-decoration:none" style-hover="background:#0B0B0C;color:#FFFFFF">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.365 1.43c0 1.14-.47 2.27-1.24 3.09-.8.86-2.1 1.5-3.2 1.42-.14-1.1.42-2.27 1.16-3.05.81-.86 2.2-1.5 3.28-1.46zM20.7 17.2c-.54 1.24-.8 1.8-1.5 2.9-.98 1.53-2.36 3.44-4.07 3.46-1.52.01-1.91-1-3.97-.99-2.06.01-2.5 1-4.02.98-1.71-.02-3.02-1.74-4-3.27C.4 16.02-.03 11.36 1.44 8.88c1.05-1.76 2.7-2.79 4.25-2.79 1.58 0 2.57.98 3.88.98 1.27 0 2.04-.98 3.87-.98 1.38 0 2.85.75 3.89 2.05-3.42 1.87-2.86 6.75.37 8.06z"></path></svg>
+        iOS app
+      </a>
+      <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;border:1px solid #E3E3E0;border-radius:6px;overflow:hidden;margin-left:auto">
+          <input type="tel" value="{{ phone }}" onChange="{{ onPhone }}" placeholder="Mobile number. We'll text a link." style="border:none;outline:none;background:transparent;font-family:inherit;font-size:0.9rem;color:#0B0B0C;padding:0 16px;width:250px"></input>
+          <button onClick="{{ sendLink }}" style="font-size:0.875rem;font-weight:600;border:none;border-left:1px solid #E3E3E0;background:#F4F4F1;color:#0B0B0C;padding:15px 18px;cursor:pointer">Send</button>
+        </div>
+      </sc-if>
+      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}"><span style="margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#F1580D">Sent. Check your phone.</span></sc-if>
+    </div>
+    <div style="margin-top:56px;padding:24px 0;border-top:1px solid #E3E3E0;border-bottom:1px solid #E3E3E0;display:flex;flex-wrap:wrap;align-items:center;gap:16px 40px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70">Trusted by employees at</span>
+      <span style="font-weight:700;font-size:1.25rem;letter-spacing:-0.03em;color:#8A8A90">Google</span>
+      <span style="font-weight:700;font-size:1.25rem;letter-spacing:-0.03em;color:#8A8A90">Apple</span>
+      <span style="font-weight:700;font-size:1.25rem;letter-spacing:-0.03em;color:#8A8A90">Rootly AI</span>
+      <span style="font-weight:700;font-size:1.25rem;letter-spacing:-0.03em;color:#8A8A90">Orthogonal</span>
+    </div>
+  </div>
+</section>
+
+<section id="coach" data-screen-label="Two ways to reach your coach" style="padding:120px 32px">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px 64px;align-items:end;margin-bottom:48px">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70;margin-bottom:20px">Your coach</div>
+        <h2 style="font-weight:600;font-size:clamp(2rem,4.2vw,3.25rem);line-height:1.02;letter-spacing:-0.04em">A real coach. Two ways to reach them.</h2>
+      </div>
+      <p style="font-size:1.0625rem;line-height:1.5;color:#6B6B70">Every membership comes with monthly consults. Spend one on a written check-in, or two on a live video call with the coach you choose.</p>
+    </div>
+    <div style="display:flex;gap:0;border:1px solid #0B0B0C;border-radius:6px;overflow:hidden;width:fit-content;margin-bottom:32px">
+      <button onClick="{{ pickLive }}" style="{{ liveTabStyle }}">Live video call <span style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;opacity:0.7;margin-left:8px">2 consults · 10 min</span></button>
+      <button onClick="{{ pickAsync }}" style="{{ asyncTabStyle }}">Async check-in <span style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;opacity:0.7;margin-left:8px">1 consult · 6 to 12h</span></button>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:48px 64px;align-items:center">
+      <sc-if value="{{ isLive }}" hint-placeholder-val="{{ true }}">
+        <div style="position:relative;aspect-ratio:16/10;border-radius:12px;overflow:hidden;background:#0B0B0C url(assets/team/coach-spencer.jpeg) center/cover;box-shadow:0 30px 80px rgba(11,11,12,0.25)">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.35) 0%,rgba(0,0,0,0) 35%,rgba(0,0,0,0) 60%,rgba(0,0,0,0.55) 100%)"></div>
+          <div style="position:absolute;top:16px;left:16px;display:flex;align-items:center;gap:8px;background:rgba(0,0,0,0.45);backdrop-filter:blur(8px);border-radius:6px;padding:6px 10px;color:#FFFFFF;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem"><span style="width:7px;height:7px;border-radius:50%;background:#FF4D4D;animation:pulse 1.4s infinite"></span>LIVE · {{ callClock }}</div>
+          <div style="position:absolute;top:16px;right:16px;background:rgba(0,0,0,0.45);backdrop-filter:blur(8px);border-radius:6px;padding:6px 10px;color:#FFFFFF;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem">ENCRYPTED</div>
+          <div style="position:absolute;right:16px;bottom:72px;width:68px;aspect-ratio:3/4;border-radius:8px;background:#2A2A2E;border:1px solid rgba(255,255,255,0.25);display:flex;align-items:center;justify-content:center;color:#8A8A90;font-family:'IBM Plex Mono',monospace;font-size:0.625rem">You</div>
+          <div style="position:absolute;left:16px;right:150px;bottom:16px;color:#FFFFFF;min-width:0"><div style="font-weight:600;font-size:1rem">Spencer Tate, CEP</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;opacity:0.8;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Certified Exercise Professional</div></div>
+          <div style="position:absolute;right:16px;bottom:16px;display:flex;gap:8px"><span style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.18);backdrop-filter:blur(8px)"></span><span style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.18);backdrop-filter:blur(8px)"></span><span style="width:36px;height:36px;border-radius:50%;background:#FF4D4D"></span></div>
+        </div>
+        <div>
+          <div style="font-size:1.5rem;font-weight:600;letter-spacing:-0.03em;line-height:1.15;margin-bottom:16px">Ten focused minutes with the coach you picked.</div>
+          <div style="display:flex;flex-direction:column;border-top:1px solid #E3E3E0">
+            <div style="padding:14px 0;border-bottom:1px solid #E3E3E0;display:grid;grid-template-columns:32px 1fr;gap:12px;font-size:0.9375rem;line-height:1.45"><span style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;padding-top:3px">01</span><span>Book from your coach's profile. Pick a time that works.</span></div>
+            <div style="padding:14px 0;border-bottom:1px solid #E3E3E0;display:grid;grid-template-columns:32px 1fr;gap:12px;font-size:0.9375rem;line-height:1.45"><span style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;padding-top:3px">02</span><span>They join with your plan, logs, and history already open. No recap needed.</span></div>
+            <div style="padding:14px 0;border-bottom:1px solid #E3E3E0;display:grid;grid-template-columns:32px 1fr;gap:12px;font-size:0.9375rem;line-height:1.45"><span style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;padding-top:3px">03</span><span>Changes and notes land in your app right after. Encrypted end to end.</span></div>
+          </div>
+        </div>
+      </sc-if>
+      <sc-if value="{{ isAsync }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;justify-content:flex-end"><div style="background:#0B0B0C;color:#FFFFFF;border-radius:12px 12px 2px 12px;padding:12px 16px;font-size:0.9375rem;line-height:1.5;max-width:360px">My knee is sore after squats. Should I push through?<div style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;opacity:0.6;margin-top:8px;text-align:right">SENT 7:12 AM</div></div></div>
+          <div style="background:#F4F4F1;border-radius:12px;padding:16px 18px;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#F1580D;letter-spacing:0.08em;text-transform:uppercase">Shifu attached your last six sessions, pain scores, and sleep</div>
+          <div style="border:1px solid #0B0B0C;border-radius:12px;padding:20px 22px"><div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><img src="{{ reply.img }}" alt="{{ reply.name }}" style="width:30px;height:30px;border-radius:6px;object-fit:cover;flex-shrink:0;border:1px solid #E3E3E0"><div><div style="font-size:0.875rem;font-weight:600">{{ reply.name }}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">REPLIED 2:40 PM · CERTIFIED EXERCISE PROFESSIONAL</div></div></div><div style="font-size:0.9375rem;line-height:1.5;margin-bottom:8px">Swapped heavy squats for two weeks of tempo work and added hip mobility before every session.</div><div style="font-size:0.875rem;line-height:1.5;color:#6B6B70">“Three sessions of 6/10 soreness is a signal. Deload for two weeks and rebuild. You'll come back past 165, not stuck at it.”</div></div>
+        </div>
+        <div>
+          <div style="font-size:1.5rem;font-weight:600;letter-spacing:-0.03em;line-height:1.15;margin-bottom:16px">Ask any time. A certified coach answers in writing.</div>
+          <div style="display:flex;flex-direction:column;border-top:1px solid #E3E3E0">
+            <div style="padding:14px 0;border-bottom:1px solid #E3E3E0;display:grid;grid-template-columns:32px 1fr;gap:12px;font-size:0.9375rem;line-height:1.45"><span style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;padding-top:3px">01</span><span>Text Shifu or tap Request in the app.</span></div>
+            <div style="padding:14px 0;border-bottom:1px solid #E3E3E0;display:grid;grid-template-columns:32px 1fr;gap:12px;font-size:0.9375rem;line-height:1.45"><span style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;padding-top:3px">02</span><span>Shifu compiles your context so the expert starts with the full picture.</span></div>
+            <div style="padding:14px 0;border-bottom:1px solid #E3E3E0;display:grid;grid-template-columns:32px 1fr;gap:12px;font-size:0.9375rem;line-height:1.45"><span style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;padding-top:3px">03</span><span>A written answer, with reasoning, in 6 to 12 hours. Every change linked to your plan.</span></div>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<section id="day" data-screen-label="A day with Shifu" style="padding:0 32px 120px">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px 64px;align-items:end;margin-bottom:48px;border-top:1px solid #0B0B0C;padding-top:36px">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70;margin-bottom:20px">A day with Shifu</div>
+        <h2 style="font-weight:600;font-size:clamp(2rem,4.2vw,3.25rem);line-height:1.02;letter-spacing:-0.04em">Shifu runs the schedule. Your coach makes the calls.</h2>
+      </div>
+      <p style="font-size:1.0625rem;line-height:1.5;color:#6B6B70">Trained by our coaches and guided by NASM programming standards. It notices, acts, and reminds, then hands your coach a prepared case. That is how $2,000-a-month care costs under $100.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr);gap:48px;align-items:start">
+      <div style="min-width:0">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:clamp(3rem,6vw,5rem);line-height:1;letter-spacing:-0.04em;margin-bottom:20px">{{ dayActive.time }}</div>
+        <div style="display:flex;gap:8px;margin-bottom:24px"><span style="{{ legendProactive }}">Proactive</span><span style="{{ legendAction }}">Action</span><span style="{{ legendReminder }}">Reminder</span></div>
+        <div style="font-size:1.375rem;font-weight:600;letter-spacing:-0.02em;line-height:1.2;margin-bottom:10px">{{ dayActive.title }}</div>
+        <p style="font-size:1rem;line-height:1.55;color:#6B6B70;max-width:420px">{{ dayActive.note }}</p>
+      </div>
+      <div style="min-width:0">
+        <div style="background:#F4F4F1;border-radius:12px;padding:22px 24px;margin-bottom:28px">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><div style="width:26px;height:26px;border-radius:6px;background:#0B0B0C;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:0.75rem">S</div><div style="font-size:0.8125rem;font-weight:600">Shifu</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;margin-left:auto">{{ dayActive.time }}</div></div>
+          <div style="font-size:1.0625rem;line-height:1.5">{{ dayActive.msg }}</div>
+          <div style="display:flex;gap:8px;margin-top:18px;flex-wrap:wrap"><span style="border-radius:6px;padding:8px 14px;font-size:0.8125rem;font-weight:600;background:#0B0B0C;color:#FFFFFF">{{ dayActive.r1 }}</span><span style="border-radius:6px;padding:8px 14px;font-size:0.8125rem;font-weight:600;border:1px solid #0B0B0C">{{ dayActive.r2 }}</span></div>
+        </div>
+        <div style="position:relative;height:1px;background:#E3E3E0;margin:0 6px">
+          <div style="{{ dayProgressStyle }}"></div>
+          <div style="position:absolute;left:0;right:0;top:-6px;display:flex;justify-content:space-between;align-items:center"><sc-for list="{{ dayMoments }}" as="m" hint-placeholder-count="6"><button onClick="{{ m.pick }}" style="{{ m.dotStyle }}" title="{{ m.time }}"></button></sc-for></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem"><sc-for list="{{ dayMoments }}" as="m" hint-placeholder-count="6"><span style="{{ m.timeStyle }}">{{ m.time }}</span></sc-for></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="team" data-screen-label="Care team" style="padding:0 32px 120px">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px 64px;align-items:end;margin-bottom:48px;border-top:1px solid #0B0B0C;padding-top:36px">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70;margin-bottom:20px">Full coaching team</div>
+        <h2 style="font-weight:600;font-size:clamp(2rem,4.2vw,3.25rem);line-height:1.02;letter-spacing:-0.04em">Licensed. Certified. Visible from day one.</h2>
+      </div>
+      <div><p style="font-size:1.0625rem;line-height:1.5;color:#6B6B70;margin-bottom:16px">NASM, ACSM and ISSA certified coaches, strength coaches and exercise physiologists. Available in every state. Nothing behind a paywall.</p><a href="Coverage.dc.html" style="font-weight:600;font-size:0.9375rem;color:#F1580D;text-decoration:none;border-bottom:1px solid #F1580D" style-hover="color:#D44A08">See full profiles and everything we cover →</a></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:20px 16px;margin-bottom:16px">
+      <sc-for list="{{ roster }}" as="m" hint-placeholder-count="6">
+        <a href="{{ m.href }}" style="display:flex;flex-direction:column;gap:12px;min-width:0;color:#0B0B0C;text-decoration:none" style-hover="color:#F1580D"><img src="{{ m.img }}" alt="{{ m.name }}" draggable="false" loading="lazy" style="width:100%;aspect-ratio:1;border-radius:12px;object-fit:cover;display:block;border:1px solid #E3E3E0;background:#F4F4F1"><div><div style="font-size:0.9375rem;font-weight:600;line-height:1.3">{{ m.name }}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;line-height:1.5;margin-top:3px">{{ m.cardCred }}</div></div></a>
+      </sc-for>
+    </div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#8A8A90;margin-bottom:40px">{{ rosterLabel }}</div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px 40px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70">Where they studied</div>
+      <img src="https://shifu.health/assets/logo-stanford.png" alt="Stanford" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="https://shifu.health/assets/logo-usc.svg" alt="USC" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="https://shifu.health/assets/logo-ucsf.png" alt="UCSF" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="https://shifu.health/assets/logo-johns-hopkins.png" alt="Johns Hopkins" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="https://shifu.health/assets/logo-upenn.png" alt="University of Pennsylvania" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Private by design" style="background:#0B0B0C;color:#FFFFFF;padding:96px 32px">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px 64px;align-items:end;margin-bottom:48px">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#8A8A90;margin-bottom:20px">Private by design</div>
+        <h2 style="font-weight:600;font-size:clamp(2rem,4.2vw,3.25rem);line-height:1.02;letter-spacing:-0.04em">Your health data stays yours.</h2>
+      </div>
+      <p style="font-size:1.0625rem;line-height:1.5;color:#8A8A90">Only licensed professionals see your case. Nothing is sold, ever.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));border-top:1px solid #2A2A2E">
+      <div style="padding:28px 24px 0 0;border-right:1px solid #2A2A2E;margin-right:24px"><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#8A8A90;margin-bottom:12px">01</div><div style="font-weight:600;margin-bottom:6px">Encrypted</div><div style="font-size:0.9375rem;line-height:1.5;color:#8A8A90">In transit and at rest. Video calls end to end.</div></div>
+      <div style="padding:28px 24px 0 0;border-right:1px solid #2A2A2E;margin-right:24px"><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#8A8A90;margin-bottom:12px">02</div><div style="font-weight:600;margin-bottom:6px">You decide what's shared</div><div style="font-size:0.9375rem;line-height:1.5;color:#8A8A90">Connect wearables, calendar, or records. Or don't.</div></div>
+      <div style="padding:28px 24px 0 0;border-right:1px solid #2A2A2E;margin-right:24px"><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#8A8A90;margin-bottom:12px">03</div><div style="font-weight:600;margin-bottom:6px">Humans, licensed, named</div><div style="font-size:0.9375rem;line-height:1.5;color:#8A8A90">Every consult shows who saw it and what they changed.</div></div>
+      <div style="padding:28px 0 0 0"><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#8A8A90;margin-bottom:12px">04</div><div style="font-weight:600;margin-bottom:6px">Delete anytime</div><div style="font-size:0.9375rem;line-height:1.5;color:#8A8A90">Export or erase your data from the app. No call required.</div></div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Members" style="padding:120px 32px 0">
+  <div style="max-width:1200px;margin:0 auto;border-top:1px solid #0B0B0C;padding-top:36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px 64px;align-items:start">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70">From members</div>
+    <div>
+      <blockquote style="font-weight:500;font-size:clamp(1.5rem,2.8vw,2.25rem);line-height:1.2;letter-spacing:-0.03em;min-height:3.6em">“{{ quote.text }}”</blockquote>
+      <div style="display:flex;align-items:center;gap:14px;margin-top:28px"><div style="{{ quote.photoStyle }}"></div><div><div style="font-size:0.9375rem;font-weight:600">{{ quote.name }}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;margin-top:2px">{{ quote.role }}</div></div><div style="display:flex;gap:6px;margin-left:auto"><sc-for list="{{ quoteDots }}" as="d" hint-placeholder-count="3"><button onClick="{{ d.pick }}" style="{{ d.style }}"></button></sc-for></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="plans" data-screen-label="Plans" style="padding:120px 32px">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px 64px;align-items:end;margin-bottom:48px">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70;margin-bottom:20px">Plans</div>
+        <h2 style="font-weight:600;font-size:clamp(2rem,4.2vw,3.25rem);line-height:1.02;letter-spacing:-0.04em">A certified coach, for less than one session.</h2>
+      </div>
+      <p style="font-size:1.0625rem;line-height:1.5;color:#6B6B70">Month to month, no insurance. A written check-in is 1 consult; a 10-minute live video call is 2.</p>
+    </div>
+    <div style="border-top:1px solid #0B0B0C;padding:36px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px 64px;align-items:center">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70;margin-bottom:16px">Plan your month</div>
+        <div style="font-size:1.25rem;font-weight:600;letter-spacing:-0.02em;line-height:1.25;margin-bottom:28px">How many expert check-ins a month?</div>
+        <div style="display:flex;align-items:center;gap:24px;margin-bottom:24px"><input type="range" min="0" max="12" step="1" value="{{ calcN }}" onChange="{{ onCalcN }}" style="flex:1;cursor:pointer"></input><div style="font-family:'IBM Plex Mono',monospace;font-size:2.5rem;line-height:1;min-width:2.2ch;text-align:right">{{ calcN }}</div></div>
+        <button onClick="{{ toggleCall }}" style="{{ callToggleStyle }}">+ one live video call a month · 2 consults</button>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;font-size:0.875rem">
+        <div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#F1580D;margin-bottom:12px">Recommended</div><div style="font-size:2.25rem;font-weight:600;letter-spacing:-0.04em;line-height:1">{{ calcPlan }}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.875rem;color:#6B6B70;margin-top:8px">{{ calcPrice }} / mo</div></div>
+        <div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70;margin-bottom:12px">Privately</div><div style="font-size:2.25rem;font-weight:600;letter-spacing:-0.04em;line-height:1;color:#6B6B70;text-decoration:line-through">{{ calcPrivate }}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.875rem;color:#F1580D;margin-top:8px">you keep {{ calcSavings }} / mo</div></div>
+        <div style="grid-column:1 / -1;line-height:1.5;color:#6B6B70">{{ calcDetail }}</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));border-top:1px solid #0B0B0C">
+      <div style="{{ planFreeStyle }}">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px"><span style="font-weight:600">Starter</span></div>
+        <div style="font-size:3rem;font-weight:600;letter-spacing:-0.05em;line-height:1">$0</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;margin:10px 0 28px">SHIFU + ONE EXPERT REVIEW</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:0.9375rem;line-height:1.45;color:#6B6B70;margin-bottom:32px"><div>Shifu, plans &amp; logging</div><div><span style="color:#0B0B0C;font-weight:600">1 consult</span> to see how a real expert changes your plan</div><div>Extra consults $15</div></div>
+        <a href="{{ startHref }}" style="display:block;margin-top:auto;padding:14px;border-radius:6px;border:1px solid #0B0B0C;color:#0B0B0C;font-weight:600;text-decoration:none;text-align:center" style-hover="background:#0B0B0C;color:#FFFFFF">Start Today</a>
+      </div>
+      <div style="{{ planCoreStyle }}">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px"><span style="font-weight:600">Core</span></div>
+        <div style="font-size:3rem;font-weight:600;letter-spacing:-0.05em;line-height:1">$49<span style="font-size:1rem;letter-spacing:0;color:#6B6B70;font-weight:500"> /mo</span></div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;margin:10px 0 28px">YOUR COACH, EVERY WEEK</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:0.9375rem;line-height:1.45;color:#6B6B70;margin-bottom:32px"><div>Unlimited Shifu, proactive texting</div><div><span style="color:#0B0B0C;font-weight:600">4 consults</span> a month. Unused roll over.</div><div>Live video calls · 2 consults</div><div>Add 4 more any month · $39</div></div>
+        <a href="{{ startHref }}" style="display:block;margin-top:auto;padding:14px;border-radius:6px;background:#0B0B0C;color:#FFFFFF;font-weight:600;text-decoration:none;text-align:center" style-hover="background:#F1580D;color:#FFFFFF">Get Core</a>
+      </div>
+      <div style="{{ planPlusStyle }}">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px"><span style="font-weight:600">Plus</span></div>
+        <div style="font-size:3rem;font-weight:600;letter-spacing:-0.05em;line-height:1">$79<span style="font-size:1rem;letter-spacing:0;color:#6B6B70;font-weight:500"> /mo</span></div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;margin:10px 0 28px">MORE ACCESS · YOUR COACH FIRST IN LINE</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:0.9375rem;line-height:1.45;color:#6B6B70;margin-bottom:32px"><div>Everything in Core</div><div><span style="color:#0B0B0C;font-weight:600">10 consults</span> a month. Under $8 each.</div><div>Priority routing to your starred coach</div><div>Extra consults $10</div></div>
+        <a href="{{ startHref }}" style="display:block;margin-top:auto;padding:14px;border-radius:6px;border:1px solid #0B0B0C;color:#0B0B0C;font-weight:600;text-decoration:none;text-align:center" style-hover="background:#0B0B0C;color:#FFFFFF">Get Plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" data-screen-label="Questions" style="padding:0 32px 120px">
+  <div style="max-width:1200px;margin:0 auto;border-top:1px solid #0B0B0C;padding-top:36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px 64px;align-items:start">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70">Questions</div>
+    <div>
+      <sc-for list="{{ faqItems }}" as="it" hint-placeholder-count="6">
+        <div style="border-bottom:1px solid #E3E3E0">
+          <button onClick="{{ it.toggle }}" style="width:100%;background:none;border:none;padding:20px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;cursor:pointer;text-align:left"><span style="font-size:1.0625rem;font-weight:600;letter-spacing:-0.01em;color:#0B0B0C">{{ it.q }}</span><span style="{{ it.plusStyle }}">+</span></button>
+          <div style="{{ it.answerStyle }}"><p style="font-size:0.9375rem;line-height:1.6;color:#6B6B70;padding-bottom:20px;max-width:620px">{{ it.a }}</p></div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#0B0B0C;color:#FFFFFF;padding:96px 32px 40px">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;padding-bottom:64px;border-bottom:1px solid #2A2A2E">
+      <h2 style="font-weight:600;font-size:clamp(2.25rem,5vw,4rem);line-height:0.98;letter-spacing:-0.045em;max-width:720px">Real care. No insurance needed.</h2>
+      <a href="{{ startHref }}" style="padding:16px 28px;border-radius:6px;background:#FFFFFF;color:#0B0B0C;font-weight:600;font-size:1rem;text-decoration:none;white-space:nowrap" style-hover="background:#F1580D;color:#FFFFFF">{{ startLabel }}</a>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:20px;padding-top:28px;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#8A8A90">
+      <span>© 2026 Supamill Inc (DBA Shifu Health) · Bespoke Exercise · General wellness guidance only. Not medical advice, diagnosis, or treatment.</span>
+      <div style="display:flex;gap:24px"><a href="#" style="color:#8A8A90;text-decoration:none" style-hover="color:#FFFFFF">Privacy</a><a href="#" style="color:#8A8A90;text-decoration:none" style-hover="color:#FFFFFF">Security</a><a href="#" style="color:#8A8A90;text-decoration:none" style-hover="color:#FFFFFF">Terms</a><a href="#" style="color:#8A8A90;text-decoration:none" style-hover="color:#FFFFFF">Contact</a></div>
+    </div>
+  </div>
+</footer>
+
+<sc-if value="{{ showStickyBar }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;left:0;right:0;bottom:0;z-index:90;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-top:1px solid #E3E3E0;padding:12px 16px;display:flex;gap:10px">
+    <a href="{{ startHref }}" style="flex:1;padding:14px;border-radius:6px;background:#0B0B0C;color:#FFFFFF;font-weight:600;font-size:0.9375rem;text-decoration:none;text-align:center" style-hover="background:#F1580D;color:#FFFFFF">Start Today</a>
+    <a href="{{ appStoreUrl }}" style="flex:1;padding:14px;border-radius:6px;border:1px solid #0B0B0C;color:#0B0B0C;font-weight:600;font-size:0.9375rem;text-decoration:none;text-align:center;background:#FFFFFF" style-hover="background:#0B0B0C;color:#FFFFFF">Get the app</a>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;smsNumber&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;+10000000000&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Start flow&quot;}, &quot;appStoreUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://apps.apple.com/&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Start flow&quot;}, &quot;leadFormAction&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Start flow&quot;}}">
+class Component extends DCLogic {
+  state = { open: null, anchor: null, phone: "", sent: false, isMobile: false, isNarrow: false, dayIdx: 0, dayPausedUntil: 0, mode: "live", modeManual: false, callSec: 0, calcN: 4, calcCall: false, quoteIdx: 0 };
+  componentDidMount() {
+    this.onResize = () => this.setState({ isMobile: window.innerWidth < 720, isNarrow: window.innerWidth < 1000 });
+    this.onResize();
+    window.addEventListener("resize", this.onResize);
+    this.dayTimer = setInterval(() => { if (Date.now() < this.state.dayPausedUntil) return; this.setState(s => ({ dayIdx: (s.dayIdx + 1) % 6 })); }, 4200);
+    this.modeTimer = setInterval(() => { if (this.state.modeManual) return; this.setState(s => ({ mode: s.mode === "live" ? "async" : "live" })); }, 7000);
+    this.clockTimer = setInterval(() => this.setState(s => ({ callSec: (s.callSec + 1) % 600 })), 1000);
+    this.qTimer = setInterval(() => this.setState(s => ({ quoteIdx: (s.quoteIdx + 1) % 3 })), 5200);
+  }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.onResize);
+    [this.dayTimer, this.modeTimer, this.clockTimer, this.qTimer].forEach(clearInterval);
+  }
+  sendLink = async () => {
+    const phone = this.state.phone.trim();
+    if (phone.replace(/\D/g, "").length < 10) return;
+    const action = this.props.leadFormAction;
+    if (action) { try { await fetch(action, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ phone, goal: this.state.anchor, source: "website-hero" }) }); } catch (e) {} }
+    this.setState({ sent: true });
+  };
+  renderVals() {
+    const INK = "#0B0B0C", NAVY = "#F1580D", MUTED = "#6B6B70", LINE = "#E3E3E0", MONO = "'IBM Plex Mono',monospace";
+    const anchorList = [["lower blood pressure", "b"], ["GLP-1 guidance", "n"], ["managing diabetes", "n"], ["losing 10 pounds", "b"], ["building strength", "e"], ["a half marathon", "e"], ["eating well on a budget", "n"], ["recovering from an injury", "e"], ["cutting sugar", "n"], ["sleeping better", "b"], ["moving more", "e"], ["gut health", "n"]];
+    // Roster from shifu-team.js (the live shifu.health profiles), filtered to this discipline.
+    const rosterAll = (typeof window !== "undefined" && window.SHIFU_SITE_TEAM) || [];
+    const team = rosterAll.filter(m => m.kind === "e").map(m => ({ id: m.id, name: m.name, role: m.cardCred || m.cred, kind: m.kind, img: m.img }));
+    const rosterCards = team.map(m => ({ name: m.name, cardCred: m.role, img: m.img, href: "Coverage.dc.html?profile=" + m.id + "#team" }));
+    const rosterLabel = team.length ? `${team.length} certified exercise coaches · live today` : "";
+    // People shown in the live-call and written-reply mocks (illustrative consults, names from the roster)
+    const live = team[0] ? { name: team[0].name, cred: team[0].role } : { name: "", cred: "" };
+    const replyM = team.find(m => m.id === "jerome-bacon-iii") || team[1] || team[0] || { name: "", img: "" };
+    const reply = { name: replyM.name, img: replyM.img };
+    const replyFirst = (replyM.name || "").split(",")[0].split(" ")[0];
+    const picked = this.state.anchor;
+    const pickedKind = (anchorList.find(a => a[0] === picked) || [])[1];
+    const matched = pickedKind ? team.filter(m => pickedKind === "b" || m.kind === pickedKind) : [];
+    const matchedTeam = matched.map(m => ({ name: m.name, role: m.role, hasPhoto: !!m.img, needsSlot: !m.img, slotId: "v3-face-" + m.id,
+      photoStyle: { width: "100%", aspectRatio: "1", borderRadius: 6, backgroundImage: `url(${m.img})`, backgroundSize: "cover", backgroundPosition: "center" } }));
+    const teamHeadline = pickedKind === "n" ? "Your dietitians" : pickedKind === "e" ? "Your coaches" : "Your team";
+    const anchors = anchorList.map(([label]) => { const on = picked === label; return { label, pick: () => this.setState({ anchor: on ? null : label }),
+      style: { fontFamily: MONO, fontSize: "0.75rem", letterSpacing: "0.02em", cursor: "pointer", borderRadius: 6, padding: "9px 12px", transition: "all 0.15s", border: "1px solid " + (on ? INK : LINE), background: on ? INK : "#FFFFFF", color: on ? "#FFFFFF" : INK } }; });
+    const goalWord = picked || "whatever you came for.";
+    const goalWordStyle = { color: picked ? NAVY : INK, transition: "color 0.4s" };
+    const smsNumber = this.props.smsNumber ?? "+10000000000";
+    const startHref = `sms:${smsNumber}?&body=${encodeURIComponent(picked ? `Hi Shifu, I want to work on ${picked}.` : "Hi Shifu, I'd like to get started.")}`;
+    const startLabel = "Start Today";
+    // coach modes
+    const mode = this.state.mode;
+    const tabStyle = (on) => ({ padding: "12px 18px", border: "none", cursor: "pointer", fontSize: "0.9375rem", fontWeight: 600, background: on ? INK : "#FFFFFF", color: on ? "#FFFFFF" : INK, transition: "all 0.25s", display: "flex", alignItems: "center" });
+    const rem = 600 - this.state.callSec, callClock = `${String(Math.floor(rem / 60)).padStart(2, "0")}:${String(rem % 60).padStart(2, "0")}`;
+    // day
+    const moments = [
+      { time: "6:45", type: "Reminder", msg: "Lower body today: squats 4×5 at 165. Warm-up and form video are in the app.", r1: "On it", r2: "Move it", title: "Reminders that fit your plan", note: "What your program and your coach actually asked for. Not a generic schedule." },
+      { time: "8:10", type: "Proactive", msg: "A 6pm meeting just landed on Thursday, right over your run. Move it to 7am, or swap Thursday and Saturday?", r1: "7am works", r2: "Swap days", title: "It notices before you do", note: "Calendar, wearables, and logs are in the loop. Conflicts get solved before they become skipped sessions." },
+      { time: "12:30", type: "Action", msg: "Thursday's session now collides with your 7pm meeting. I moved it to Friday 6:30am and booked the gym.", r1: "Perfect", r2: "Undo", title: "It does things, not just says things", note: "Calendar changes, bookings, swaps. The follow-through a concierge would handle." },
+      { time: "15:00", type: "Proactive", msg: "Knee soreness logged after both sessions this week. Worth a look from " + replyFirst + "? I've pulled your last six sets together.", r1: "Send it", r2: "Not now", title: "It knows when to bring in a human", note: "Patterns worth a coach's judgment become a consult request, with the context attached." },
+      { time: "17:30", type: "Reminder", msg: "Long run tomorrow. Tonight: earlier dinner, water, lights out by 10:30. I'll check in at 6:15.", r1: "Set", r2: "Adjust", title: "The night before matters", note: "The small things that decide whether tomorrow happens." },
+      { time: "20:45", type: "Action", msg: replyFirst + " reviewed your week and deloaded squats for two weeks. New sessions are in the app. Put them on your calendar?", r1: "Add them", r2: "See what changed", title: "Coach changes, delivered", note: "A resolved consult becomes the next concrete step." },
+    ];
+    const dayIdx = this.state.dayIdx, am = moments[dayIdx];
+    const dayMoments = moments.map((m, i) => ({ time: m.time, pick: () => this.setState({ dayIdx: i, dayPausedUntil: Date.now() + 10000 }),
+      dotStyle: { width: i === dayIdx ? 13 : 9, height: i === dayIdx ? 13 : 9, borderRadius: "50%", border: "none", background: i <= dayIdx ? INK : LINE, cursor: "pointer", padding: 0, transition: "all 0.3s", boxShadow: i === dayIdx ? "0 0 0 5px rgba(241,88,13,0.18)" : "none" },
+      timeStyle: { color: i === dayIdx ? INK : "#A0A0A5", transition: "color 0.3s" } }));
+    const dayProgressStyle = { position: "absolute", left: 0, top: 0, height: "100%", background: INK, width: (dayIdx / 5 * 100) + "%", transition: "width 0.6s cubic-bezier(0.22,1,0.36,1)" };
+    const legend = (t) => ({ fontFamily: MONO, fontSize: "0.6875rem", letterSpacing: "0.1em", textTransform: "uppercase", padding: "6px 10px", borderRadius: 4, transition: "all 0.4s", border: "1px solid " + (am.type === t ? NAVY : LINE), background: am.type === t ? NAVY : "transparent", color: am.type === t ? "#FFFFFF" : MUTED });
+    // quotes
+    const quotes = [
+      { text: "Getting nudges has been really helpful, especially when challenges get escalated to my human coach.", name: "Christian Pickett", role: "Cofounder · Orthogonal", img: "https://shifu.health/testimonials/christian.png" },
+      { text: "I focused more on chest for an upcoming event, and quickly adjusted when I sprained my knee. A great experience.", name: "Liam Redmond", role: "Founder & CEO · Yelo", img: "https://shifu.health/testimonials/liam.png" },
+      { text: "Shifu removed the confusion that comes with the gym. A tailored workout with instructional videos every day.", name: "Brock Eastman", role: "Doctor of Medicine, Dentistry", img: "https://shifu.health/testimonials/brock.png" },
+    ];
+    const qi = this.state.quoteIdx, q = quotes[qi];
+    const quote = { text: q.text, name: q.name, role: q.role, photoStyle: { width: 40, height: 40, borderRadius: 6, backgroundImage: `url(${q.img})`, backgroundSize: "cover", backgroundPosition: "center" } };
+    const quoteDots = quotes.map((_, i) => ({ pick: () => this.setState({ quoteIdx: i }), style: { width: i === qi ? 24 : 8, height: 8, borderRadius: 4, border: "none", padding: 0, cursor: "pointer", background: i === qi ? INK : LINE, transition: "all 0.3s" } }));
+    // calc
+    const n = this.state.calcN, call = this.state.calcCall, total = n + (call ? 2 : 0);
+    let plan, price, detail;
+    if (total <= 1) { plan = "Starter"; price = 0; detail = total === 0 ? "Shifu, plans and logging, with one expert review whenever you want it." : "Your included consult covers it."; }
+    else if (total <= 4) { plan = "Core"; price = 49; detail = `Uses ${total} of your 4 monthly consults.`; }
+    else if (total <= 10) { plan = "Plus"; price = 79; detail = `Uses ${total} of your 10 monthly consults.`; }
+    else { plan = "Plus"; price = 79 + (total - 10) * 10; detail = `10 included, plus ${total - 10} extra at $10 each.`; }
+    const priv = n * 150 + (call ? 150 : 0);
+    const callToggleStyle = { fontFamily: MONO, fontSize: "0.75rem", cursor: "pointer", borderRadius: 6, padding: "10px 14px", transition: "all 0.15s", border: "1px solid " + (call ? INK : LINE), background: call ? INK : "#FFFFFF", color: call ? "#FFFFFF" : INK };
+    const planStyle = (rec) => ({ padding: "32px 28px", display: "flex", flexDirection: "column", borderTop: "3px solid " + (rec ? NAVY : "transparent"), marginTop: -1, borderRight: "1px solid " + LINE, transition: "border-color 0.4s" });
+    const faqs = [
+      { q: "Do I need insurance?", a: "No. Plans start at $49 a month, less than one private training session. No networks, no referrals." },
+      { q: "Can you help after an injury?", a: "Yes. Our return-to-sport coaches build conservative progressions and track pain scores. Anything that needs a diagnosis or physical therapy gets flagged and referred at no charge." },
+      { q: "What if I also want a dietitian?", a: "The full Bespoke Healthcare membership adds registered dietitians under the same plan, so one team sees your training and nutrition together." },
+      { q: "What's the difference between a check-in and a call?", a: "A check-in is written: your coach reviews your context and replies with reasoning in 6 to 12 hours (1 consult). A call is 10 minutes of live video with the coach you choose (2 consults)." },
+      { q: "How do consults accumulate?", a: "Core: 4 a month. Plus: 10. Unused roll over; purchased never expire. Core can add 4 for $39." },
+      { q: "Who sees my information?", a: "Only the licensed professional handling your consult, and only what you've chosen to share. Every consult shows who saw it. Nothing is sold." },
+      { q: "Can I cancel or delete my data?", a: "Yes, both from the app. Month to month; purchased consults stay yours." },
+      { q: "Is this medical care?", a: "No. We provide general wellness coaching, not medical advice, diagnosis, or treatment. Registered dietitians provide medical nutrition therapy only in states where they are licensed." },
+    ];
+    const open = this.state.open;
+    return {
+      wideNav: !this.state.isNarrow, showStickyBar: this.state.isMobile,
+      roster: rosterCards, rosterLabel, live, reply,
+      anchors, hasPick: !!picked, matchedTeam, teamHeadline, goalWord, goalWordStyle, startHref, startLabel, appStoreUrl: this.props.appStoreUrl ?? "https://apps.apple.com/",
+      phone: this.state.phone, onPhone: e => this.setState({ phone: e.target.value }), sendLink: this.sendLink, sent: this.state.sent, notSent: !this.state.sent,
+      isLive: mode === "live", isAsync: mode === "async", pickLive: () => this.setState({ mode: "live", modeManual: true }), pickAsync: () => this.setState({ mode: "async", modeManual: true }), liveTabStyle: tabStyle(mode === "live"), asyncTabStyle: tabStyle(mode === "async"), callClock,
+      dayMoments, dayProgressStyle, dayActive: { time: am.time, msg: am.msg, r1: am.r1, r2: am.r2, title: am.title, note: am.note }, legendProactive: legend("Proactive"), legendAction: legend("Action"), legendReminder: legend("Reminder"),
+      quote, quoteDots,
+      calcN: n, onCalcN: e => this.setState({ calcN: +e.target.value }), toggleCall: () => this.setState(s => ({ calcCall: !s.calcCall })), callToggleStyle,
+      calcPlan: plan, calcPrice: "$" + price, calcDetail: detail, calcPrivate: "$" + priv.toLocaleString(), calcSavings: "$" + Math.max(0, priv - price).toLocaleString(),
+      recFree: plan === "Starter", recCore: plan === "Core", recPlus: plan === "Plus", planFreeStyle: planStyle(plan === "Starter"), planCoreStyle: planStyle(plan === "Core"), planPlusStyle: { ...planStyle(plan === "Plus"), borderRight: "none" },
+      faqItems: faqs.map((f, i) => ({ q: f.q, a: f.a, toggle: () => this.setState({ open: open === i ? null : i }),
+        plusStyle: { fontFamily: MONO, fontSize: "1.25rem", color: MUTED, transition: "transform 0.2s", transform: open === i ? "rotate(45deg)" : "none" },
+        answerStyle: { overflow: "hidden", maxHeight: open === i ? 300 : 0, transition: "max-height 0.3s cubic-bezier(0.22,1,0.36,1)" } })),
+    };
+  }
+}
+</script>
+</body>
+</html>

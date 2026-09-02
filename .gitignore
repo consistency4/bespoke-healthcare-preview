@@ -1,0 +1,6 @@
+# not part of the preview site
+archive/
+source-material/
+.image-slots.state.json
+.vercel/
+.DS_Store

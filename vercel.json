@@ -1,0 +1,14 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    { "source": "/", "destination": "/Bespoke%20Healthcare%20v3.dc.html" },
+    { "source": "/nutrition", "destination": "/Bespoke%20Nutrition%20v3.dc.html" },
+    { "source": "/exercise", "destination": "/Bespoke%20Exercise%20v3.dc.html" },
+    { "source": "/coverage", "destination": "/Coverage.dc.html" },
+    { "source": "/logo-ideas", "destination": "/Logo%20Ideas.dc.html" },
+    { "source": "/goals/:slug", "destination": "/Goal%20-%20:slug.dc.html" }
+  ],
+  "headers": [
+    { "source": "/(.*)", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] }
+  ]
+}

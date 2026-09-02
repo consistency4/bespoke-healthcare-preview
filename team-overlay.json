@@ -1,0 +1,285 @@
+{
+  "isabel-zimmermann": {
+    "kind": "n",
+    "cred": "Registered Dietitian · MS Nutrition Sciences · sports nutrition",
+    "states": "Registered Dietitian (RD)",
+    "bio": "Sports nutrition dietitian with nearly a decade of experience, most recently the primary sports dietitian at the University of Mississippi. A former Division I cross country and track athlete at NC State.",
+    "specs": [
+      "Race fueling",
+      "Muscle gain",
+      "Hydration",
+      "Weight loss",
+      "Meal prep",
+      "Body recomposition"
+    ]
+  },
+  "kristina-bauer": {
+    "kind": "n",
+    "cred": "Registered Dietitian Nutritionist · MS · pediatric weight management",
+    "states": "Licensed: OH · KY",
+    "bio": "Registered dietitian specializing in pediatric weight management at Cincinnati Children's. Works from Health at Every Size and intuitive eating rather than restrictive dieting.",
+    "specs": [
+      "Weight loss",
+      "Cutting sugar",
+      "Meal prep",
+      "Eating well on a budget",
+      "Plateaus"
+    ]
+  },
+  "brooke-caplinger": {
+    "kind": "n",
+    "cred": "Registered Dietitian Nutritionist · Certified Personal Trainer",
+    "states": "Licensed: MA",
+    "bio": "Registered dietitian and personal trainer of six years who pairs nutrition coaching with exercise guidance. Works in K-12 school nutrition and provides insurance-covered coaching through Kickoff.",
+    "specs": [
+      "Weight loss",
+      "Body recomposition",
+      "Muscle gain",
+      "Meal prep",
+      "Beginner lifting"
+    ]
+  },
+  "nickie-patel": {
+    "kind": "n",
+    "cred": "Registered Dietitian Nutritionist · metabolic & hormone health",
+    "states": "Licensed in 17 states",
+    "bio": "Registered dietitian with a kinesiology background who focuses on weight loss that protects metabolism, hormone concerns such as PCOS and thyroid, and performance goals. Uses wearable data and bloodwork to guide plans.",
+    "specs": [
+      "GLP-1 guidance",
+      "GLP-1 side effects",
+      "Weight loss",
+      "PCOS",
+      "Plateaus",
+      "Insulin resistance",
+      "Body recomposition",
+      "Meal prep"
+    ]
+  },
+  "emily-levin": {
+    "kind": "n",
+    "cred": "Registered Dietitian Nutritionist · MPH",
+    "states": "Registered Dietitian Nutritionist (RDN)",
+    "bio": "Registered dietitian and Public Health Advisor in the NIH Office of Nutrition Research. Brings a public-health lens to translating nutrition evidence into everyday practice.",
+    "specs": [
+      "Eating well on a budget",
+      "Plant-based",
+      "Meal prep",
+      "Cholesterol",
+      "Blood pressure"
+    ]
+  },
+  "ashley-art": {
+    "kind": "n",
+    "cred": "Registered Dietitian Nutritionist · MS · community & clinical",
+    "states": "Licensed: OH",
+    "bio": "Registered dietitian at Lutheran Social Services of Central Ohio supporting community and clinical nutrition. Trained across WIC and rural healthcare settings, with a focus on guidance that fits real life.",
+    "specs": [
+      "Eating well on a budget",
+      "Meal prep",
+      "Cutting sugar",
+      "Weight loss",
+      "Hydration"
+    ]
+  },
+  "michelle-wolff": {
+    "kind": "n",
+    "cred": "Registered Dietitian Nutritionist · CDN · relationship with food",
+    "states": "Licensed in 17 states",
+    "bio": "Board-certified dietitian in New York City who helps clients rebuild trust with their bodies and their relationship with food. A former Division I cross country and track athlete, with continued training in functional nutrition.",
+    "specs": [
+      "Gut health",
+      "IBS",
+      "Reflux",
+      "Cutting sugar",
+      "Meal prep",
+      "Eating out & travel",
+      "Hydration"
+    ]
+  },
+  "jessica-weissman": {
+    "kind": "n",
+    "cred": "Registered Dietitian Nutritionist · PhD · Certified Personal Trainer",
+    "states": "Licensed: FL · IL",
+    "bio": "Registered dietitian, personal trainer, and Department Chair of Integrative and Functional Nutrition at Saybrook University. More than a decade across bariatric, outpatient, hospital, and wellness settings.",
+    "specs": [
+      "GLP-1 guidance",
+      "GLP-1 side effects",
+      "Weight loss",
+      "Type 2 diabetes",
+      "Insulin resistance",
+      "Body recomposition",
+      "Plateaus",
+      "Beginner lifting"
+    ]
+  },
+  "christopher-peterson": {
+    "kind": "n",
+    "cred": "Registered Dietitian Nutritionist · MS Nutrition Diagnostics · performance",
+    "states": "Registered Dietitian Nutritionist (RDN)",
+    "bio": "Registered dietitian specializing in clinical and performance nutrition, previously a nutrition associate with the Detroit Tigers organization. Works on sports nutrition, weight management, and hormone-driven health.",
+    "specs": [
+      "Race fueling",
+      "Muscle gain",
+      "Weight loss",
+      "Body recomposition",
+      "Hydration",
+      "Meal prep"
+    ]
+  },
+  "nilufer-ece-bozkan": {
+    "kind": "n",
+    "cred": "Certified Nutritionist · Integrative Nutrition",
+    "states": "General wellness · all states",
+    "bio": "Runs Wellness with Nilufer, a remote one-on-one coaching practice built around sustainable habits and personalized wellness plans. Takes a whole-body approach across mental, physical, and everyday routines.",
+    "specs": [
+      "Meal prep",
+      "Eating well on a budget",
+      "Cutting sugar",
+      "Hydration",
+      "Plant-based",
+      "Sleep & recovery"
+    ]
+  },
+  "michaela-gleed": {
+    "kind": "e",
+    "cred": "NASM Certified Personal Trainer · Pilates · Yoga Alliance",
+    "states": "All states",
+    "bio": "Founder and lead instructor of Habitual, blending the breath work of yoga, the control of Pilates, and the discipline of interval training into routines people keep.",
+    "specs": [
+      "Mobility",
+      "Home workouts",
+      "Busy-schedule programming",
+      "Beginner lifting",
+      "Sleep & recovery"
+    ]
+  },
+  "jerome-bacon-iii": {
+    "kind": "e",
+    "cred": "ACSM Certified Exercise Physiologist · Corrective Exercise Specialist",
+    "states": "All states",
+    "bio": "Clinical exercise physiologist with more than two decades in cardiopulmonary rehabilitation. Builds ACSM-guided exercise prescriptions from medical records and teaches safe, self-monitored home training.",
+    "specs": [
+      "Hypertension-safe training",
+      "Home workouts",
+      "Beginner lifting",
+      "Return from injury",
+      "Busy-schedule programming"
+    ]
+  },
+  "libby-thompson": {
+    "kind": "e",
+    "cred": "Exercise Physiologist · NASM Certified",
+    "states": "All states",
+    "bio": "Exercise physiologist who began in cardiology before spending three years in an obesity management clinic at Cincinnati Children's, helping patients and families build healthier routines.",
+    "specs": [
+      "Beginner lifting",
+      "Home workouts",
+      "Hypertension-safe training",
+      "Busy-schedule programming",
+      "Mobility"
+    ]
+  },
+  "taylor-duckett": {
+    "kind": "e",
+    "cred": "NASM Certified Strength Coach · Personal Trainer",
+    "states": "All states",
+    "bio": "Personal trainer and strength coach who has worked with hundreds of clients across every age and fitness level since 2015, and now coaches online as well as in person.",
+    "specs": [
+      "Building strength",
+      "Beginner lifting",
+      "Home workouts",
+      "Busy-schedule programming",
+      "Body recomposition"
+    ]
+  },
+  "katie-callo": {
+    "kind": "e",
+    "cred": "ISSA Certified Personal Trainer · Pilates · Guinness World Record holder",
+    "states": "All states",
+    "bio": "Certified personal trainer and Pilates instructor with UCLA Recreation's FITWELL program, and a Guinness World Record holder for the heaviest female hip thrust. Also a certified Diabetes Prevention Program coach.",
+    "specs": [
+      "Building strength",
+      "Muscle gain",
+      "Mobility",
+      "Return from injury",
+      "Type 2 diabetes",
+      "Prediabetes & A1c"
+    ]
+  },
+  "michael-hawkins": {
+    "kind": "e",
+    "cred": "ISSA Certified Strength Coach",
+    "states": "All states",
+    "bio": "Certified strength coach with more than 25 years of dual experience in business and fitness, coaching people who have to fit training around a demanding schedule.",
+    "specs": [
+      "Building strength",
+      "Busy-schedule programming",
+      "Beginner lifting",
+      "Home workouts",
+      "Muscle gain"
+    ]
+  },
+  "aaron-snyder": {
+    "kind": "a",
+    "cred": "Doctor of Physical Therapy · Orthopedic Clinical Specialist (OCS)",
+    "states": "Advisor · does not see members directly",
+    "bio": "Orthopedic physical therapist and Head of Basketball Performance at Agile Physical Therapy, and a former professional point guard. Advises on physical therapy.",
+    "specs": [
+      "Return from injury",
+      "Mobility",
+      "Running injuries"
+    ]
+  },
+  "eric-lee": {
+    "kind": "a",
+    "cred": "Doctor of Physical Therapy · CSCS · Certified Dry Needling",
+    "states": "Advisor · does not see members directly",
+    "bio": "Doctor of physical therapy and strength and conditioning specialist who founded ELee Performance PT in Miami, with experience across NCAA, MLB, and NFL athletes. Advises on sports performance and rehab.",
+    "specs": [
+      "Return from injury",
+      "Running injuries",
+      "Mobility",
+      "Building strength"
+    ]
+  },
+  "hannah-todd": {
+    "kind": "a",
+    "cred": "Doctor of Physical Therapy · Pelvic Health",
+    "states": "Advisor · does not see members directly",
+    "bio": "Doctor of physical therapy and founder of Vital Core Physical Therapy, treating pelvic floor dysfunction through in-person, virtual, and hybrid care. Advises on pelvic and postpartum health.",
+    "specs": [
+      "Pregnancy & postpartum",
+      "Mobility",
+      "Return from injury"
+    ]
+  },
+  "dena-kranzberg": {
+    "kind": "a",
+    "cred": "Women's Health Nurse Practitioner (WHNP-BC) · NASM CPT · IFBB Pro",
+    "states": "Advisor · does not see members directly",
+    "bio": "Board-certified women's health nurse practitioner working in precision medicine and healthy longevity, with prior practice in perimenopause and menopause care. Advises on clinical nursing and women's health.",
+    "specs": [
+      "Menopause",
+      "Pregnancy & postpartum",
+      "PCOS"
+    ]
+  },
+  "grace-berger": {
+    "kind": "a",
+    "cred": "Licensed Clinical Social Worker (LCSW) · CBT · DBT · ACT",
+    "states": "Advisor · does not see members directly",
+    "bio": "Licensed clinical social worker in Chicago providing outpatient psychotherapy for children, adolescents, and adults using CBT, DBT, and ACT. Advises on behavioral health.",
+    "specs": [
+      "Sleep & recovery"
+    ]
+  },
+  "kiahlei-yaste": {
+    "kind": "a",
+    "cred": "Clinical Social Worker (SWC) · Mental Health Therapist",
+    "states": "Advisor · does not see members directly",
+    "bio": "Clinical social worker and mental health therapist in acute behavioral health, trained in motivational interviewing and trauma-informed care. Advises on therapy and behavioral health.",
+    "specs": [
+      "Sleep & recovery"
+    ]
+  }
+}
