@@ -37,6 +37,7 @@
     "dietitian": true,
     "licensedStates": [],
     "advisorRole": "",
+    "funFact": "",
     "disclaimer": ""
   },
   {
@@ -80,6 +81,7 @@
       "Kentucky"
     ],
     "advisorRole": "",
+    "funFact": "",
     "disclaimer": ""
   },
   {
@@ -123,6 +125,7 @@
       "Massachusetts"
     ],
     "advisorRole": "",
+    "funFact": "",
     "disclaimer": ""
   },
   {
@@ -184,6 +187,7 @@
       "Wisconsin"
     ],
     "advisorRole": "",
+    "funFact": "",
     "disclaimer": ""
   },
   {
@@ -223,6 +227,7 @@
     "dietitian": true,
     "licensedStates": [],
     "advisorRole": "",
+    "funFact": "",
     "disclaimer": ""
   },
   {
@@ -264,6 +269,7 @@
       "Ohio"
     ],
     "advisorRole": "",
+    "funFact": "",
     "disclaimer": ""
   },
   {
@@ -321,6 +327,7 @@
       "Wisconsin"
     ],
     "advisorRole": "",
+    "funFact": "",
     "disclaimer": ""
   },
   {
@@ -369,6 +376,7 @@
       "Illinois"
     ],
     "advisorRole": "",
+    "funFact": "",
     "disclaimer": ""
   },
   {
@@ -409,6 +417,7 @@
     "dietitian": true,
     "licensedStates": [],
     "advisorRole": "",
+    "funFact": "",
     "disclaimer": ""
   },
   {
@@ -447,6 +456,7 @@
     "dietitian": false,
     "licensedStates": [],
     "advisorRole": "",
+    "funFact": "",
     "disclaimer": "Nilüfer Ece Bozkan is a certified health and wellness coach. Her work is in holistic wellness coaching, not licensed clinical care. She does not provide medical nutrition therapy, physical therapy, or any other clinical or medical service, and her coaching is intended to support general wellness rather than diagnose or treat any condition."
   },
   {
@@ -485,6 +495,7 @@
     "dietitian": false,
     "licensedStates": [],
     "advisorRole": "",
+    "funFact": "",
     "disclaimer": "Michaela Gleed is a wellness and movement instructor. Her work is in fitness and mindful movement coaching, not licensed clinical care. She does not provide medical nutrition therapy, physical therapy, or any other clinical or medical service, and her offerings are intended to support general wellness rather than diagnose or treat any condition."
   },
   {
@@ -524,6 +535,7 @@
     "dietitian": false,
     "licensedStates": [],
     "advisorRole": "",
+    "funFact": "",
     "disclaimer": ""
   },
   {
@@ -563,6 +575,7 @@
     "dietitian": false,
     "licensedStates": [],
     "advisorRole": "",
+    "funFact": "",
     "disclaimer": ""
   },
   {
@@ -600,6 +613,7 @@
     "dietitian": false,
     "licensedStates": [],
     "advisorRole": "Certified Strength Coach.",
+    "funFact": "",
     "disclaimer": ""
   },
   {
@@ -642,6 +656,7 @@
     "dietitian": false,
     "licensedStates": [],
     "advisorRole": "",
+    "funFact": "",
     "disclaimer": "Katie Callo is a certified personal trainer and fitness instructor. Her work is in fitness coaching, not licensed clinical care. She does not provide medical nutrition therapy, physical therapy, or any other clinical or medical service, and her offerings are intended to support general wellness rather than diagnose or treat any condition."
   },
   {
@@ -679,6 +694,7 @@
     "dietitian": false,
     "licensedStates": [],
     "advisorRole": "",
+    "funFact": "",
     "disclaimer": ""
   },
   {
@@ -717,6 +733,7 @@
     "dietitian": false,
     "licensedStates": [],
     "advisorRole": "Advisor focused on training and supervising our AI Health Assistant in physical therapy.",
+    "funFact": "",
     "disclaimer": "Aaron acts as an internal consultant and does not actively see customers."
   },
   {
@@ -757,6 +774,7 @@
     "dietitian": false,
     "licensedStates": [],
     "advisorRole": "Advisor focused on training and supervising our AI Health Assistant in physical therapy.",
+    "funFact": "",
     "disclaimer": "Eric acts as an internal consultant and does not actively see customers."
   },
   {
@@ -795,6 +813,7 @@
     "dietitian": false,
     "licensedStates": [],
     "advisorRole": "Advisor focused on training and supervising our AI Health Assistant in physical therapy.",
+    "funFact": "",
     "disclaimer": "Hannah acts as an internal consultant and does not actively see customers."
   },
   {
@@ -836,6 +855,7 @@
     "dietitian": false,
     "licensedStates": [],
     "advisorRole": "Advisor focused on clinical nursing and women's health expertise for our AI Health Assistant.",
+    "funFact": "",
     "disclaimer": "Dena acts as an internal consultant and does not actively see customers."
   },
   {
@@ -874,6 +894,7 @@
     "dietitian": false,
     "licensedStates": [],
     "advisorRole": "Advisor focused on therapy and behavioral health expertise for our AI Health Assistant.",
+    "funFact": "",
     "disclaimer": "Grace acts as an internal consultant and does not actively see customers."
   },
   {
@@ -909,6 +930,187 @@
     "dietitian": false,
     "licensedStates": [],
     "advisorRole": "Advisor focused on therapy and behavioral health expertise for our AI Health Assistant.",
+    "funFact": "",
     "disclaimer": "Kiahlei acts as an internal consultant and does not actively see customers."
+  },
+  {
+    "id": "spencer-tate",
+    "kind": "f",
+    "name": "Spencer Tate",
+    "cred": "Co-Founder, CEO · exercise coach · D1 runner · 2:28 marathon",
+    "cardCred": "Co-Founder, CEO",
+    "role": "Co-Founder, CEO",
+    "states": "Furman University · cross country & track",
+    "bio": "Division I cross country and track at Furman, coached by national champions. A 2:28 marathoner who has coached athletes from beginner to advanced.",
+    "specs": [],
+    "img": "assets/team/coach-spencer.jpeg",
+    "liveImg": "https://shifu.health/assets/coach-spencer.jpeg",
+    "profileUrl": "https://shifu.health/team/spencer-tate/",
+    "background": [
+      "Division I cross country and track at Furman, coached by national champions. A 2:28 marathoner who has coached athletes from beginner to advanced, Spencer started Shifu to give everyone the kind of team that elite athletes take for granted: a coach, a dietitian, and someone watching the whole picture every day."
+    ],
+    "education": [
+      "Furman University"
+    ],
+    "credentials": [],
+    "links": {},
+    "dietitian": false,
+    "licensedStates": [],
+    "advisorRole": "",
+    "funFact": "Aspires to one day compete in the U.S. Olympic Trials.",
+    "disclaimer": ""
+  },
+  {
+    "id": "nemath-ahmed",
+    "kind": "f",
+    "name": "Nemath Ahmed",
+    "cred": "Co-Founder, CTO · MS Computer Science (AI)",
+    "cardCred": "Co-Founder, CTO",
+    "role": "Co-Founder, CTO",
+    "states": "Georgia Tech · Emory Hospital",
+    "bio": "Former lead wellness developer at Georgia Tech with an MS in computer science focused on AI. Spent two years at Emory Hospital researching women's preventive health.",
+    "specs": [],
+    "img": "assets/team/coach-nemath.jpg",
+    "liveImg": "https://shifu.health/assets/coach-nemath.jpg",
+    "profileUrl": "https://shifu.health/team/nemath-ahmed/",
+    "background": [
+      "Former lead wellness developer at Georgia Tech with an MS in computer science focused on AI. Spent two years at Emory Hospital researching women's preventive health, and now builds Shifu: the assistant that runs the day so licensed professionals can make the calls."
+    ],
+    "education": [
+      "MS: Computer Science (AI), Georgia Tech"
+    ],
+    "credentials": [],
+    "links": {},
+    "dietitian": false,
+    "licensedStates": [],
+    "advisorRole": "",
+    "funFact": "Plays six instruments, including flute, piano, kalimba, guitar, harmonica, and ukulele.",
+    "disclaimer": ""
+  },
+  {
+    "id": "alan-bi",
+    "kind": "f",
+    "name": "Alan Bi",
+    "cred": "Growth Engineer",
+    "cardCred": "Growth Engineer",
+    "role": "Growth Engineer",
+    "states": "UNC Chapel Hill",
+    "bio": "Previously at Elliot Davis. PhD student in history at UNC Chapel Hill studying the 2008 financial crisis.",
+    "specs": [],
+    "img": "assets/team/alan.jpg",
+    "liveImg": "https://shifu.health/assets/alan.jpg",
+    "profileUrl": "https://shifu.health/team/alan-bi/",
+    "background": [
+      "Previously at Elliot Davis. PhD student in history at UNC Chapel Hill studying the 2008 financial crisis."
+    ],
+    "education": [
+      "UNC Chapel Hill"
+    ],
+    "credentials": [],
+    "links": {},
+    "dietitian": false,
+    "licensedStates": [],
+    "advisorRole": "",
+    "funFact": "Speaks three languages: English, Chinese, and French.",
+    "disclaimer": ""
+  },
+  {
+    "id": "jason-calacanis",
+    "kind": "i",
+    "name": "Jason Calacanis",
+    "cred": "General Partner, LAUNCH · investor & strategic advisor",
+    "cardCred": "General Partner, LAUNCH",
+    "role": "General Partner, LAUNCH",
+    "states": "Investor",
+    "bio": "Serial entrepreneur, early Uber investor, host of This Week in Startups and co-host of the All-In Podcast. Founder & CEO of LAUNCH.",
+    "specs": [],
+    "img": "assets/team/coach-jason.png",
+    "liveImg": "https://shifu.health/assets/coach-jason.png",
+    "profileUrl": "https://shifu.health/team/jason-calacanis/",
+    "background": [
+      "Jason is a serial entrepreneur and one of the most prominent angel investors in technology, best known as an early investor in Uber (2010) and co-host of the All-In Podcast, where he has served as a \"Bestie\" since 2021. He has hosted This Week in Startups since 2009, a long-running podcast featuring conversations with founders and investors including Travis Kalanick, Brit Morin, and Andy Rachleff, and he is the author of ANGEL (2017), a book on angel investing. Since 2011 he has been Founder & CEO of LAUNCH, an early-stage venture fund and accelerator, and since 2021 he has taught emerging founders through Founder University. He also founded Inside.com (2007), which provides business intelligence through events, newsletters, and an online community.",
+      "His operating career began in New York's early internet scene, where he founded Silicon Alley Reporter (1996), a magazine and events business chronicling the dot-com era that was later renamed VentureReporter.net after pivoting from advertising to database revenue; the company was sold to Dow Jones in 2003. He then co-founded Weblogs, Inc. with Brian Alvey (2003–2006), a blog network publishing Engadget, Autoblog, Joystiq, and more than 70 other leading blogs, which was acquired by TimeWarner/AOL in October 2005. Following the acquisition, he served as an Entrepreneur in Action at Sequoia Capital (2006–2007)."
+    ],
+    "education": [
+      "Fordham University"
+    ],
+    "credentials": [],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/jasoncalacanis/"
+    },
+    "dietitian": false,
+    "licensedStates": [],
+    "advisorRole": "Strategic Advisor & Investor",
+    "funFact": "",
+    "disclaimer": ""
+  },
+  {
+    "id": "raj-shekhar-singh",
+    "kind": "i",
+    "name": "Raj Shekhar Singh",
+    "cred": "General Partner, z21 Ventures · investor & strategic advisor",
+    "cardCred": "General Partner, z21 Ventures",
+    "role": "General Partner, z21 Ventures",
+    "states": "Investor",
+    "bio": "Founder and General Partner of z21 Ventures, founding member of Innovaccer, former McKinsey consultant, PhD from UC Berkeley.",
+    "specs": [],
+    "img": "assets/team/coach-raj.png",
+    "liveImg": "https://shifu.health/assets/coach-raj.png",
+    "profileUrl": "https://shifu.health/team/raj-shekhar-singh/",
+    "background": [
+      "Raj is a serial entrepreneur and early-stage investor focused on the US-India technology corridor. He is the Founder and General Partner of z21 Ventures (2022–present), a US-based, community-focused, operator-led venture capital fund with $40 million under management, investing in early-stage technology startups. Through z21 he has backed companies like Develo, an AI-native operating system for pediatric care, and serves as a Board Member at LivSYT (AI-driven metro infrastructure design) and Zime, and as a Board Observer at HEN Nozzles.",
+      "His operating background spans multiple industries, including B2B SaaS, healthtech, EV, high tech, and autonomous driving. He was a founding member of Innovaccer, a leading healthtech company transforming healthcare data and analytics. He co-founded International Battery Company (2022–2024), a Li-ion cell manufacturing startup that raised $35M from RTP Global and others to bridge the EV gap in India, where he served as Chief Revenue Officer, and also co-founded HyperspecAI. Earlier in his career, he worked as a consultant at McKinsey & Co. His PhD research at UC Berkeley, conducted with Lawrence Berkeley National Labs, NASA JPL, and UC Irvine, focused on data assimilation and modeling techniques to improve high-resolution predictive modeling of groundwater."
+    ],
+    "education": [
+      "BTech: Biotechnology and Biochemical Engineering (with Honors), Indian Institute of Technology, Kharagpur",
+      "PhD: University of California, Berkeley"
+    ],
+    "credentials": [
+      "Early-stage venture investing (US-India corridor)",
+      "Startup founding and scaling (B2B SaaS, Healthtech, EV, High Tech, Autonomous Driving)",
+      "Board governance and advisory"
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/rajshekharsingh1/"
+    },
+    "dietitian": false,
+    "licensedStates": [],
+    "advisorRole": "Strategic Advisor & Investor",
+    "funFact": "",
+    "disclaimer": ""
+  },
+  {
+    "id": "abhinav-shashank",
+    "kind": "i",
+    "name": "Abhinav Shashank",
+    "cred": "CEO Innovaccer · Co-Founder, z21 Ventures · investor & strategic advisor",
+    "cardCred": "CEO Innovaccer & Co-Founder, z21 Ventures",
+    "role": "CEO Innovaccer & Co-Founder, z21 Ventures",
+    "states": "Investor",
+    "bio": "Co-Founder and CEO of Innovaccer, the healthtech company behind the Innovaccer Health Cloud, and Co-Founder of z21 Ventures.",
+    "specs": [],
+    "img": "assets/team/coach-abhinav.png",
+    "liveImg": "https://shifu.health/assets/coach-abhinav.png",
+    "profileUrl": "https://shifu.health/team/abhinav-shashank/",
+    "background": [
+      "Abhinav is the Co-Founder and CEO of Innovaccer (2014–present), a leading healthtech company on a mission to connect and curate the world's healthcare information to make it accessible and useful. Under his leadership, Innovaccer built the Innovaccer Health Cloud, which unifies patient data across systems and settings and empowers healthcare organizations to develop scalable, modern applications that improve clinical, operational, and financial outcomes. The company's solutions have been deployed across more than 1,000 care settings in the U.S., enabling 37,000+ providers, integrating medical records for over 24 million people, and generating more than $600 million in savings. Innovaccer has been recognized as a Best in KLAS vendor in population health management and the No. 1 customer-rated vendor by Black Book, and recently signed a Strategic Collaboration Agreement with Amazon Web Services to accelerate AI-driven healthcare autonomy through its Healthcare Autonomy Platform.",
+      "Beyond Innovaccer, Abhinav is a Co-Founder of z21 Ventures (2022–present), a community-focused, operator-led venture capital fund investing in early-stage technology startups in the US-India corridor, where he describes himself as a \"Purposeful Capitalist.\" He also serves as a Member of the Apex Committee for the Ministry of Education, Government of India (2023–present), helping establish AI Centers of Excellence in India. He is a prolific voice in healthcare innovation, publishing two newsletters, Xccelerate (10,000+ subscribers), focused on accelerated healthcare innovation and digital transformation, and Purposeful Capitalism. Earlier in his career, he was an Innovation Executive at Ingersoll Rand (2010–2012)."
+    ],
+    "education": [
+      "BE: Mechanical Engineering, Indian Institute of Technology, Kharagpur"
+    ],
+    "credentials": [
+      "Healthcare"
+    ],
+    "links": {
+      "business": "https://innovaccer.com/",
+      "businessLabel": "Innovaccer",
+      "linkedin": "https://www.linkedin.com/in/abhinavshashank/"
+    },
+    "dietitian": false,
+    "licensedStates": [],
+    "advisorRole": "Strategic Advisor & Investor",
+    "funFact": "",
+    "disclaimer": ""
   }
 ]

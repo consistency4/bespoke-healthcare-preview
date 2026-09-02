@@ -223,7 +223,7 @@ class Component extends DCLogic {
     // Roster from shifu-team.js: names, photos, bios, education, credentials and links are the live shifu.health profiles.
     const team = (typeof window !== "undefined" && window.SHIFU_SITE_TEAM) || [];
     const { filter, topic } = this.state;
-    const KIND_LABEL = { n: "Nutrition · Registered dietitians & nutritionists", e: "Exercise · Certified coaches", a: "Clinical advisor · trains and supervises Shifu" };
+    const KIND_LABEL = { n: "Nutrition · Registered dietitians & nutritionists", e: "Exercise · Certified coaches", a: "Clinical advisor · trains and supervises Shifu", f: "Founding team", i: "Investor & strategic advisor" };
     const MAX_CHIPS = 3; // three chips plus a "+N more" chip fit the two-row chip area on a 285px card
     const chipStyle = (on) => ({ fontFamily: MONO, fontSize: "0.6875rem", lineHeight: 1.3, padding: "5px 9px", borderRadius: 4, background: on ? NAVY : "#F4F4F1", color: on ? "#FFFFFF" : MUTED, transition: "all 0.25s", whiteSpace: "nowrap" });
     const tab = (on) => ({ padding: "10px 16px", border: "none", cursor: "pointer", fontSize: "0.875rem", fontWeight: 600, background: on ? INK : "#FFFFFF", color: on ? "#FFFFFF" : INK, transition: "all 0.2s" });
@@ -233,7 +233,8 @@ class Component extends DCLogic {
       topics: g.topics.map(label => { const on = topic === label; return { label, pick: () => this.setState({ topic: on ? null : label }),
         style: { fontFamily: MONO, fontSize: "0.75rem", cursor: "pointer", borderRadius: 6, padding: "8px 12px", transition: "all 0.15s", border: "1px solid " + (on ? NAVY : LINE), background: on ? NAVY : "#FFFFFF", color: on ? "#FFFFFF" : INK } }; }),
     }));
-    const visible = team.filter(m => filter === "all" || m.kind === filter);
+    // founders (f) and investors (i) live on the Manifesto page; Coverage lists the care team and advisors
+    const visible = team.filter(m => "nea".includes(m.kind) && (filter === "all" || m.kind === filter));
     const matchCount = topic ? visible.filter(m => m.specs.includes(topic)).length : 0;
     const teamOut = visible.map(m => {
       const hit = !!topic && m.specs.includes(topic), dim = !!topic && !hit;

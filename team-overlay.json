@@ -281,5 +281,92 @@
     "specs": [
       "Sleep & recovery"
     ]
+  },
+  "spencer-tate": {
+    "kind": "f",
+    "cred": "Co-Founder, CEO · exercise coach · D1 runner · 2:28 marathon",
+    "states": "Furman University · cross country & track",
+    "bio": "Division I cross country and track at Furman, coached by national champions. A 2:28 marathoner who has coached athletes from beginner to advanced.",
+    "specs": [],
+    "person": {
+      "name": "Spencer Tate",
+      "cardCred": "Co-Founder, CEO",
+      "role": "Co-Founder, CEO",
+      "photo": "/assets/coach-spencer.jpeg",
+      "background": [
+        "Division I cross country and track at Furman, coached by national champions. A 2:28 marathoner who has coached athletes from beginner to advanced, Spencer started Shifu to give everyone the kind of team that elite athletes take for granted: a coach, a dietitian, and someone watching the whole picture every day."
+      ],
+      "funFact": "Aspires to one day compete in the U.S. Olympic Trials.",
+      "education": [
+        "Furman University"
+      ],
+      "credentials": [],
+      "links": {}
+    }
+  },
+  "nemath-ahmed": {
+    "kind": "f",
+    "cred": "Co-Founder, CTO · MS Computer Science (AI)",
+    "states": "Georgia Tech · Emory Hospital",
+    "bio": "Former lead wellness developer at Georgia Tech with an MS in computer science focused on AI. Spent two years at Emory Hospital researching women's preventive health.",
+    "specs": [],
+    "person": {
+      "name": "Nemath Ahmed",
+      "cardCred": "Co-Founder, CTO",
+      "role": "Co-Founder, CTO",
+      "photo": "/assets/coach-nemath.jpg",
+      "background": [
+        "Former lead wellness developer at Georgia Tech with an MS in computer science focused on AI. Spent two years at Emory Hospital researching women's preventive health, and now builds Shifu: the assistant that runs the day so licensed professionals can make the calls."
+      ],
+      "funFact": "Plays six instruments, including flute, piano, kalimba, guitar, harmonica, and ukulele.",
+      "education": [
+        "MS: Computer Science (AI), Georgia Tech"
+      ],
+      "credentials": [],
+      "links": {}
+    }
+  },
+  "alan-bi": {
+    "kind": "f",
+    "cred": "Growth Engineer",
+    "states": "UNC Chapel Hill",
+    "bio": "Previously at Elliot Davis. PhD student in history at UNC Chapel Hill studying the 2008 financial crisis.",
+    "specs": [],
+    "person": {
+      "name": "Alan Bi",
+      "cardCred": "Growth Engineer",
+      "role": "Growth Engineer",
+      "photo": "/assets/alan.jpg",
+      "background": [
+        "Previously at Elliot Davis. PhD student in history at UNC Chapel Hill studying the 2008 financial crisis."
+      ],
+      "funFact": "Speaks three languages: English, Chinese, and French.",
+      "education": [
+        "UNC Chapel Hill"
+      ],
+      "credentials": [],
+      "links": {}
+    }
+  },
+  "jason-calacanis": {
+    "kind": "i",
+    "cred": "General Partner, LAUNCH · investor & strategic advisor",
+    "states": "Investor",
+    "bio": "Serial entrepreneur, early Uber investor, host of This Week in Startups and co-host of the All-In Podcast. Founder & CEO of LAUNCH.",
+    "specs": []
+  },
+  "raj-shekhar-singh": {
+    "kind": "i",
+    "cred": "General Partner, z21 Ventures · investor & strategic advisor",
+    "states": "Investor",
+    "bio": "Founder and General Partner of z21 Ventures, founding member of Innovaccer, former McKinsey consultant, PhD from UC Berkeley.",
+    "specs": []
+  },
+  "abhinav-shashank": {
+    "kind": "i",
+    "cred": "CEO Innovaccer · Co-Founder, z21 Ventures · investor & strategic advisor",
+    "states": "Investor",
+    "bio": "Co-Founder and CEO of Innovaccer, the healthtech company behind the Innovaccer Health Cloud, and Co-Founder of z21 Ventures.",
+    "specs": []
   }
 }
