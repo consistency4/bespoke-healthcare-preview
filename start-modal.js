@@ -23,7 +23,7 @@
 
   var COPY = {
     start: { eyebrow: 'Launching soon', title: 'We are launching publicly soon.', body: 'Leave your email and we will let you know the moment memberships open.', done: 'We will email you as soon as Shifu Health opens to the public.', plan: 'launch-notify' },
-    app: { eyebrow: 'iOS app · coming soon', title: 'The iOS app is coming soon.', body: 'Leave your email and we will let you know the moment it is in the App Store.', done: 'We will email you as soon as the app is in the App Store.', plan: 'ios-app-notify' }
+    app: { eyebrow: 'iOS app · closed beta', title: 'We are in closed beta, but are opening our app to the public soon.', body: 'Leave your email and we will let you know the moment it opens.', done: 'We will email you as soon as the app opens to the public.', plan: 'ios-app-notify' }
   };
 
   function endpoint() {
