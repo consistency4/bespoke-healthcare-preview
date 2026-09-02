@@ -44,7 +44,7 @@
       <p style="font-size:1.0625rem;line-height:1.5;color:#6B6B70">Pick a topic to see who on the team handles it. Every consult is routed to a professional licensed in your state.</p>
     </div>
     <div style="display:flex;gap:0;border:1px solid #0B0B0C;border-radius:6px;overflow:hidden;width:fit-content;margin-bottom:40px">
-      <button onClick="{{ filterAll }}" style="{{ tabAll }}">All</button><button onClick="{{ filterN }}" style="{{ tabN }}">Nutrition</button><button onClick="{{ filterE }}" style="{{ tabE }}">Exercise</button><button onClick="{{ filterA }}" style="{{ tabA }}">Advisors</button>
+      <button onClick="{{ filterAll }}" style="{{ tabAll }}">All</button><button onClick="{{ filterN }}" style="{{ tabN }}">Nutrition</button><button onClick="{{ filterE }}" style="{{ tabE }}">Exercise</button>
     </div>
     <div style="display:flex;flex-direction:column;border-top:1px solid #0B0B0C">
       <sc-for list="{{ groups }}" as="g" hint-placeholder-count="7">
@@ -204,12 +204,20 @@ class Component extends DCLogic {
     try {
       const id = new URLSearchParams(window.location.search).get("profile");
       const roster = window.SHIFU_SITE_TEAM || [];
-      if (id && roster.some(m => m.id === id)) this.openProfile(id);
+      if (id && roster.some(m => m.id === id)) { this.openedFromLink = true; this.openProfile(id); }
     } catch (e) {}
   }
   componentWillUnmount() { document.removeEventListener("keydown", this.onKey); document.body.style.overflow = ""; }
   openProfile(id) { document.body.style.overflow = "hidden"; this.setState({ open: id }); }
-  closeProfile() { document.body.style.overflow = ""; this.setState({ open: null }); }
+  closeProfile() {
+    document.body.style.overflow = ""; this.setState({ open: null });
+    // opened straight from a link on another page of ours: closing goes back to that page
+    if (this.openedFromLink) {
+      this.openedFromLink = false;
+      try { if (document.referrer && new URL(document.referrer).origin === window.location.origin && window.history.length > 1) { window.history.back(); return; } } catch (e) {}
+      try { window.history.replaceState(null, "", window.location.pathname + "#team"); } catch (e) {}
+    }
+  }
   renderVals() {
     const INK = "#0B0B0C", NAVY = "#F1580D", MUTED = "#6B6B70", LINE = "#E3E3E0", MONO = "'IBM Plex Mono',monospace";
     const groupDefs = [
@@ -228,14 +236,15 @@ class Component extends DCLogic {
     const MAX_CHIPS = 3; // three chips plus a "+N more" chip fit the two-row chip area on a 285px card
     const chipStyle = (on) => ({ fontFamily: MONO, fontSize: "0.6875rem", lineHeight: 1.3, padding: "5px 9px", borderRadius: 4, background: on ? NAVY : "#F4F4F1", color: on ? "#FFFFFF" : MUTED, transition: "all 0.25s", whiteSpace: "nowrap" });
     const tab = (on) => ({ padding: "10px 16px", border: "none", cursor: "pointer", fontSize: "0.875rem", fontWeight: 600, background: on ? INK : "#FFFFFF", color: on ? "#FFFFFF" : INK, transition: "all 0.2s" });
-    const groups = groupDefs.filter(g => filter === "all" || filter === "a" || g.kind === filter).map(g => ({
+    const groups = groupDefs.filter(g => filter === "all" || g.kind === filter).map(g => ({
       title: g.title, kindLabel: g.kind === "n" ? "Nutrition · Registered dietitians" : "Exercise · Certified coaches",
       rowStyle: { display: "grid", gridTemplateColumns: "minmax(200px,0.8fr) minmax(0,2fr)", gap: "16px 40px", padding: "28px 0", borderBottom: "1px solid " + LINE },
       topics: g.topics.map(label => { const on = topic === label; return { label, pick: () => this.setState({ topic: on ? null : label }),
         style: { fontFamily: MONO, fontSize: "0.75rem", cursor: "pointer", borderRadius: 6, padding: "8px 12px", transition: "all 0.15s", border: "1px solid " + (on ? NAVY : LINE), background: on ? NAVY : "#FFFFFF", color: on ? "#FFFFFF" : INK } }; }),
     }));
-    // founders (f) and investors (i) live on the Manifesto page; Coverage lists the care team and advisors
-    const visible = team.filter(m => "nea".includes(m.kind) && (filter === "all" || m.kind === filter));
+    // Coverage lists the bookable care team only: dietitians, nutritionists and coaches. Clinical advisors,
+    // founders and investors are on the Manifesto page.
+    const visible = team.filter(m => "ne".includes(m.kind) && (filter === "all" || m.kind === filter));
     const matchCount = topic ? visible.filter(m => m.specs.includes(topic)).length : 0;
     const teamOut = visible.map(m => {
       const hit = !!topic && m.specs.includes(topic), dim = !!topic && !hit;
@@ -268,18 +277,18 @@ class Component extends DCLogic {
       linkedin: links.linkedin || "", hasLinkedin: !!links.linkedin,
       profileUrl: o ? o.profileUrl : "#", bookable: !!(o && o.kind !== "a"),
     };
-    const nCount = team.filter(m => m.kind === "n").length, eCount = team.filter(m => m.kind === "e").length, aCount = team.filter(m => m.kind === "a").length;
-    const teamCount = filter === "n" ? `${nCount} in nutrition` : filter === "e" ? `${eCount} in exercise` : filter === "a" ? `${aCount} advisors` : `${nCount + eCount} bookable · ${aCount} advisors`;
+    const nCount = team.filter(m => m.kind === "n").length, eCount = team.filter(m => m.kind === "e").length;
+    const teamCount = filter === "n" ? `${nCount} in nutrition` : filter === "e" ? `${eCount} in exercise` : `${nCount + eCount} people`;
     return {
       startHref: `sms:${this.props.smsNumber ?? "+10000000000"}?&body=${encodeURIComponent(topic ? `Hi Shifu, I want to work on ${topic.toLowerCase()}.` : "Hi Shifu, I'd like to get started.")}`,
-      filterAll: () => this.setState({ filter: "all", topic: null }), filterN: () => this.setState({ filter: "n", topic: null }), filterE: () => this.setState({ filter: "e", topic: null }), filterA: () => this.setState({ filter: "a", topic: null }),
-      tabAll: tab(filter === "all"), tabN: tab(filter === "n"), tabE: tab(filter === "e"), tabA: tab(filter === "a"),
+      filterAll: () => this.setState({ filter: "all", topic: null }), filterN: () => this.setState({ filter: "n", topic: null }), filterE: () => this.setState({ filter: "e", topic: null }),
+      tabAll: tab(filter === "all"), tabN: tab(filter === "n"), tabE: tab(filter === "e"),
       groups, team: teamOut, teamCount,
       hasOpen: !!o, profile, closeProfile: () => this.closeProfile(),
       teamTitle: !topic ? "Profiles, credentials, license states."
         : matchCount === 0 ? `No one on the team lists ${topic.toLowerCase()} yet.`
         : `${matchCount} on the team handle ${topic.toLowerCase()}.`,
-      teamSub: !topic ? "Every member is licensed or certified in their field, and you see all of them from day one. Open any card for their full background, education and credentials. Clinical advisors train and supervise Shifu; they do not see members directly."
+      teamSub: !topic ? "Every member is licensed or certified in their field, and you see all of them from day one. Open any card for their full background, education and credentials."
         : matchCount === 0 ? "Ask us anyway and we will point you to the closest fit on the team."
         : "Book a 10-minute video call (2 consults) or request a written check-in (1) with any of them.",
     };
