@@ -7,6 +7,9 @@
 }
 
 @media (max-width: 720px) {
+  /* heroes sit closer to the nav on phones (desktop: 168px home, 140px elsewhere) */
+  [style*="padding:168px"], [style*="padding: 168px"], [style*="padding:140px"], [style*="padding: 140px"] { padding-top: 104px !important; }
+
   /* tighter page gutters: 375px phones get 335px of content */
   section, footer { padding-left: 20px !important; padding-right: 20px !important; }
   nav > div { padding-left: 20px !important; padding-right: 20px !important; }
@@ -57,7 +60,8 @@
   [style*="minmax(260px"] { grid-template-columns: 1fr !important; }
   [style*="minmax(250px"] { grid-template-columns: 1fr !important; }
   /* face grids: three across */
-  [style*="minmax(170px"], [style*="minmax(150px"], [style*="minmax(118px"] { grid-template-columns: repeat(3, 1fr) !important; }
+  [style*="minmax(170px"] { grid-template-columns: repeat(2, 1fr) !important; }
+  [style*="minmax(150px"], [style*="minmax(118px"] { grid-template-columns: repeat(3, 1fr) !important; }
   [style*="minmax(110px"] { grid-template-columns: repeat(3, 1fr) !important; }
   /* home discipline tiles: two across */
   [style*="minmax(150px,1fr));gap:12px"], [style*="minmax(150px, 1fr)); gap: 12px"] { grid-template-columns: repeat(2, 1fr) !important; }
