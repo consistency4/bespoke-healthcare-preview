@@ -105,12 +105,12 @@
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:48px 64px;align-items:center">
       <sc-if value="{{ isLive }}" hint-placeholder-val="{{ true }}">
-        <div style="position:relative;aspect-ratio:16/10;border-radius:12px;overflow:hidden;background:#0B0B0C url(/assets/team/coach-spencer.jpeg) center/cover;box-shadow:0 30px 80px rgba(11,11,12,0.25)">
+        <div style="{{ liveMockStyle }}">
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.35) 0%,rgba(0,0,0,0) 35%,rgba(0,0,0,0) 60%,rgba(0,0,0,0.55) 100%)"></div>
           <div style="position:absolute;top:16px;left:16px;display:flex;align-items:center;gap:8px;background:rgba(0,0,0,0.45);backdrop-filter:blur(8px);border-radius:6px;padding:6px 10px;color:#FFFFFF;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem"><span style="width:7px;height:7px;border-radius:50%;background:#FF4D4D;animation:pulse 1.4s infinite"></span>Live · {{ callClock }}</div>
           <div style="position:absolute;top:16px;right:16px;background:rgba(0,0,0,0.45);backdrop-filter:blur(8px);border-radius:6px;padding:6px 10px;color:#FFFFFF;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem">Encrypted</div>
           <div style="position:absolute;right:16px;bottom:72px;width:68px;aspect-ratio:3/4;border-radius:8px;background:#2A2A2E;border:1px solid rgba(255,255,255,0.25);display:flex;align-items:center;justify-content:center;color:#8A8A90;font-family:'IBM Plex Mono',monospace;font-size:0.625rem">You</div>
-          <div style="position:absolute;left:16px;right:150px;bottom:16px;color:#FFFFFF;min-width:0"><div style="font-weight:600;font-size:1rem">Spencer Tate, CEP</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;opacity:0.8;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Certified Exercise Professional</div></div>
+          <div style="position:absolute;left:16px;right:150px;bottom:16px;color:#FFFFFF;min-width:0"><div style="font-weight:600;font-size:1rem">{{ live.name }}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;opacity:0.8;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ live.cred }}</div></div>
           <div style="position:absolute;right:16px;bottom:16px;display:flex;gap:8px"><span style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.18);backdrop-filter:blur(8px)"></span><span style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.18);backdrop-filter:blur(8px)"></span><span style="width:36px;height:36px;border-radius:50%;background:#FF4D4D"></span></div>
         </div>
         <div>
@@ -338,7 +338,9 @@ class Component extends DCLogic {
     const rosterCards = team.map(m => ({ name: m.name, cardCred: m.role, img: m.img, href: "/coverage/?profile=" + m.id + "#team" }));
     const rosterLabel = team.length ? `${team.length} certified exercise coaches · live today` : "";
     // People shown in the live-call and written-reply mocks (illustrative consults, names from the roster)
-    const live = team[0] ? { name: team[0].name, cred: team[0].role } : { name: "", cred: "" };
+    // Michaela Gleed (first exercise coach in the roster) is the coach on the live-call mock
+    const live = team[0] ? { name: team[0].name, cred: team[0].role, img: team[0].img } : { name: "", cred: "", img: "" };
+    const liveMockStyle = { position: "relative", aspectRatio: "16/10", borderRadius: 12, overflow: "hidden", background: "#0B0B0C" + (live.img ? " url(" + live.img + ") center 30%/cover" : ""), boxShadow: "0 30px 80px rgba(11,11,12,0.25)" };
     const replyM = team.find(m => m.id === "jerome-bacon-iii") || team[1] || team[0] || { name: "", img: "" };
     const reply = { name: replyM.name, img: replyM.img };
     const replyFirst = (replyM.name || "").split(",")[0].split(" ")[0];
@@ -406,7 +408,7 @@ class Component extends DCLogic {
     const open = this.state.open;
     return {
       wideNav: !this.state.isNarrow, showStickyBar: this.state.isMobile,
-      roster: rosterCards, rosterLabel, live, reply,
+      roster: rosterCards, rosterLabel, live, reply, liveMockStyle,
       anchors, hasPick: !!picked, matchedTeam, teamHeadline, goalWord, goalWordStyle, startHref, startLabel, appStoreUrl: this.props.appStoreUrl ?? "https://apps.apple.com/",
       phone: this.state.phone, onPhone: e => this.setState({ phone: e.target.value }), sendLink: this.sendLink, sent: this.state.sent, notSent: !this.state.sent,
       isLive: mode === "live", isAsync: mode === "async", pickLive: () => this.setState({ mode: "live", modeManual: true }), pickAsync: () => this.setState({ mode: "async", modeManual: true }), liveTabStyle: tabStyle(mode === "live"), asyncTabStyle: tabStyle(mode === "async"), callClock,
