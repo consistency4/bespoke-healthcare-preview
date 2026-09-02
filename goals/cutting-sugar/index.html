@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="/assets/favicon.png">
-  <link rel="stylesheet" href="/mobile.css?v=ff36b465">
+  <link rel="stylesheet" href="/mobile.css?v=6bba7275">
   <script src="/image-slot.js?v=22a948e0"></script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -141,7 +141,7 @@ class Component extends DCLogic {
     const roster = (typeof window !== "undefined" && window.SHIFU_SITE_TEAM) || [];
     const people = ids.map(id => roster.find(m => m.id === id) || extras[id]).filter(Boolean);
     const card = (m) => ({ name: m.name, cred: m.cred, img: m.img, href: m.href || ("/coverage/?profile=" + m.id + "#team"),
-      replyMeta: "REPLIED IN 6H · " + (m.dietitian ? "LICENSED IN YOUR STATE" : "CERTIFIED · ALL STATES") });
+      replyMeta: "Replied in 6h · " + (m.dietitian ? "licensed in your state" : "certified · all states") });
     const lead = people.length ? card(people[0]) : { name: "", cred: "", img: "", href: "#", replyMeta: "" };
     // dietitians work under state licenses; coaches and nutritionists are certified and available everywhere
     const strapline = people.some(m => m.dietitian) ? "Licensed in your state · visible from day one" : "Certified · every state · visible from day one";

@@ -91,10 +91,10 @@
     </div>
     <div style="margin-top:56px;padding:24px 0;border-top:1px solid #E3E3E0;border-bottom:1px solid #E3E3E0;display:flex;flex-wrap:wrap;align-items:center;gap:16px 40px">
       <span style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70">Trusted by employees at</span>
-      <img src="/assets/employers/google.svg" alt="Google" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6">
-      <img src="/assets/employers/apple.svg" alt="Apple" style="height:26px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6">
-      <img src="/assets/employers/rootly.svg" alt="Rootly AI" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6">
-      <span style="display:inline-flex;align-items:center;gap:8px;opacity:0.6"><img src="/assets/employers/orthogonal.svg" alt="" style="height:20px;width:20px"><span style="font-weight:700;font-size:1.25rem;letter-spacing:-0.03em;color:#0B0B0C;line-height:1">Orthogonal</span></span><img src="/assets/employers/asana.svg" alt="Asana" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6"><img src="/assets/employers/waymo.svg" alt="Waymo" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6"><img src="/assets/employers/pivot-robotics.svg" alt="Pivot Robotics" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="/assets/employers/google.svg" alt="Google" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1) brightness(0);opacity:0.55">
+      <img src="/assets/employers/apple.svg" alt="Apple" style="height:26px;width:auto;object-fit:contain;filter:grayscale(1) brightness(0);opacity:0.55">
+      <img src="/assets/employers/rootly.svg" alt="Rootly AI" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1) brightness(0);opacity:0.55">
+      <span style="display:inline-flex;align-items:center;gap:8px;opacity:0.55"><img src="/assets/employers/orthogonal.svg" alt="" style="height:20px;width:20px"><span style="font-weight:700;font-size:1.25rem;letter-spacing:-0.03em;color:#0B0B0C;line-height:1">Orthogonal</span></span><img src="/assets/employers/asana.svg" alt="Asana" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1) brightness(0);opacity:0.55"><img src="/assets/employers/waymo.svg" alt="Waymo" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1) brightness(0);opacity:0.55"><img src="/assets/employers/pivot-robotics.svg" alt="Pivot Robotics" style="height:22px;width:auto;object-fit:contain;filter:grayscale(1) brightness(0);opacity:0.55">
     </div>
   </div>
 </section>
@@ -113,10 +113,10 @@
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:48px 64px;align-items:center">
       <sc-if value="{{ isLive }}" hint-placeholder-val="{{ true }}">
-        <div style="position:relative;aspect-ratio:16/10;border-radius:12px;overflow:hidden;background:linear-gradient(160deg,#2A1A10,#0B0B0C);box-shadow:0 30px 80px rgba(11,11,12,0.25)">
+        <div style="{{ liveMockStyle }}">
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.35) 0%,rgba(0,0,0,0) 35%,rgba(0,0,0,0) 60%,rgba(0,0,0,0.55) 100%)"></div>
-          <div style="position:absolute;top:16px;left:16px;display:flex;align-items:center;gap:8px;background:rgba(0,0,0,0.45);backdrop-filter:blur(8px);border-radius:6px;padding:6px 10px;color:#FFFFFF;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem"><span style="width:7px;height:7px;border-radius:50%;background:#FF4D4D;animation:pulse 1.4s infinite"></span>LIVE · {{ callClock }}</div>
-          <div style="position:absolute;top:16px;right:16px;background:rgba(0,0,0,0.45);backdrop-filter:blur(8px);border-radius:6px;padding:6px 10px;color:#FFFFFF;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem">ENCRYPTED</div>
+          <div style="position:absolute;top:16px;left:16px;display:flex;align-items:center;gap:8px;background:rgba(0,0,0,0.45);backdrop-filter:blur(8px);border-radius:6px;padding:6px 10px;color:#FFFFFF;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem"><span style="width:7px;height:7px;border-radius:50%;background:#FF4D4D;animation:pulse 1.4s infinite"></span>Live · {{ callClock }}</div>
+          <div style="position:absolute;top:16px;right:16px;background:rgba(0,0,0,0.45);backdrop-filter:blur(8px);border-radius:6px;padding:6px 10px;color:#FFFFFF;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem">Encrypted</div>
           <div style="position:absolute;right:16px;bottom:72px;width:68px;aspect-ratio:3/4;border-radius:8px;background:#2A2A2E;border:1px solid rgba(255,255,255,0.25);display:flex;align-items:center;justify-content:center;color:#8A8A90;font-family:'IBM Plex Mono',monospace;font-size:0.625rem">You</div>
           <div style="position:absolute;left:16px;right:150px;bottom:16px;color:#FFFFFF;min-width:0"><div style="font-weight:600;font-size:1rem">{{ live.name }}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;opacity:0.8;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ live.cred }}</div></div>
           <div style="position:absolute;right:16px;bottom:16px;display:flex;gap:8px"><span style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.18);backdrop-filter:blur(8px)"></span><span style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.18);backdrop-filter:blur(8px)"></span><span style="width:36px;height:36px;border-radius:50%;background:#FF4D4D"></span></div>
@@ -132,9 +132,9 @@
       </sc-if>
       <sc-if value="{{ isAsync }}" hint-placeholder-val="{{ false }}">
         <div style="display:flex;flex-direction:column;gap:12px">
-          <div style="display:flex;justify-content:flex-end"><div style="background:#0B0B0C;color:#FFFFFF;border-radius:12px 12px 2px 12px;padding:12px 16px;font-size:0.9375rem;line-height:1.5;max-width:360px">Can you look at my week? I keep crashing around 3pm.<div style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;opacity:0.6;margin-top:8px;text-align:right">SENT 7:12 AM</div></div></div>
+          <div style="display:flex;justify-content:flex-end"><div style="background:#0B0B0C;color:#FFFFFF;border-radius:12px 12px 2px 12px;padding:12px 16px;font-size:0.9375rem;line-height:1.5;max-width:360px">Can you look at my week? I keep crashing around 3pm.<div style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;opacity:0.6;margin-top:8px;text-align:right">Sent 7:12 am</div></div></div>
           <div style="background:#F4F4F1;border-radius:12px;padding:16px 18px;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#F1580D;letter-spacing:0.08em;text-transform:uppercase">Shifu attached 14 days of logs, sleep, and your calendar</div>
-          <div style="border:1px solid #0B0B0C;border-radius:12px;padding:20px 22px"><div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><img src="{{ reply.img }}" alt="{{ reply.name }}" style="width:30px;height:30px;border-radius:6px;object-fit:cover;flex-shrink:0;border:1px solid #E3E3E0"><div><div style="font-size:0.875rem;font-weight:600">{{ reply.name }}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">REPLIED 2:40 PM · LICENSED IN YOUR STATE</div></div></div><div style="font-size:0.9375rem;line-height:1.5;margin-bottom:8px">Adjusted your weekday breakfasts: protein up to 30g, more fiber at lunch.</div><div style="font-size:0.875rem;line-height:1.5;color:#6B6B70">“Your logs show a 3pm crash most days. More protein and fiber earlier should smooth it out. Check in after a week.”</div></div>
+          <div style="border:1px solid #0B0B0C;border-radius:12px;padding:20px 22px"><div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><img src="{{ reply.img }}" alt="{{ reply.name }}" style="width:30px;height:30px;border-radius:6px;object-fit:cover;flex-shrink:0;border:1px solid #E3E3E0"><div><div style="font-size:0.875rem;font-weight:600">{{ reply.name }}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70">Replied 2:40 pm · licensed in your state</div></div></div><div style="font-size:0.9375rem;line-height:1.5;margin-bottom:8px">Adjusted your weekday breakfasts: protein up to 30g, more fiber at lunch.</div><div style="font-size:0.875rem;line-height:1.5;color:#6B6B70">“Your logs show a 3pm crash most days. More protein and fiber earlier should smooth it out. Check in after a week.”</div></div>
         </div>
         <div>
           <div style="font-size:1.5rem;font-weight:600;letter-spacing:-0.03em;line-height:1.15;margin-bottom:16px">Ask any time. A registered dietitian answers in writing.</div>
@@ -196,11 +196,11 @@
     <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#8A8A90;margin-bottom:40px">{{ rosterLabel }}</div>
     <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px 40px">
       <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70">Where they studied</div>
-      <img src="/assets/universities/logo-stanford.png" alt="Stanford" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
-      <img src="/assets/universities/logo-usc.svg" alt="USC" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
-      <img src="/assets/universities/logo-ucsf.png" alt="UCSF" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
-      <img src="/assets/universities/logo-johns-hopkins.png" alt="Johns Hopkins" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
-      <img src="/assets/universities/logo-upenn.png" alt="University of Pennsylvania" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
+      <img src="/assets/universities/logo-stanford.png" alt="Stanford" style="height:22px;object-fit:contain;filter:grayscale(1) brightness(0);opacity:0.55">
+      <img src="/assets/universities/logo-usc.svg" alt="USC" style="height:22px;object-fit:contain;filter:grayscale(1) brightness(0);opacity:0.55">
+      <img src="/assets/universities/logo-ucsf.png" alt="UCSF" style="height:22px;object-fit:contain;filter:grayscale(1) brightness(0);opacity:0.55">
+      <img src="/assets/universities/logo-johns-hopkins.png" alt="Johns Hopkins" style="height:22px;object-fit:contain;filter:grayscale(1) brightness(0);opacity:0.55">
+      <img src="/assets/universities/logo-upenn.png" alt="University of Pennsylvania" style="height:22px;object-fit:contain;filter:grayscale(1) brightness(0);opacity:0.55">
     </div>
   </div>
 </section>
@@ -258,21 +258,21 @@
       <div style="{{ planFreeStyle }}">
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px"><span style="font-weight:600">Starter</span></div>
         <div style="font-size:3rem;font-weight:600;letter-spacing:-0.05em;line-height:1">$0</div>
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;margin:10px 0 28px">SHIFU + ONE EXPERT REVIEW</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;margin:10px 0 28px">Shifu + one expert review</div>
         <div style="display:flex;flex-direction:column;gap:10px;font-size:0.9375rem;line-height:1.45;color:#6B6B70;margin-bottom:32px"><div>Shifu, plans &amp; logging</div><div><span style="color:#0B0B0C;font-weight:600">1 consult</span> to see how a real expert changes your plan</div><div>Extra consults $15</div></div>
         <a href="{{ startHref }}" style="display:block;margin-top:auto;padding:14px;border-radius:6px;border:1px solid #0B0B0C;color:#0B0B0C;font-weight:600;text-decoration:none;text-align:center" style-hover="background:#0B0B0C;color:#FFFFFF">Start Today</a>
       </div>
       <div style="{{ planCoreStyle }}">
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px"><span style="font-weight:600">Core</span></div>
         <div style="font-size:3rem;font-weight:600;letter-spacing:-0.05em;line-height:1">$49<span style="font-size:1rem;letter-spacing:0;color:#6B6B70;font-weight:500"> /mo</span></div>
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;margin:10px 0 28px">YOUR DIETITIAN, EVERY WEEK</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;margin:10px 0 28px">Your dietitian, every week</div>
         <div style="display:flex;flex-direction:column;gap:10px;font-size:0.9375rem;line-height:1.45;color:#6B6B70;margin-bottom:32px"><div>Unlimited Shifu, proactive texting</div><div><span style="color:#0B0B0C;font-weight:600">4 consults</span> a month. Unused roll over.</div><div>Live video calls · 2 consults</div><div>Add 4 more any month · $39</div></div>
         <a href="{{ startHref }}" style="display:block;margin-top:auto;padding:14px;border-radius:6px;background:#0B0B0C;color:#FFFFFF;font-weight:600;text-decoration:none;text-align:center" style-hover="background:#F1580D;color:#FFFFFF">Get Core</a>
       </div>
       <div style="{{ planPlusStyle }}">
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px"><span style="font-weight:600">Plus</span></div>
         <div style="font-size:3rem;font-weight:600;letter-spacing:-0.05em;line-height:1">$79<span style="font-size:1rem;letter-spacing:0;color:#6B6B70;font-weight:500"> /mo</span></div>
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;margin:10px 0 28px">MORE ACCESS · YOUR DIETITIAN FIRST IN LINE</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;margin:10px 0 28px">More access · your dietitian first in line</div>
         <div style="display:flex;flex-direction:column;gap:10px;font-size:0.9375rem;line-height:1.45;color:#6B6B70;margin-bottom:32px"><div>Everything in Core</div><div><span style="color:#0B0B0C;font-weight:600">10 consults</span> a month. Under $8 each.</div><div>Priority routing to your starred dietitian</div><div>Extra consults $10</div></div>
         <a href="{{ startHref }}" style="display:block;margin-top:auto;padding:14px;border-radius:6px;border:1px solid #0B0B0C;color:#0B0B0C;font-weight:600;text-decoration:none;text-align:center" style-hover="background:#0B0B0C;color:#FFFFFF">Get Plus</a>
       </div>
@@ -346,7 +346,8 @@ class Component extends DCLogic {
     const rosterCards = team.map(m => ({ name: m.name, cardCred: m.role, img: m.img, href: "/coverage/?profile=" + m.id + "#team" }));
     const rosterLabel = team.length ? `${team.length} dietitians and nutritionists · live today` : "";
     // People shown in the live-call and written-reply mocks (illustrative consults, names from the roster)
-    const live = team[0] ? { name: team[0].name, cred: team[0].role } : { name: "", cred: "" };
+    const live = team[0] ? { name: team[0].name, cred: team[0].role, img: team[0].img } : { name: "", cred: "", img: "" };
+    const liveMockStyle = { position: "relative", aspectRatio: "16/10", borderRadius: 12, overflow: "hidden", background: "#0B0B0C" + (live.img ? " url(" + live.img + ") center 30%/cover" : ""), boxShadow: "0 30px 80px rgba(11,11,12,0.25)" };
     const replyM = team.find(m => m.id === "kristina-bauer") || team[1] || team[0] || { name: "", img: "" };
     const reply = { name: replyM.name, img: replyM.img };
     const replyFirst = (replyM.name || "").split(",")[0].split(" ")[0];
@@ -414,7 +415,7 @@ class Component extends DCLogic {
     const open = this.state.open;
     return {
       wideNav: !this.state.isNarrow, showStickyBar: this.state.isMobile,
-      roster: rosterCards, rosterLabel, live, reply,
+      roster: rosterCards, rosterLabel, live, reply, liveMockStyle,
       anchors, hasPick: !!picked, matchedTeam, teamHeadline, goalWord, goalWordStyle, startHref, startLabel, appStoreUrl: this.props.appStoreUrl ?? "https://apps.apple.com/",
       phone: this.state.phone, onPhone: e => this.setState({ phone: e.target.value }), sendLink: this.sendLink, sent: this.state.sent, notSent: !this.state.sent,
       isLive: mode === "live", isAsync: mode === "async", pickLive: () => this.setState({ mode: "live", modeManual: true }), pickAsync: () => this.setState({ mode: "async", modeManual: true }), liveTabStyle: tabStyle(mode === "live"), asyncTabStyle: tabStyle(mode === "async"), callClock,

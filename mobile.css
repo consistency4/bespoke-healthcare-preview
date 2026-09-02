@@ -1,6 +1,10 @@
 /* Phone and small-tablet adjustments shared by every page (linked from each page's <helmet>).
    The pages use inline styles, so these rules override with !important and match on inline-style text. */
 
+/* no-caps: small mono labels, tags and captions render in sentence case everywhere (the inline styles still say
+   uppercase; this overrides them and drops the wide tracking that went with caps). */
+[style*="text-transform:uppercase"], [style*="text-transform: uppercase"] { text-transform: none !important; letter-spacing: 0.02em !important; }
+
 /* While a profile popup is open the fixed nav and menu button step aside (WebKit draws the nav's blur above the backdrop). */
 html.profile-open nav, html.profile-open .site-menu-btn, html.profile-open .site-menu-panel { visibility: hidden !important; }
 
