@@ -30,7 +30,7 @@ Each file is one self-contained page. To view it, serve this folder over HTTP (`
 **High-fidelity.** Colors, type, spacing, copy and interactions are final. Recreate pixel-accurately. Use the copy in the files verbatim.
 
 ## Site map
-The routes below are live: `node build-routes.mjs` copies each source file to `<route>/index.html` (GitHub Pages serves directories), so links and assets in the sources are root-absolute (`/nutrition/`, `/coverage/?profile=<id>#team`, `/assets/...`). Run the build after editing any page and commit the generated folders with it.
+The site is served by GitHub Pages at **https://bespoke.healthcare** (custom domain on the `consistency4/bespoke-healthcare-preview` repo; DNS at GoDaddy, HTTPS by GitHub). The previous domain, shifu.health, forwards every path to the same page here via a one-file redirect site (`consistency4/shifu-health-redirect`, DNS on Cloudflare). The routes below are live: `node build-routes.mjs` copies each source file to `<route>/index.html` (GitHub Pages serves directories), so links and assets in the sources are root-absolute (`/nutrition/`, `/coverage/?profile=<id>#team`, `/assets/...`). Run the build after editing any page and commit the generated folders with it.
 
 | Route | Design file | In nav as |
 |---|---|---|
