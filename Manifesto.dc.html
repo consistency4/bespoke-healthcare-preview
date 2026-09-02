@@ -37,86 +37,32 @@
   </div>
 </nav>
 
-<section data-screen-label="Manifesto" style="padding:140px 32px 120px">
+<section data-screen-label="Manifesto" style="padding:140px 32px 96px">
   <div style="max-width:1200px;margin:0 auto">
     <a href="Bespoke Healthcare v3.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">← Back</a>
     <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70;margin:28px 0 36px">Manifesto</div>
-    <h1 style="font-weight:600;font-size:clamp(2.75rem,7vw,6rem);line-height:0.98;letter-spacing:-0.045em;max-width:1100px;margin-bottom:40px;text-wrap:balance">Care that works together, at a price that works.</h1>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px 64px;align-items:start;margin-bottom:64px">
-      <p style="font-size:clamp(1.125rem,1.8vw,1.375rem);line-height:1.45;letter-spacing:-0.01em;max-width:560px;text-wrap:balance">More than a third of Americans skip the care they need because of cost. Without a fundamentally new approach, that gap only widens. We are building the approach: one team across nutrition and exercise, personalized to your biology, your week and your budget, run by an assistant that never sleeps and led by licensed humans who make every call.</p>
-      <div style="display:flex;flex-direction:column;gap:12px">
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#F1580D">What we believe</div>
-        <p style="font-size:1.0625rem;line-height:1.5;color:#6B6B70">Health is not a list of separate appointments. Your sleep changes your training, your training changes your appetite, your meals change your labs. Care that ignores those links costs more and works less. Ours is built around them.</p>
-      </div>
-    </div>
-    <div style="display:flex;flex-direction:column;border-top:1px solid #0B0B0C">
-      <sc-for list="{{ beliefs }}" as="b" hint-placeholder-count="5">
-        <div style="display:grid;grid-template-columns:minmax(200px,0.8fr) minmax(0,2fr);gap:16px 40px;padding:32px 0;border-bottom:1px solid #E3E3E0">
-          <div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#F1580D;margin-bottom:10px">{{ b.n }}</div><div style="font-size:1.375rem;font-weight:600;letter-spacing:-0.03em;line-height:1.15">{{ b.title }}</div></div>
-          <p style="font-size:1.0625rem;line-height:1.55;color:#6B6B70;max-width:640px">{{ b.body }}</p>
-        </div>
-      </sc-for>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-top:40px">
-      <div style="padding:24px 28px;background:#F4F4F1;border-radius:12px"><div style="font-family:'IBM Plex Mono',monospace;font-size:2.25rem;line-height:1;letter-spacing:-0.04em;color:#0B0B0C;margin-bottom:10px">$49</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70;line-height:1.6">A dietitian and a coach, every month. Concierge care runs $2,000.</div></div>
-      <div style="padding:24px 28px;background:#F4F4F1;border-radius:12px"><div style="font-family:'IBM Plex Mono',monospace;font-size:2.25rem;line-height:1;letter-spacing:-0.04em;color:#0B0B0C;margin-bottom:10px">{{ bookableCount }}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70;line-height:1.6">Licensed dietitians, nutritionists and certified coaches you can book from day one.</div></div>
-      <div style="padding:24px 28px;background:#F4F4F1;border-radius:12px"><div style="font-family:'IBM Plex Mono',monospace;font-size:2.25rem;line-height:1;letter-spacing:-0.04em;color:#0B0B0C;margin-bottom:10px">6 to 12h</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70;line-height:1.6">A written answer from a real professional, with the reasoning, linked to your plan.</div></div>
-      <div style="padding:24px 28px;background:#F4F4F1;border-radius:12px"><div style="font-family:'IBM Plex Mono',monospace;font-size:2.25rem;line-height:1;letter-spacing:-0.04em;color:#0B0B0C;margin-bottom:10px">0</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70;line-height:1.6">Insurance forms, referrals, or hidden rosters. Your data stays yours.</div></div>
+    <h1 style="font-weight:600;font-size:clamp(2.75rem,7vw,6rem);line-height:0.98;letter-spacing:-0.045em;max-width:1100px;margin-bottom:40px;text-wrap:balance">Care is split, expensive, and left for you to coordinate.</h1>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px 64px;align-items:start">
+      <p style="font-size:clamp(1.125rem,1.8vw,1.375rem);line-height:1.45;letter-spacing:-0.01em;max-width:560px;text-wrap:balance">More than a third of Americans skip the care they need because of cost. Those who can pay get it in pieces: a dietitian who never sees the training plan, a coach who never sees the labs, a doctor who sees neither.</p>
+      <p style="font-size:1.0625rem;line-height:1.55;color:#6B6B70;max-width:520px">Nobody is watching the whole picture, so the person left coordinating it is the patient. Without a fundamentally new approach, that gap only widens. Below is the team working on it.</p>
     </div>
   </div>
 </section>
 
-<section id="founders" data-screen-label="Founding team" style="padding:0 32px 120px">
+<section id="team" data-screen-label="The team" style="padding:0 32px 120px">
   <div style="max-width:1200px;margin:0 auto">
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px 64px;align-items:end;margin-bottom:40px;border-top:1px solid #0B0B0C;padding-top:36px">
-      <div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70;margin-bottom:20px">The founding team</div><h2 style="font-weight:600;font-size:clamp(2rem,4.2vw,3.25rem);line-height:1.02;letter-spacing:-0.04em">Built by a coach and an engineer.</h2></div>
-      <p style="font-size:1.0625rem;line-height:1.5;color:#6B6B70">Shifu started with a question from the running world: why does everyone except elite athletes have to coordinate their own care? The team below is building the answer. Tap a card for the full background.</p>
+    <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 40px;border-top:1px solid #0B0B0C;padding-top:36px;margin-bottom:32px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70">The team · {{ totalCount }} people</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#8A8A90">Founders · clinical advisors · dietitians · coaches · investors · tap anyone for their background</div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px">
-      <sc-for list="{{ founders }}" as="m" hint-placeholder-count="3">
-        <button onClick="{{ m.open }}" style="text-align:left;font-family:inherit;cursor:pointer;border:1px solid #E3E3E0;border-radius:12px;padding:24px;background:#FFFFFF;display:flex;flex-direction:column;min-width:0;color:#0B0B0C" style-hover="border-color:#0B0B0C">
-          <div style="display:flex;gap:16px;align-items:flex-start;margin-bottom:18px">
-            <img src="{{ m.img }}" alt="{{ m.name }}" draggable="false" style="width:96px;height:96px;border-radius:12px;object-fit:cover;flex-shrink:0;border:1px solid #E3E3E0;background:#F4F4F1">
-            <div style="min-width:0"><div style="font-size:1.125rem;font-weight:600;letter-spacing:-0.02em;line-height:1.25">{{ m.name }}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#F1580D;line-height:1.5;margin-top:6px">{{ m.title }}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;line-height:1.5;margin-top:4px">{{ m.states }}</div></div>
-          </div>
-          <div style="font-size:0.9375rem;line-height:1.5;color:#6B6B70;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;min-height:4.21875rem">{{ m.bio }}</div>
-          <div style="margin-top:auto;padding-top:18px;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.06em;text-transform:uppercase;color:#6B6B70">Full background →</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:24px 14px">
+      <sc-for list="{{ people }}" as="m" hint-placeholder-count="12">
+        <button onClick="{{ m.open }}" style="text-align:left;font-family:inherit;cursor:pointer;border:none;background:none;padding:0;display:flex;flex-direction:column;gap:10px;min-width:0;color:#0B0B0C" style-hover="color:#F1580D" aria-label="{{ m.openLabel }}">
+          <img src="{{ m.img }}" alt="{{ m.name }}" draggable="false" loading="lazy" style="width:100%;aspect-ratio:1;border-radius:8px;object-fit:cover;display:block;border:1px solid #E3E3E0;background:#F4F4F1">
+          <div style="min-width:0"><div style="font-size:0.8125rem;font-weight:600;line-height:1.3;letter-spacing:-0.01em">{{ m.name }}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70;line-height:1.5;margin-top:3px">{{ m.title }}</div></div>
         </button>
       </sc-for>
     </div>
-  </div>
-</section>
-
-<section id="team" data-screen-label="Care team &amp; supporters" style="padding:0 32px 120px">
-  <div style="max-width:1200px;margin:0 auto">
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px 64px;align-items:end;margin-bottom:8px;border-top:1px solid #0B0B0C;padding-top:36px">
-      <div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70;margin-bottom:20px">Care team &amp; supporters · {{ totalCount }} people</div><h2 style="font-weight:600;font-size:clamp(2rem,4.2vw,3.25rem);line-height:1.02;letter-spacing:-0.04em">Everyone behind your plan.</h2></div>
-      <p style="font-size:1.0625rem;line-height:1.5;color:#6B6B70">Clinical advisors train and supervise Shifu. Registered dietitians, nutritionists and certified coaches see members directly. Investors back the model. Every one of them is visible here from day one; tap a face for their background, education and credentials.</p>
-    </div>
-    <sc-for list="{{ groups }}" as="g" hint-placeholder-count="4">
-      <div style="border-top:1px solid #E3E3E0;padding:32px 0 8px">
-        <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;margin-bottom:24px">
-          <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:14px"><div style="font-size:1.25rem;font-weight:600;letter-spacing:-0.02em">{{ g.title }}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70">{{ g.eyebrow }}</div></div>
-          <sc-if value="{{ g.hasLink }}" hint-placeholder-val="{{ true }}"><a href="{{ g.href }}" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;border-bottom:1px solid #E3E3E0" style-hover="color:#0B0B0C">{{ g.linkLabel }}</a></sc-if>
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px 16px">
-          <sc-for list="{{ g.people }}" as="m" hint-placeholder-count="6">
-            <button onClick="{{ m.open }}" style="text-align:left;font-family:inherit;cursor:pointer;border:none;background:none;padding:0;display:flex;flex-direction:column;gap:12px;min-width:0;color:#0B0B0C" style-hover="color:#F1580D" aria-label="{{ m.openLabel }}">
-              <img src="{{ m.img }}" alt="{{ m.name }}" draggable="false" loading="lazy" style="width:100%;aspect-ratio:1;border-radius:12px;object-fit:cover;display:block;border:1px solid #E3E3E0;background:#F4F4F1">
-              <div style="min-width:0"><div style="font-size:0.9375rem;font-weight:600;line-height:1.3">{{ m.name }}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;line-height:1.5;margin-top:3px">{{ m.title }}</div></div>
-            </button>
-          </sc-for>
-        </div>
-        <sc-if value="{{ g.isInvestors }}" hint-placeholder-val="{{ false }}">
-          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px 40px;margin-top:32px">
-            <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70">Backed by</div>
-            <img src="assets/investors/launch.svg" alt="LAUNCH" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
-            <img src="assets/investors/z21-ventures.svg" alt="z21 Ventures" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
-            <img src="assets/investors/teamworthy.svg" alt="Teamworthy" style="height:22px;object-fit:contain;filter:grayscale(1);opacity:0.6">
-          </div>
-        </sc-if>
-      </div>
-    </sc-for>
   </div>
 </section>
 
@@ -202,7 +148,7 @@
 <footer style="background:#0B0B0C;color:#FFFFFF;padding:80px 32px 40px">
   <div style="max-width:1200px;margin:0 auto">
     <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;padding-bottom:48px;border-bottom:1px solid #2A2A2E">
-      <h2 style="font-weight:600;font-size:clamp(2rem,4.5vw,3.5rem);line-height:0.98;letter-spacing:-0.045em;max-width:720px">One team. One plan. Yours from day one.</h2>
+      <h2 style="font-weight:600;font-size:clamp(2rem,4.5vw,3.5rem);line-height:0.98;letter-spacing:-0.045em;max-width:720px">Bring one goal. We'll build around it.</h2>
       <a href="{{ startHref }}" style="padding:16px 28px;border-radius:6px;background:#FFFFFF;color:#0B0B0C;font-weight:600;font-size:1rem;text-decoration:none;white-space:nowrap" style-hover="background:#F1580D;color:#FFFFFF">Start Today</a>
     </div>
     <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:20px;padding-top:28px;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#8A8A90">
@@ -232,26 +178,12 @@ class Component extends DCLogic {
     // Everyone comes from shifu-team.js: care team and advisors from the live shifu.health roster,
     // founders from shifu.health/about (team-overlay.json "person"), investors from the live roster.
     const team = (typeof window !== "undefined" && window.SHIFU_SITE_TEAM) || [];
-    const beliefs = [
-      { n: "01", title: "One team, one plan.", body: "Your dietitian sees your training. Your coach sees your meals. Shifu connects the two every day and brings in the right person when it matters. Care that is split across disciplines is care that contradicts itself; ours is built to agree." },
-      { n: "02", title: "Personalized means your biology, your week, your budget.", body: "Bespoke is not a template with your name on it. Plans are built from your labs, your wearable, your calendar and what you can actually spend, then rebuilt as those change. The same care model works for a half marathon and for lowering blood pressure." },
-      { n: "03", title: "Affordable is a design constraint, not a discount.", body: "Concierge care costs $2,000 a month because a human does everything. Here Shifu handles the day: meals, groceries, scheduling, logging, reminders. Licensed professionals spend their time where judgment matters, so a dietitian and a coach cost less than one session. No insurance needed." },
-      { n: "04", title: "Humans make the calls.", body: "AI works hand in hand with people, not in place of them. Every change to your plan comes from a licensed dietitian or certified coach, in writing, with the reasoning. Clinical advisors train and supervise Shifu. Anything clinical is flagged and referred at no charge." },
-      { n: "05", title: "Nothing hidden.", body: "You see every person on your team, their credentials and license states, from day one. Every consult records who reviewed it and what changed. Your health data is used for one thing, your care: never sold, never shared with advertisers, exportable or deletable any time." },
-    ];
     const KIND_LABEL = { n: "Nutrition · Registered dietitians & nutritionists", e: "Exercise · Certified coaches", a: "Clinical advisor · trains and supervises Shifu", f: "Founding team", i: "Investor & strategic advisor" };
-    const groupDefs = [
-      { kind: "a", title: "Clinical advisors", eyebrow: "Physical therapy · nursing · behavioral health · train and supervise Shifu", href: "Coverage.dc.html#team", linkLabel: "Full profiles on Coverage →" },
-      { kind: "n", title: "Dietitians & nutritionists", eyebrow: "Medical nutrition therapy · everyday eating · bookable", href: "Bespoke Nutrition v3.dc.html", linkLabel: "Bespoke Nutrition →" },
-      { kind: "e", title: "Exercise coaches", eyebrow: "Strength · endurance · mobility · bookable", href: "Bespoke Exercise v3.dc.html", linkLabel: "Bespoke Exercise →" },
-      { kind: "i", title: "Investors", eyebrow: "Operators backing the model", href: "", linkLabel: "" },
-    ];
-    const face = (m) => ({ name: m.name, title: m.cardCred || m.cred, img: m.img, open: () => this.openProfile(m.id), openLabel: "Open profile: " + m.name });
-    const groups = groupDefs.map(g => { const people = team.filter(m => m.kind === g.kind); return {
-      title: g.title, eyebrow: `${people.length} · ${g.eyebrow}`, people: people.map(face),
-      hasLink: !!g.href, href: g.href, linkLabel: g.linkLabel, isInvestors: g.kind === "i",
-    }; });
-    const founders = team.filter(m => m.kind === "f").map(m => ({ name: m.name, title: m.cardCred || m.cred, states: m.states, bio: m.bio, img: m.img, open: () => this.openProfile(m.id) }));
+    // one grid: founding team first, then advisors, dietitians and nutritionists, coaches, investors
+    const ORDER = ["f", "a", "n", "e", "i"];
+    const people = ORDER.flatMap(k => team.filter(m => m.kind === k)).map(m => ({
+      name: m.name.split(",")[0], title: m.cardCred || m.cred, img: m.img, open: () => this.openProfile(m.id), openLabel: "Open profile: " + m.name,
+    }));
     const o = team.find(m => m.id === this.state.open) || null;
     const links = (o && o.links) || {};
     const profile = {
@@ -272,9 +204,8 @@ class Component extends DCLogic {
       profileUrl: o ? o.profileUrl : "#", hasProfileUrl: !!(o && o.kind !== "f"),
       bookable: !!(o && (o.kind === "n" || o.kind === "e")),
     };
-    const bookableCount = team.filter(m => m.kind === "n" || m.kind === "e").length;
     return {
-      beliefs, groups, founders, bookableCount, totalCount: team.length,
+      people, totalCount: team.length,
       hasOpen: !!o, profile, closeProfile: () => this.closeProfile(),
       startHref: `sms:${this.props.smsNumber ?? "+10000000000"}?&body=${encodeURIComponent("Hi Shifu, I'd like to get started.")}`,
     };
