@@ -205,7 +205,7 @@ window.SHIFU_SITE_TEAM = [
     "cardCred": "Registered Dietitian",
     "role": "Registered Dietitian",
     "states": "Registered Dietitian Nutritionist (RDN)",
-    "bio": "Registered dietitian and Public Health Advisor in the NIH Office of Nutrition Research. Brings a public-health lens to translating nutrition evidence into everyday practice.",
+    "bio": "Registered dietitian with a public-health background. Brings a public-health lens to translating nutrition evidence into everyday practice.",
     "specs": [
       "Eating well on a budget",
       "Plant-based",
@@ -217,7 +217,7 @@ window.SHIFU_SITE_TEAM = [
     "liveImg": "https://shifu.health/assets/coach-emily-levin.png",
     "profileUrl": "https://shifu.health/team/emily-levin/",
     "background": [
-      "Emily is a Registered Dietitian Nutritionist and Public Health Advisor in the NIH Office of Nutrition Research, where she helps advance national nutrition research priorities and cross-agency collaboration. Based in New York, she brings a public-health lens to how nutrition guidance is translated into practice.",
+      "Emily is a Registered Dietitian Nutritionist with a background in public-health nutrition. Based in New York, she brings a public-health lens to how nutrition guidance is translated into practice.",
       "She has contributed to federal nutrition initiatives, including support work connected to the Dietary Guidelines process, and is active in Food is Medicine programming, including leadership around oncology care symposiums with partners like the American Cancer Society. Her work sits at the intersection of evidence, policy, and practical nutrition support.",
       "Emily holds a Master of Public Health and is a Registered Dietitian Nutritionist. She completed her graduate training through UTHealth Houston and brings that clinical and public-health foundation into how she supports clients and teams."
     ],
