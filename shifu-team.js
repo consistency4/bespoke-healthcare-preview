@@ -595,6 +595,49 @@ window.SHIFU_SITE_TEAM = [
     "funFact": "",
     "disclaimer": ""
   },
+  {
+    "id": "andrea-krenek",
+    "kind": "n",
+    "name": "Andrea Krenek, PhD, RDN",
+    "cred": "PhD, Nutritional Sciences · Registered Dietitian Nutritionist · Chef",
+    "cardCred": "Registered Dietitian",
+    "role": "Registered Dietitian",
+    "states": "Registered Dietitian Nutritionist (RDN)",
+    "bio": "Registered dietitian, chef and nutrition scientist. Postdoctoral fellow in the Christopher Gardner Nutrition Research Group at Stanford, with a PhD focused on cardiovascular and pediatric health.",
+    "specs": [
+      "Plant-based",
+      "Cholesterol",
+      "Blood pressure",
+      "Meal prep",
+      "PCOS"
+    ],
+    "img": "/assets/team/coach-andrea-krenek.jpg",
+    "liveImg": "",
+    "profileUrl": "https://shifu.health/team/andrea-krenek/",
+    "background": [
+      "Andrea is a registered dietitian, chef and nutrition scientist. She is a postdoctoral research fellow in the Christopher Gardner Nutrition Research Group at the Stanford Prevention Research Center, Stanford University School of Medicine, and counsels clients through telehealth nutrition practice. Her approach centers on sustainable, individualized and enjoyable nutrition and lifestyle habits rather than restriction.",
+      "Her work spans plant-based nutrition at every life stage, cardiovascular and chronic disease prevention and management, pediatric nutrition, women's health and culinary medicine. Before Stanford she spent several years on nutrition research studies as a fellow in the National Institutes of Health Intramural Research Program, and earlier coordinated studies at the Center for Translational Research in Aging and Longevity.",
+      "Andrea holds a PhD in Nutritional Sciences from the University of Florida, focused on cardiovascular and pediatric health. She completed her dietetic training through The Ohio State University and earned Bachelor of Science degrees in Nutrition and in Kinesiology at Texas A&M University, alongside formal culinary training."
+    ],
+    "education": [
+      "PhD: Nutritional Sciences, University of Florida",
+      "Dietetic internship, The Ohio State University",
+      "BS: Nutrition and BS: Kinesiology, Texas A&M University",
+      "Culinary training"
+    ],
+    "credentials": [
+      "Registered Dietitian Nutritionist (RDN)",
+      "Licensed Dietitian Nutritionist (LDN)"
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/andrea-krenek-phd-rdn-chef-12b818114/"
+    },
+    "dietitian": true,
+    "licensedStates": [],
+    "advisorRole": "",
+    "funFact": "",
+    "disclaimer": ""
+  },
   /* ---------- Exercise ---------- */
   {
     "id": "michaela-gleed",
@@ -1112,6 +1155,41 @@ window.SHIFU_SITE_TEAM = [
     "advisorRole": "Advisor focused on therapy and behavioral health expertise for our AI Health Assistant.",
     "funFact": "",
     "disclaimer": "Kiahlei acts as an internal consultant and does not actively see customers."
+  },
+  {
+    "id": "halemah-shuman",
+    "kind": "a",
+    "name": "Halemah Shuman, MS, PA-C",
+    "cred": "Physician Assistant, PA-C · MS Global Health",
+    "cardCred": "Physician Assistant",
+    "role": "Physician Assistant",
+    "states": "Advisor · does not see members directly",
+    "bio": "Certified physician assistant practicing primary care at a Federally Qualified Health Center in California's Central Valley, with a master's in global health. Advises on primary and preventive care.",
+    "specs": [],
+    "img": "/assets/team/coach-halemah-shuman.jpg",
+    "liveImg": "",
+    "profileUrl": "https://shifu.health/team/halemah-shuman/",
+    "background": [
+      "Halemah is a certified physician assistant practicing primary care at Community Health Centers of America, a Federally Qualified Health Center serving California's Central Valley. A National Health Service Corps scholar, she committed early to working in underserved communities and is passionate about preventive care and health education for the people least likely to receive them.",
+      "Before PA school she earned a master's degree in global health and served as a course assistant at the UCSF Institute for Global Health Sciences, worked as a medical scribe with Vituity, and interned in neurosurgery research at Stanford University School of Medicine. At Notre Dame de Namur University she founded and led the Pre-Med Club and worked as a senior tutor.",
+      "Halemah completed her physician assistant training at the University of Dayton."
+    ],
+    "education": [
+      "Physician Assistant program, University of Dayton",
+      "MS: Global Health",
+      "Notre Dame de Namur University"
+    ],
+    "credentials": [
+      "Physician Assistant-Certified (PA-C)"
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/halemah-shuman/"
+    },
+    "dietitian": false,
+    "licensedStates": [],
+    "advisorRole": "Advisor focused on primary care and preventive medicine expertise for our AI Health Assistant.",
+    "funFact": "",
+    "disclaimer": ""
   },
   /* ---------- Founding team (from shifu.health/about; data in team-overlay.json "person") ---------- */
   {
