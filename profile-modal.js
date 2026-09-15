@@ -1,7 +1,7 @@
 /* In-place profile popup.
  *
  * Every person on the home, discipline and goal pages links to /coverage/?profile=<id>#team. This
- * intercepts those clicks and opens the same profile popup the Coverage and Manifesto pages render,
+ * intercepts those clicks and opens the same profile popup the Coverage and Mission pages render,
  * on the page the visitor is already on, so closing it returns them exactly where they were. Data
  * comes from shifu-team.js (window.SHIFU_SITE_TEAM). The Coverage link still works as a plain URL
  * (shared links, JavaScript off).

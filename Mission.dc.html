@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/shifu-team.js"></script>
+<script src="/support.js"></script>
+<script src="/start-modal.js"></script>
+<script src="/site-nav.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/assets/brand/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon-180.png">
+  <link rel="stylesheet" href="/mobile.css">
+  <title>Mission · Bespoke Healthcare</title>
+  <script src="/image-slot.js"></script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Schibsted Grotesk',ui-sans-serif,system-ui,sans-serif;background:#FFFFFF;color:#0B0B0C;-webkit-font-smoothing:antialiased}
+    a{color:#F1580D}a:hover{color:#D44A08}
+    button{font-family:inherit}
+  </style>
+</helmet>
+
+<nav style="position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.88);backdrop-filter:blur(14px);border-bottom:1px solid #E3E3E0">
+  <div style="max-width:1200px;margin:0 auto;padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <div class="nav-wordmark" style="display:flex;align-items:baseline;gap:14px"><a href="/" style="display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:1rem;letter-spacing:-0.02em;color:#0B0B0C;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C"><img src="/assets/brand/mark.svg" alt="" width="24" height="24" style="width:24px;height:24px;display:block;flex-shrink:0"><span>Bespoke Healthcare</span></a><span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;white-space:nowrap">/ Mission</span></div>
+    <div style="display:flex;align-items:center;gap:28px">
+      <a class="nav-link" href="/nutrition/" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Nutrition</a>
+      <a class="nav-link" href="/exercise/" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Exercise</a>
+      <a class="nav-link" href="/coverage/" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Coverage</a>
+      <a class="nav-link" href="#team" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Team</a>
+      <a class="nav-link" href="/#plans" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none;white-space:nowrap" style-hover="color:#0B0B0C">Plans</a>
+      <a href="{{ startHref }}" style="padding:10px 18px;border-radius:6px;background:#0B0B0C;color:#FFFFFF;font-size:0.875rem;font-weight:600;text-decoration:none;white-space:nowrap" style-hover="background:#F1580D;color:#FFFFFF">Start Today</a>
+    </div>
+  </div>
+</nav>
+
+<section data-screen-label="Mission" style="padding:140px 32px 96px">
+  <div style="max-width:1200px;margin:0 auto">
+    <a href="/" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">← Back</a>
+    <h1 style="font-weight:600;font-size:clamp(2.75rem,7vw,6rem);line-height:0.98;letter-spacing:-0.045em;max-width:1100px;margin:28px 0 40px;text-wrap:balance">Care is split, expensive, and left for you to coordinate.</h1>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px 64px;align-items:start">
+      <p style="font-size:clamp(1.125rem,1.8vw,1.375rem);line-height:1.45;letter-spacing:-0.01em;max-width:560px;text-wrap:balance">More than a third of Americans skip the care they need because of cost. Those who can pay get it in pieces: a dietitian who never sees the training plan, a coach who never sees the labs, a doctor who sees neither.</p>
+      <p style="font-size:1.0625rem;line-height:1.55;color:#6B6B70;max-width:520px">Nobody is watching the whole picture, so the person left coordinating it is the patient. Without a fundamentally new approach, that gap only widens. Below is the team working on it.</p>
+    </div>
+  </div>
+</section>
+
+<section id="team" data-screen-label="The team" style="padding:0 32px 120px">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 40px;border-top:1px solid #0B0B0C;padding-top:36px;margin-bottom:32px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70">The team · {{ totalCount }} people</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#8A8A90">Founders · clinical advisors · dietitians · coaches · investors · tap anyone for their background</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:24px 14px">
+      <sc-for list="{{ people }}" as="m" hint-placeholder-count="12">
+        <button onClick="{{ m.open }}" style="text-align:left;font-family:inherit;cursor:pointer;border:none;background:none;padding:0;display:flex;flex-direction:column;gap:10px;min-width:0;color:#0B0B0C" style-hover="color:#F1580D" aria-label="{{ m.openLabel }}">
+          <img src="{{ m.img }}" alt="{{ m.name }}" draggable="false" loading="lazy" style="width:100%;aspect-ratio:1;border-radius:8px;object-fit:cover;display:block;border:1px solid #E3E3E0;background:#F4F4F1">
+          <div style="min-width:0"><div style="font-size:0.8125rem;font-weight:600;line-height:1.3;letter-spacing:-0.01em">{{ m.name }}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.625rem;color:#6B6B70;line-height:1.5;margin-top:3px">{{ m.title }}</div></div>
+        </button>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<sc-if value="{{ hasOpen }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="Profile" style="position:fixed;inset:0;z-index:200;overflow-y:auto;-webkit-overflow-scrolling:touch">
+    <div onClick="{{ closeProfile }}" style="position:fixed;inset:0;background:rgba(11,11,12,0.55);backdrop-filter:blur(4px)"></div>
+    <div style="position:relative;max-width:720px;margin:0 auto;padding:48px 24px">
+      <div role="dialog" aria-modal="true" aria-label="{{ profile.name }}" style="background:#FFFFFF;border-radius:12px;padding:40px;box-shadow:0 30px 80px rgba(11,11,12,0.25);position:relative">
+        <button onClick="{{ closeProfile }}" aria-label="Close" style="position:absolute;top:14px;right:14px;width:34px;height:34px;border:1px solid #E3E3E0;border-radius:6px;background:#FFFFFF;color:#6B6B70;font-size:20px;line-height:1;cursor:pointer" style-hover="border-color:#0B0B0C;color:#0B0B0C">×</button>
+        <div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;padding-right:40px">
+          <img src="{{ profile.img }}" alt="{{ profile.name }}" style="width:120px;height:120px;border-radius:12px;object-fit:cover;flex-shrink:0;border:1px solid #E3E3E0;background:#F4F4F1">
+          <div style="min-width:0;flex:1">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#F1580D;margin-bottom:10px">{{ profile.kindLabel }}</div>
+            <div style="font-size:1.5rem;font-weight:600;letter-spacing:-0.03em;line-height:1.15">{{ profile.name }}</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;line-height:1.5;margin-top:8px">{{ profile.cred }}</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#F1580D;line-height:1.5;margin-top:4px">{{ profile.states }}</div>
+          </div>
+        </div>
+        <div style="border-top:1px solid #0B0B0C;margin-top:28px;padding-top:24px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70;margin-bottom:12px">Background</div>
+          <sc-for list="{{ profile.background }}" as="para" hint-placeholder-count="2">
+            <p style="font-size:0.9375rem;line-height:1.6;color:#0B0B0C;margin-bottom:12px">{{ para }}</p>
+          </sc-for>
+          <sc-if value="{{ profile.hasAdvisorRole }}" hint-placeholder-val="{{ false }}">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70;margin:24px 0 8px">Role at Shifu</div>
+            <p style="font-size:0.9375rem;line-height:1.6;color:#0B0B0C">{{ profile.advisorRole }}</p>
+          </sc-if>
+          <sc-if value="{{ profile.hasFunFact }}" hint-placeholder-val="{{ false }}">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;line-height:1.6;color:#6B6B70;background:#F4F4F1;border-radius:8px;padding:12px 14px;margin-top:20px"><span style="color:#F1580D">Fun fact · </span>{{ profile.funFact }}</div>
+          </sc-if>
+        </div>
+        <sc-if value="{{ profile.hasDetails }}" hint-placeholder-val="{{ true }}">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px 40px;border-top:1px solid #E3E3E0;margin-top:24px;padding-top:20px">
+            <sc-if value="{{ profile.hasEducation }}" hint-placeholder-val="{{ true }}">
+              <div>
+                <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70;margin-bottom:8px">Education</div>
+                <sc-for list="{{ profile.education }}" as="line" hint-placeholder-count="2"><div style="font-size:0.875rem;line-height:1.5;color:#0B0B0C;padding:4px 0">{{ line }}</div></sc-for>
+              </div>
+            </sc-if>
+            <sc-if value="{{ profile.hasCredentials }}" hint-placeholder-val="{{ true }}">
+              <div>
+                <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70;margin-bottom:8px">Credentials</div>
+                <sc-for list="{{ profile.credentials }}" as="line" hint-placeholder-count="2"><div style="font-size:0.875rem;line-height:1.5;color:#0B0B0C;padding:4px 0">{{ line }}</div></sc-for>
+              </div>
+            </sc-if>
+          </div>
+        </sc-if>
+        <sc-if value="{{ profile.hasSpecs }}" hint-placeholder-val="{{ true }}">
+          <div style="border-top:1px solid #E3E3E0;margin-top:20px;padding-top:20px">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70;margin-bottom:10px">Handles on Shifu</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px"><sc-for list="{{ profile.specs }}" as="s" hint-placeholder-count="5"><span style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;line-height:1.3;padding:5px 9px;border-radius:4px;background:#F4F4F1;color:#6B6B70">{{ s }}</span></sc-for></div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ profile.isDietitian }}" hint-placeholder-val="{{ false }}">
+          <div style="background:#F4F4F1;border-radius:8px;padding:14px 16px;margin-top:20px">
+            <div style="font-size:0.875rem;line-height:1.55;color:#6B6B70">As a registered dietitian, {{ profile.firstName }} can only work with members located in states where they hold an active license.</div>
+            <sc-if value="{{ profile.hasLicensedStates }}" hint-placeholder-val="{{ true }}"><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;line-height:1.6;color:#0B0B0C;margin-top:8px"><span style="color:#6B6B70">Licensed states · </span>{{ profile.licensedStates }}</div></sc-if>
+          </div>
+        </sc-if>
+        <sc-if value="{{ profile.hasDisclaimer }}" hint-placeholder-val="{{ false }}">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;line-height:1.6;color:#8A8A90;background:#F4F4F1;border-radius:8px;padding:12px 14px;margin-top:20px">{{ profile.disclaimer }}</div>
+        </sc-if>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;border-top:1px solid #0B0B0C;margin-top:24px;padding-top:20px">
+          <sc-if value="{{ profile.bookable }}" hint-placeholder-val="{{ true }}">
+            <a href="{{ startHref }}" style="padding:11px 16px;border-radius:6px;background:#0B0B0C;color:#FFFFFF;font-size:0.8125rem;font-weight:600;text-decoration:none;white-space:nowrap" style-hover="background:#F1580D;color:#FFFFFF">Book a call · 2</a>
+            <a href="{{ startHref }}" style="padding:11px 16px;border-radius:6px;border:1px solid #0B0B0C;color:#0B0B0C;font-size:0.8125rem;font-weight:600;text-decoration:none;white-space:nowrap" style-hover="background:#0B0B0C;color:#FFFFFF">Check-in · 1</a>
+          </sc-if>
+          <sc-if value="{{ profile.hasLinkedin }}" hint-placeholder-val="{{ true }}">
+            <a href="{{ profile.linkedin }}" target="_blank" rel="noopener noreferrer" style="padding:11px 16px;border-radius:6px;border:1px solid #E3E3E0;color:#6B6B70;font-size:0.8125rem;font-weight:600;text-decoration:none;white-space:nowrap" style-hover="border-color:#0B0B0C;color:#0B0B0C">LinkedIn ↗</a>
+          </sc-if>
+          <sc-if value="{{ profile.hasBusiness }}" hint-placeholder-val="{{ false }}">
+            <a href="{{ profile.business }}" target="_blank" rel="noopener noreferrer" style="padding:11px 16px;border-radius:6px;border:1px solid #E3E3E0;color:#6B6B70;font-size:0.8125rem;font-weight:600;text-decoration:none;white-space:nowrap" style-hover="border-color:#0B0B0C;color:#0B0B0C">{{ profile.businessLabel }} ↗</a>
+          </sc-if>
+        </div>
+      </div>
+    </div>
+  </div>
+</sc-if>
+
+<footer style="background:#0B0B0C;color:#FFFFFF;padding:80px 32px 40px">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;padding-bottom:48px;border-bottom:1px solid #2A2A2E">
+      <h2 style="font-weight:600;font-size:clamp(2rem,4.5vw,3.5rem);line-height:0.98;letter-spacing:-0.045em;max-width:720px">Bring one goal. We'll build around it.</h2>
+      <a href="{{ startHref }}" style="padding:16px 28px;border-radius:6px;background:#FFFFFF;color:#0B0B0C;font-weight:600;font-size:1rem;text-decoration:none;white-space:nowrap" style-hover="background:#F1580D;color:#FFFFFF">Start Today</a>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:20px;padding-top:28px;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#8A8A90">
+      <span>© 2026 Supamill Inc (DBA Shifu Health) · General wellness guidance only. Not medical advice, diagnosis, or treatment.</span>
+      <div style="display:flex;gap:24px"><a href="/coverage/" style="color:#8A8A90;text-decoration:none" style-hover="color:#FFFFFF">Coverage</a><a href="/" style="color:#8A8A90;text-decoration:none" style-hover="color:#FFFFFF">← Home</a></div>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;smsNumber&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;+10000000000&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Start flow&quot;}}">
+class Component extends DCLogic {
+  state = { open: null };
+  componentDidMount() {
+    // Escape closes the profile; ?profile=<id> opens one on load.
+    this.onKey = (e) => { if (e.key === "Escape" && this.state.open) this.closeProfile(); };
+    document.addEventListener("keydown", this.onKey);
+    try {
+      const id = new URLSearchParams(window.location.search).get("profile");
+      const roster = window.SHIFU_SITE_TEAM || [];
+      if (id && roster.some(m => m.id === id)) this.openProfile(id);
+    } catch (e) {}
+  }
+  componentWillUnmount() { document.removeEventListener("keydown", this.onKey); document.body.style.overflow = ""; document.documentElement.classList.remove("profile-open"); }
+  openProfile(id) { document.body.style.overflow = "hidden"; document.documentElement.classList.add("profile-open"); this.setState({ open: id }); }
+  closeProfile() { document.body.style.overflow = ""; document.documentElement.classList.remove("profile-open"); this.setState({ open: null }); }
+  renderVals() {
+    // Everyone comes from shifu-team.js: care team and advisors from the live shifu.health roster,
+    // founders from shifu.health/about (team-overlay.json "person"), investors from the live roster.
+    const team = (typeof window !== "undefined" && window.SHIFU_SITE_TEAM) || [];
+    const KIND_LABEL = { n: "Nutrition · Registered dietitians & nutritionists", e: "Exercise · Certified coaches", a: "Clinical advisor · trains and supervises Shifu", f: "Founding team", i: "Investor & strategic advisor" };
+    // one grid: founding team first, then advisors, dietitians and nutritionists, coaches, investors
+    const ORDER = ["f", "a", "n", "e", "i"];
+    const people = ORDER.flatMap(k => team.filter(m => m.kind === k)).map(m => ({
+      name: m.name.split(",")[0], title: m.cardCred || m.cred, img: m.img, open: () => this.openProfile(m.id), openLabel: "Open profile: " + m.name,
+    }));
+    const o = team.find(m => m.id === this.state.open) || null;
+    const links = (o && o.links) || {};
+    const profile = {
+      name: o ? o.name : "", cred: o ? o.cred : "", states: o ? o.states : "", img: o ? o.img : "",
+      kindLabel: o ? KIND_LABEL[o.kind] : "",
+      background: o ? (o.background || []) : [],
+      advisorRole: o ? (o.advisorRole || "") : "", hasAdvisorRole: !!(o && o.advisorRole),
+      funFact: o ? (o.funFact || "") : "", hasFunFact: !!(o && o.funFact),
+      education: o ? (o.education || []) : [], hasEducation: !!(o && (o.education || []).length),
+      credentials: o ? (o.credentials || []) : [], hasCredentials: !!(o && (o.credentials || []).length),
+      hasDetails: !!(o && ((o.education || []).length || (o.credentials || []).length)),
+      specs: o ? (o.specs || []) : [], hasSpecs: !!(o && (o.specs || []).length),
+      isDietitian: !!(o && o.dietitian), firstName: o ? o.name.split(",")[0].split(" ")[0] : "",
+      licensedStates: o ? (o.licensedStates || []).join(" · ") : "", hasLicensedStates: !!(o && (o.licensedStates || []).length),
+      disclaimer: o ? (o.disclaimer || "") : "", hasDisclaimer: !!(o && o.disclaimer),
+      linkedin: links.linkedin || "", hasLinkedin: !!links.linkedin,
+      business: links.business || "", businessLabel: links.businessLabel || "Website", hasBusiness: !!links.business,
+      profileUrl: o ? o.profileUrl : "#", hasProfileUrl: !!(o && o.kind !== "f"),
+      bookable: !!(o && (o.kind === "n" || o.kind === "e")),
+    };
+    return {
+      people, totalCount: team.length,
+      hasOpen: !!o, profile, closeProfile: () => this.closeProfile(),
+      startHref: `sms:${this.props.smsNumber ?? "+10000000000"}?&body=${encodeURIComponent("Hi Shifu, I'd like to get started.")}`,
+    };
+  }
+}
+</script>
+</body>
+</html>

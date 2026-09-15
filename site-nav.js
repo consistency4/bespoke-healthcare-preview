@@ -18,7 +18,7 @@
     { label: 'Nutrition', href: '/nutrition/', sub: 'Registered dietitians' },
     { label: 'Exercise', href: '/exercise/', sub: 'Certified coaches' },
     { label: 'Coverage', href: '/coverage/', sub: 'Every topic, every profile' },
-    { label: 'Manifesto', href: '/manifesto/', sub: 'The problem and the team' },
+    { label: 'Mission', href: '/mission/', sub: 'The problem and the team' },
     { label: 'Plans', href: '/#plans', sub: 'Starter $0 · Core $49 · Plus $79' }
   ];
 

@@ -8,7 +8,7 @@
 <script src="/shifu-team.js?v=9ed8d377"></script>
 <script src="/support.js?v=2e38395c"></script>
 <script src="/start-modal.js?v=daed3894"></script>
-<script src="/site-nav.js?v=629a6de5"></script>
+<script src="/site-nav.js?v=c3ac4e25"></script>
 </head>
 <body>
 <x-dc>
@@ -247,7 +247,7 @@ class Component extends DCLogic {
         style: { fontFamily: MONO, fontSize: "0.75rem", cursor: "pointer", borderRadius: 6, padding: "8px 12px", transition: "all 0.15s", border: "1px solid " + (on ? NAVY : LINE), background: on ? NAVY : "#FFFFFF", color: on ? "#FFFFFF" : INK } }; }),
     }));
     // Coverage lists the bookable care team only: dietitians, nutritionists and coaches. Clinical advisors,
-    // founders and investors are on the Manifesto page.
+    // founders and investors are on the Mission page.
     const visible = team.filter(m => "ne".includes(m.kind) && (filter === "all" || m.kind === filter));
     const matchCount = topic ? visible.filter(m => m.specs.includes(topic)).length : 0;
     const teamOut = visible.map(m => {

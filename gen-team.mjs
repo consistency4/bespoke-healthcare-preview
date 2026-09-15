@@ -50,7 +50,7 @@ mkdirSync(PHOTO_DIR, { recursive: true });
 // Photos used by the design files outside the roster (Spencer leads the half-marathon goal page and the
 // Exercise live-call mock; he is on shifu.health/about rather than the care-team carousel).
 for (const f of ['coach-spencer.jpeg']) { copyFileSync(join(SITE_ROOT, 'assets', f), join(PHOTO_DIR, f)); shrink(join(PHOTO_DIR, f)); }
-// Investor firm logos for the Manifesto page.
+// Investor firm logos for the Mission page.
 mkdirSync(join(HERE, 'assets/investors'), { recursive: true });
 for (const f of ['launch.svg', 'z21-ventures.svg', 'teamworthy.svg']) copyFileSync(join(SITE_ROOT, 'assets/investors', f), join(HERE, 'assets/investors', f));
 
