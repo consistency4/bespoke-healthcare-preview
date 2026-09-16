@@ -52,7 +52,7 @@
     <div style="display:flex;flex-direction:column;border-top:1px solid #0B0B0C">
       <sc-for list="{{ groups }}" as="g" hint-placeholder-count="7">
         <div style="{{ g.rowStyle }}">
-          <div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70;margin-bottom:8px">{{ g.kindLabel }}</div><div style="font-size:1.25rem;font-weight:600;letter-spacing:-0.02em">{{ g.title }}</div></div>
+          <div style="font-size:1.25rem;font-weight:600;letter-spacing:-0.02em">{{ g.title }}</div>
           <div style="display:flex;flex-wrap:wrap;gap:8px;align-content:start">
             <sc-for list="{{ g.topics }}" as="t"><button onClick="{{ t.pick }}" style="{{ t.style }}">{{ t.label }}</button></sc-for>
           </div>
@@ -290,8 +290,8 @@ class Component extends DCLogic {
     // label -> { specs, kind, dietitian } for the selected topic
     const TOPIC = {};
     for (const g of groupDefs) for (const t of g.topics) { TOPIC[t.label] = { specs: t.specs, kind: g.kind, dietitian: !!g.dietitian }; for (const [dl, ds] of (t.details || [])) TOPIC[dl] = { specs: ds, kind: g.kind, dietitian: !!g.dietitian }; }
-    const teamKind = (k) => (k === "r" || k === "m" ? "e" : k); // rehab and mind topics are handled by the exercise coaches
-    const matches = (m, label) => { const t = TOPIC[label]; if (!t) return false; if (m.kind !== teamKind(t.kind)) return false; if (t.dietitian && !m.dietitian) return false; return t.specs.length ? m.specs.some(sp => t.specs.includes(sp)) : true; };
+    const teamKinds = (k) => (k === "r" ? "e" : k === "m" ? "ne" : k); // rehab: the coaches; mind: dietitians and coaches together
+    const matches = (m, label) => { const t = TOPIC[label]; if (!t) return false; if (!teamKinds(t.kind).includes(m.kind)) return false; if (t.dietitian && !m.dietitian) return false; return t.specs.length ? m.specs.some(sp => t.specs.includes(sp)) : true; };
     const matchedSpecs = (m, label) => { const t = TOPIC[label]; return t ? m.specs.filter(sp => t.specs.includes(sp)) : []; };
     // Roster from shifu-team.js: names, photos, bios, education, credentials and links are the live shifu.health profiles.
     const team = (typeof window !== "undefined" && window.SHIFU_SITE_TEAM) || [];
@@ -309,7 +309,7 @@ class Component extends DCLogic {
     }));
     // Coverage lists the bookable care team only: dietitians, nutritionists and coaches. Clinical advisors,
     // founders and investors are on the Mission page.
-    const visible = team.filter(m => "ne".includes(m.kind) && (filter === "all" || m.kind === teamKind(filter)));
+    const visible = team.filter(m => "ne".includes(m.kind) && (filter === "all" || teamKinds(filter).includes(m.kind)));
     const matchCount = topic ? visible.filter(m => matches(m, topic)).length : 0;
     const teamOut = visible.map(m => {
       const hit = !!topic && matches(m, topic), dim = !!topic && !hit;
@@ -346,7 +346,7 @@ class Component extends DCLogic {
     const nCount = team.filter(m => m.kind === "n").length, eCount = team.filter(m => m.kind === "e").length;
     // "Type 2 diabetes" -> "type 2 diabetes", but "5K", "GLP-1", "IBS" keep their capitals
     const lc = (x) => x.split(" ").map(w => (/\d/.test(w) || /^[A-Z&/()]+$/.test(w) || /[a-z][A-Z]/.test(w)) ? w : w.toLowerCase()).join(" ");
-    const teamCount = filter === "n" ? `${nCount} in nutrition` : filter === "e" ? `${eCount} in exercise` : filter === "r" ? `${eCount} coaches cover rehab` : filter === "m" ? `${eCount} coaches cover mind` : `${nCount + eCount} people`;
+    const teamCount = filter === "n" ? `${nCount} in nutrition` : filter === "e" ? `${eCount} in exercise` : filter === "r" ? `${eCount} coaches cover rehab` : filter === "m" ? `${nCount + eCount} people cover mind` : `${nCount + eCount} people`;
     return {
       startHref: `sms:${this.props.smsNumber ?? "+10000000000"}?&body=${encodeURIComponent(topic ? `Hi Shifu, I want to work on ${lc(topic)}.` : "Hi Shifu, I'd like to get started.")}`,
       filterAll: () => this.setState({ filter: "all", topic: null }), filterN: () => this.setState({ filter: "n", topic: null }), filterE: () => this.setState({ filter: "e", topic: null }), filterR: () => this.setState({ filter: "r", topic: null }), filterM: () => this.setState({ filter: "m", topic: null }),
