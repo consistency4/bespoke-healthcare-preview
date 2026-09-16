@@ -188,6 +188,10 @@ Same template and behaviors as Exercise with dietitian content: H1 "Nutrition Th
 3. **Footer** (dark) "Bring one goal. We'll build around it." + "← Back to home".
 Behavior: filter tabs set the discipline and clear the topic; topic chips toggle one topic at a time (click again to clear). With a topic active, matching cards get an orange border and non-matching cards drop to 35% opacity (0.35s). The Start button's SMS body becomes "Hi Shifu, I want to work on {topic}."
 
+#### Coverage taxonomy (2026-09-16)
+
+The topic rows on Coverage mirror the care-plan admin: area → care tier (row) → case type (chip) → detail (lighter "↳" sub-chip). Exercise: General training (Running → 5K/10K/Half/Marathon, Weight lifting → Build muscle/Get stronger/Tone up, Biking, Swimming), Preventive health (5). Nutrition: General health (6, Weight management → four GLP-1 details), Active condition (10, dietitian license). Rehab: Preventive (5), handled by the exercise coaches (fourth tab). Each chip carries a `specs` list that maps onto the specialties people already list on their profiles, so the roster did not change; an empty list falls back to everyone in that discipline (dietitians only for Active condition). `groupDefs` in `Coverage.dc.html` is the source.
+
 ### 4b. Mission — `Mission.dc.html` (prop: smsNumber)
 The company page: the problem, then everyone working on it. No product benefits, plans or investor logos here on purpose.
 1. **Mission** (140px top, 96px bottom). "← Back", eyebrow "Mission" (28px above, 36px below), H1 "Care is split, expensive, and left for you to coordinate." (discipline H1 size, max-width 1100px, 40px below). 2-col grid (`minmax(320px,1fr)`, gap 32px 64px): hero-definition-size problem statement (max-width 560px) | 1.0625rem muted paragraph (max-width 520px) ending "Below is the team working on it." Copy is in the file.

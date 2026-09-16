@@ -47,7 +47,7 @@
       <p style="font-size:1.0625rem;line-height:1.5;color:#6B6B70">Pick a topic to see who on the team handles it. Every consult is routed to a professional licensed in your state.</p>
     </div>
     <div style="display:flex;gap:0;border:1px solid #0B0B0C;border-radius:6px;overflow:hidden;width:fit-content;margin-bottom:40px">
-      <button onClick="{{ filterAll }}" style="{{ tabAll }}">All</button><button onClick="{{ filterN }}" style="{{ tabN }}">Nutrition</button><button onClick="{{ filterE }}" style="{{ tabE }}">Exercise</button>
+      <button onClick="{{ filterAll }}" style="{{ tabAll }}">All</button><button onClick="{{ filterN }}" style="{{ tabN }}">Nutrition</button><button onClick="{{ filterE }}" style="{{ tabE }}">Exercise</button><button onClick="{{ filterR }}" style="{{ tabR }}">Rehab</button>
     </div>
     <div style="display:flex;flex-direction:column;border-top:1px solid #0B0B0C">
       <sc-for list="{{ groups }}" as="g" hint-placeholder-count="7">
@@ -222,15 +222,60 @@ class Component extends DCLogic {
   }
   renderVals() {
     const INK = "#0B0B0C", NAVY = "#F1580D", MUTED = "#6B6B70", LINE = "#E3E3E0", MONO = "'IBM Plex Mono',monospace";
+    // Coverage taxonomy (area -> care tier -> case type -> detail), mirrored from the care-plan admin on 2026-09-16.
+    // Each case type maps onto the specialties people already list on their profiles (`specs`), so the filter
+    // keeps working without editing the roster; an empty map falls back to everyone in that tier's discipline
+    // (dietitians only for the Active condition tier). Details are rendered as lighter sub-chips.
     const groupDefs = [
-      { kind: "n", title: "Metabolic health", topics: ["GLP-1 guidance", "Type 2 diabetes", "Prediabetes & A1c", "Cholesterol", "Blood pressure", "Insulin resistance"] },
-      { kind: "n", title: "Weight & body composition", topics: ["Weight loss", "Muscle gain", "GLP-1 side effects", "Plateaus", "Body recomposition"] },
-      { kind: "n", title: "Digestive & women's health", topics: ["Gut health", "IBS", "Reflux", "PCOS", "Pregnancy & postpartum", "Menopause"] },
-      { kind: "n", title: "Everyday eating", topics: ["Eating well on a budget", "Meal prep", "Eating out & travel", "Cutting sugar", "Plant-based", "Hydration"] },
-      { kind: "e", title: "Strength & conditioning", topics: ["Building strength", "Beginner lifting", "Home workouts", "Busy-schedule programming", "Hypertension-safe training"] },
-      { kind: "e", title: "Running", topics: ["First 5K", "10K to half marathon", "Marathon training", "Race fueling", "Pace & training zones", "Running injuries"] },
-      { kind: "e", title: "Recovery & mobility", topics: ["Return from injury", "Mobility", "Hiking & event prep", "Sleep & recovery"] },
+      { kind: "e", title: "General training", label: "Exercise · General training · Certified coaches", topics: [
+        { label: "Running", specs: [], details: [ ["5K", []], ["10K", []], ["Half marathon", []], ["Marathon", []] ] },
+        { label: "Weight lifting", specs: ["Building strength", "Beginner lifting", "Muscle gain", "Body recomposition"], details: [
+          ["Build muscle", ["Muscle gain", "Building strength"]], ["Get stronger", ["Building strength", "Beginner lifting"]], ["Tone up", ["Body recomposition", "Muscle gain"]] ] },
+        { label: "Biking", specs: [] },
+        { label: "Swimming", specs: [] },
+      ] },
+      { kind: "e", title: "Preventive health", label: "Exercise · Preventive health · Certified coaches", topics: [
+        { label: "Return to exercise after a break", specs: ["Return from injury", "Beginner lifting", "Home workouts"] },
+        { label: "Deconditioning", specs: ["Beginner lifting", "Home workouts", "Mobility"] },
+        { label: "Weight-loss training", specs: ["Weight loss", "Body recomposition", "Home workouts"] },
+        { label: "Desk-job movement", specs: ["Mobility", "Busy-schedule programming", "Home workouts"] },
+        { label: "Healthy aging & strength", specs: ["Building strength", "Mobility", "Hypertension-safe training"] },
+      ] },
+      { kind: "n", title: "General health", label: "Nutrition · General health · Registered dietitians & nutritionists", topics: [
+        { label: "General healthy eating", specs: ["Meal prep", "Hydration", "Eating out & travel", "Plant-based"] },
+        { label: "Meal planning", specs: ["Meal prep", "Eating well on a budget", "Eating out & travel"] },
+        { label: "Weight management", specs: ["Weight loss", "GLP-1 guidance", "Plateaus", "Body recomposition"], details: [
+          ["Just started a GLP-1", ["GLP-1 guidance", "GLP-1 side effects"]], ["On a GLP-1 a while", ["GLP-1 guidance", "Plateaus", "Muscle gain"]], ["Coming off a GLP-1", ["GLP-1 guidance", "Weight loss", "Plateaus"]], ["No medication", ["Weight loss", "Plateaus", "Body recomposition"]] ] },
+        { label: "Sports & performance nutrition", specs: ["Race fueling", "Muscle gain", "Hydration"] },
+        { label: "Heart-healthy eating", specs: ["Cholesterol", "Blood pressure", "Plant-based"] },
+        { label: "Gut health basics", specs: ["Gut health", "IBS", "Reflux"] },
+      ] },
+      { kind: "n", title: "Active condition", label: "Nutrition · Active condition · Registered dietitians · dietitian license", dietitian: true, topics: [
+        { label: "IBS & digestive issues", specs: ["IBS", "Gut health"] },
+        { label: "Acid reflux (GERD)", specs: ["Reflux"] },
+        { label: "Prediabetes", specs: ["Prediabetes & A1c", "Insulin resistance"] },
+        { label: "Type 2 diabetes", specs: ["Type 2 diabetes", "Insulin resistance"] },
+        { label: "High cholesterol", specs: ["Cholesterol"] },
+        { label: "High blood pressure", specs: ["Blood pressure"] },
+        { label: "Food allergies & intolerances", specs: [] },
+        { label: "Celiac / gluten-free", specs: [] },
+        { label: "Nutrient deficiencies (iron, B12, vitamin D)", specs: [] },
+        { label: "Chronic Dieting", specs: ["Weight loss", "Plateaus"] },
+      ] },
+      { kind: "r", title: "Preventive", label: "Rehab · Preventive · Certified coaches", topics: [
+        { label: "Injury prevention", specs: ["Running injuries", "Return from injury", "Mobility"] },
+        { label: "Mobility & flexibility", specs: ["Mobility"] },
+        { label: "Posture & ergonomics", specs: ["Mobility", "Busy-schedule programming"] },
+        { label: "Balance & fall prevention", specs: ["Mobility", "Hypertension-safe training"] },
+        { label: "Return-to-activity conditioning", specs: ["Return from injury"] },
+      ] },
     ];
+    // label -> { specs, kind, dietitian } for the selected topic
+    const TOPIC = {};
+    for (const g of groupDefs) for (const t of g.topics) { TOPIC[t.label] = { specs: t.specs, kind: g.kind, dietitian: !!g.dietitian }; for (const [dl, ds] of (t.details || [])) TOPIC[dl] = { specs: ds, kind: g.kind, dietitian: !!g.dietitian }; }
+    const teamKind = (k) => (k === "r" ? "e" : k); // rehab topics are handled by the exercise coaches
+    const matches = (m, label) => { const t = TOPIC[label]; if (!t) return false; if (m.kind !== teamKind(t.kind)) return false; if (t.dietitian && !m.dietitian) return false; return t.specs.length ? m.specs.some(sp => t.specs.includes(sp)) : true; };
+    const matchedSpecs = (m, label) => { const t = TOPIC[label]; return t ? m.specs.filter(sp => t.specs.includes(sp)) : []; };
     // Roster from shifu-team.js: names, photos, bios, education, credentials and links are the live shifu.health profiles.
     const team = (typeof window !== "undefined" && window.SHIFU_SITE_TEAM) || [];
     const { filter, topic } = this.state;
@@ -238,20 +283,22 @@ class Component extends DCLogic {
     const MAX_CHIPS = 3; // three chips plus a "+N more" chip fit the two-row chip area on a 285px card
     const chipStyle = (on) => ({ fontFamily: MONO, fontSize: "0.6875rem", lineHeight: 1.3, padding: "5px 9px", borderRadius: 4, background: on ? NAVY : "#F4F4F1", color: on ? "#FFFFFF" : MUTED, transition: "all 0.25s", whiteSpace: "nowrap" });
     const tab = (on) => ({ padding: "10px 16px", border: "none", cursor: "pointer", fontSize: "0.875rem", fontWeight: 600, background: on ? INK : "#FFFFFF", color: on ? "#FFFFFF" : INK, transition: "all 0.2s" });
+    const chip = (label, sub) => { const on = topic === label; return { label: sub ? "↳ " + label : label, pick: () => this.setState({ topic: on ? null : label }),
+      style: { fontFamily: MONO, fontSize: sub ? "0.6875rem" : "0.75rem", cursor: "pointer", borderRadius: 6, padding: sub ? "7px 10px" : "8px 12px", transition: "all 0.15s", border: "1px solid " + (on ? NAVY : (sub ? "transparent" : LINE)), background: on ? NAVY : (sub ? "#F4F4F1" : "#FFFFFF"), color: on ? "#FFFFFF" : (sub ? MUTED : INK) } }; };
     const groups = groupDefs.filter(g => filter === "all" || g.kind === filter).map(g => ({
-      title: g.title, kindLabel: g.kind === "n" ? "Nutrition · Registered dietitians" : "Exercise · Certified coaches",
+      title: g.title, kindLabel: g.label,
       rowStyle: { display: "grid", gridTemplateColumns: "minmax(200px,0.8fr) minmax(0,2fr)", gap: "16px 40px", padding: "28px 0", borderBottom: "1px solid " + LINE },
-      topics: g.topics.map(label => { const on = topic === label; return { label, pick: () => this.setState({ topic: on ? null : label }),
-        style: { fontFamily: MONO, fontSize: "0.75rem", cursor: "pointer", borderRadius: 6, padding: "8px 12px", transition: "all 0.15s", border: "1px solid " + (on ? NAVY : LINE), background: on ? NAVY : "#FFFFFF", color: on ? "#FFFFFF" : INK } }; }),
+      topics: g.topics.flatMap(t => [chip(t.label, false)].concat((t.details || []).map(([dl]) => chip(dl, true)))),
     }));
     // Coverage lists the bookable care team only: dietitians, nutritionists and coaches. Clinical advisors,
     // founders and investors are on the Mission page.
-    const visible = team.filter(m => "ne".includes(m.kind) && (filter === "all" || m.kind === filter));
-    const matchCount = topic ? visible.filter(m => m.specs.includes(topic)).length : 0;
+    const visible = team.filter(m => "ne".includes(m.kind) && (filter === "all" || m.kind === teamKind(filter)));
+    const matchCount = topic ? visible.filter(m => matches(m, topic)).length : 0;
     const teamOut = visible.map(m => {
-      const hit = !!topic && m.specs.includes(topic), dim = !!topic && !hit;
-      // the selected topic always leads, so it stays visible inside the fixed two-row chip area
-      const ordered = hit ? [topic].concat(m.specs.filter(s => s !== topic)) : m.specs;
+      const hit = !!topic && matches(m, topic), dim = !!topic && !hit;
+      // the specialties behind the selected topic lead, so they stay visible inside the fixed two-row chip area
+      const lead = hit ? matchedSpecs(m, topic) : [];
+      const ordered = lead.concat(m.specs.filter(s => !lead.includes(s)));
       const shown = ordered.slice(0, MAX_CHIPS), extra = ordered.length - shown.length;
       return {
         id: m.id, name: m.name, cred: m.cred, states: m.states, bio: m.bio, img: m.img,
@@ -259,7 +306,7 @@ class Component extends DCLogic {
         bookable: m.kind !== "a", advisor: m.kind === "a",
         linkedin: (m.links || {}).linkedin || "", hasLinkedin: !!(m.links || {}).linkedin,
         cardStyle: { border: "1px solid " + (hit ? NAVY : LINE), borderRadius: 12, padding: 20, display: "flex", flexDirection: "column", minWidth: 0, opacity: dim ? 0.35 : 1, transition: "all 0.35s", background: "#FFFFFF" },
-        specs: shown.map(s => ({ label: s, style: chipStyle(s === topic) })),
+        specs: shown.map(s => ({ label: s, style: chipStyle(lead.includes(s)) })),
         hasExtra: extra > 0, extraLabel: "+" + extra + " more",
       };
     });
@@ -272,7 +319,7 @@ class Component extends DCLogic {
       advisorRole: o ? (o.advisorRole || "") : "", hasAdvisorRole: !!(o && o.advisorRole),
       education: o ? (o.education || []) : [], hasEducation: !!(o && (o.education || []).length),
       credentials: o ? (o.credentials || []) : [], hasCredentials: !!(o && (o.credentials || []).length),
-      specs: o ? o.specs.map(s => ({ label: s, style: chipStyle(s === topic) })) : [], hasSpecs: !!(o && o.specs.length),
+      specs: o ? o.specs.map(s => ({ label: s, style: chipStyle(!!topic && matchedSpecs(o, topic).includes(s)) })) : [], hasSpecs: !!(o && o.specs.length),
       isDietitian: !!(o && o.dietitian), firstName: o ? o.name.split(",")[0].split(" ")[0] : "",
       licensedStates: o ? (o.licensedStates || []).join(" · ") : "", hasLicensedStates: !!(o && (o.licensedStates || []).length),
       disclaimer: o ? (o.disclaimer || "") : "", hasDisclaimer: !!(o && o.disclaimer),
@@ -280,16 +327,18 @@ class Component extends DCLogic {
       profileUrl: o ? o.profileUrl : "#", bookable: !!(o && o.kind !== "a"),
     };
     const nCount = team.filter(m => m.kind === "n").length, eCount = team.filter(m => m.kind === "e").length;
-    const teamCount = filter === "n" ? `${nCount} in nutrition` : filter === "e" ? `${eCount} in exercise` : `${nCount + eCount} people`;
+    // "Type 2 diabetes" -> "type 2 diabetes", but "5K", "GLP-1", "IBS" keep their capitals
+    const lc = (x) => x.split(" ").map(w => (/\d/.test(w) || /^[A-Z&/()]+$/.test(w) || /[a-z][A-Z]/.test(w)) ? w : w.toLowerCase()).join(" ");
+    const teamCount = filter === "n" ? `${nCount} in nutrition` : filter === "e" ? `${eCount} in exercise` : filter === "r" ? `${eCount} coaches cover rehab` : `${nCount + eCount} people`;
     return {
-      startHref: `sms:${this.props.smsNumber ?? "+10000000000"}?&body=${encodeURIComponent(topic ? `Hi Shifu, I want to work on ${topic.toLowerCase()}.` : "Hi Shifu, I'd like to get started.")}`,
-      filterAll: () => this.setState({ filter: "all", topic: null }), filterN: () => this.setState({ filter: "n", topic: null }), filterE: () => this.setState({ filter: "e", topic: null }),
-      tabAll: tab(filter === "all"), tabN: tab(filter === "n"), tabE: tab(filter === "e"),
+      startHref: `sms:${this.props.smsNumber ?? "+10000000000"}?&body=${encodeURIComponent(topic ? `Hi Shifu, I want to work on ${lc(topic)}.` : "Hi Shifu, I'd like to get started.")}`,
+      filterAll: () => this.setState({ filter: "all", topic: null }), filterN: () => this.setState({ filter: "n", topic: null }), filterE: () => this.setState({ filter: "e", topic: null }), filterR: () => this.setState({ filter: "r", topic: null }),
+      tabAll: tab(filter === "all"), tabN: tab(filter === "n"), tabE: tab(filter === "e"), tabR: tab(filter === "r"),
       groups, team: teamOut, teamCount,
       hasOpen: !!o, profile, closeProfile: () => this.closeProfile(),
       teamTitle: !topic ? "Profiles, credentials, license states."
-        : matchCount === 0 ? `No one on the team lists ${topic.toLowerCase()} yet.`
-        : `${matchCount} on the team handle ${topic.toLowerCase()}.`,
+        : matchCount === 0 ? `No one on the team lists ${lc(topic)} yet.`
+        : `${matchCount} on the team handle ${lc(topic)}.`,
       teamSub: !topic ? "Every member is licensed or certified in their field, and you see all of them from day one. Open any card for their full background, education and credentials."
         : matchCount === 0 ? "Ask us anyway and we will point you to the closest fit on the team."
         : "Book a 10-minute video call (2 consults) or request a written check-in (1) with any of them.",
