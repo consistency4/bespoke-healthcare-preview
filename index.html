@@ -233,6 +233,20 @@
   </div>
 </section>
 
+<section id="faq" data-screen-label="Questions" style="padding:0 32px 120px">
+  <div style="max-width:1200px;margin:0 auto;border-top:1px solid #0B0B0C;padding-top:36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px 64px;align-items:start">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70">Questions</div>
+    <div>
+      <sc-for list="{{ faqItems }}" as="it" hint-placeholder-count="8">
+        <div style="border-bottom:1px solid #E3E3E0">
+          <button onClick="{{ it.toggle }}" style="width:100%;background:none;border:none;padding:20px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;cursor:pointer;text-align:left"><span style="font-size:1.0625rem;font-weight:600;letter-spacing:-0.01em;color:#0B0B0C">{{ it.q }}</span><span style="{{ it.plusStyle }}">+</span></button>
+          <div style="{{ it.answerStyle }}"><p style="font-size:0.9375rem;line-height:1.6;color:#6B6B70;padding-bottom:20px;max-width:620px">{{ it.a }}</p></div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
 <footer style="padding:96px 32px 40px">
   <div style="max-width:1200px;margin:0 auto">
     <div style="display:flex;justify-content:flex-end;align-items:flex-end;gap:40px;flex-wrap:wrap;padding-bottom:48px;border-bottom:1px solid #0B0B0C">
@@ -247,7 +261,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;smsNumber&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;+10000000000&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Start flow&quot;}, &quot;appStoreUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://apps.apple.com/&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Start flow&quot;}}">
 class Component extends DCLogic {
-  state = { d: 0, manual: false };
+  state = { d: 0, manual: false, open: null };
   componentDidMount() { this.t = setInterval(() => { if (this.state.manual) return; this.setState(s => ({ d: (s.d + 1) % 5 })); }, 4500); }
   componentWillUnmount() { clearInterval(this.t); }
   renderVals() {
@@ -275,7 +289,22 @@ class Component extends DCLogic {
       const n = roster.filter(m => m.kind === kind).length;
       return n ? `${n} ${plural} · live today` : "";
     };
+    const open = this.state.open;
+    const faqs = [
+      { q: "How do consults work?", a: "A consult is one interaction with a licensed expert who can change your plan. A written check-in is 1 consult and a 10-minute live video call is 2. Free members buy consults at $15 each; Starter includes 4 a month, Core 8, Plus 14. Unused consults bank for 3 months, and consults you buy are yours for life." },
+      { q: "What's the difference between a check-in and a live call?", a: "A check-in is asynchronous: you text Shifu or tap Request, Shifu compiles your logs and context, and your dietitian or coach replies in writing with their reasoning in 6 to 12 hours. A live call is synchronous: 10 minutes of video with the expert you choose, who joins with your plan and history already open. Notes and changes land in the app right after either." },
+      { q: "What does Shifu actually do?", a: "Shifu is your AI health assistant. It sends the reminders your plan asked for, notices patterns before you do and nudges you proactively, and takes actions like building a grocery list, ordering lunch, or moving a session around your calendar. When a pattern needs judgment it becomes a consult request with the context attached. Shifu never diagnoses." },
+      { q: "Are the dietitians licensed?", a: "Yes. Registered dietitians provide medical nutrition therapy only in the states where they are licensed, and the app confirms your state when you open a consult. Certified nutritionists cover everyday eating everywhere. License states are listed on every profile." },
+      { q: "Who are the exercise coaches?", a: "NASM, ACSM and ISSA certified coaches, strength coaches and exercise physiologists, available in every state. They program your training, adjust it as life happens, and see what your dietitian sees." },
+      { q: "Who sees my information?", a: "Only the licensed professional handling your consult, and only what you've chosen to share. Every consult shows who saw it and what they changed. Data is encrypted in transit and at rest, video calls end to end, nothing is ever sold, and you can export or delete your data from the app." },
+      { q: "Do I need insurance?", a: "No. Membership is month to month with no networks or referrals: Free at $0, Starter at $49.99, Core at $79.99, or Plus at $125.99 a month." },
+      { q: "Is this medical care?", a: "No. We provide general wellness guidance, not medical advice, diagnosis, or treatment. Registered dietitians provide medical nutrition therapy only in states where they are licensed." },
+    ];
+    const faqItems = faqs.map((f, i) => ({ q: f.q, a: f.a, toggle: () => this.setState({ open: open === i ? null : i }),
+      plusStyle: { fontFamily: MONO, fontSize: "1.25rem", color: MUTED, transition: "transform 0.2s", transform: open === i ? "rotate(45deg)" : "none" },
+      answerStyle: { overflow: "hidden", maxHeight: open === i ? 400 : 0, transition: "max-height 0.3s cubic-bezier(0.22,1,0.36,1)" } }));
     return {
+      faqItems,
       nutritionStrip: strip("n"), exerciseStrip: strip("e"),
       nutritionStripLabel: countLabel("n", "dietitians and nutritionists"),
       exerciseStripLabel: countLabel("e", "certified exercise coaches"),
