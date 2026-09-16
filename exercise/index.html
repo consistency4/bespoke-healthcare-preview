@@ -244,21 +244,21 @@
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px"><span style="font-weight:600">Starter</span></div>
         <div style="font-size:3rem;font-weight:600;letter-spacing:-0.05em;line-height:1">$49.99<span style="font-size:1rem;letter-spacing:0;color:#6B6B70;font-weight:500"> /mo</span></div>
         <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;margin:10px 0 28px">An expert in the loop every week</div>
-        <div style="display:flex;flex-direction:column;gap:10px;font-size:0.9375rem;line-height:1.45;color:#6B6B70;margin-bottom:32px"><div>Everything in Free</div><div><span style="color:#0B0B0C;font-weight:600">4 consults</span> a month · $12.25 each</div><div>Unused ones bank for 3 months</div><div>Extra consults $11.99</div></div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:0.9375rem;line-height:1.45;color:#6B6B70;margin-bottom:32px"><div>Everything in Free</div><div><span style="color:#0B0B0C;font-weight:600">4 consults</span> a month · $12.25 each</div><div>Unused ones bank for 3 months</div><div>Extra consults $11.99 · lifetime use</div></div>
         <a href="{{ startHref }}" style="display:block;margin-top:auto;padding:14px;border-radius:6px;border:1px solid #0B0B0C;color:#0B0B0C;font-weight:600;text-decoration:none;text-align:center" style-hover="background:#0B0B0C;color:#FFFFFF">Get Starter</a>
       </div>
       <div style="{{ planCoreStyle }}">
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px"><span style="font-weight:600">Core</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#F1580D">Most members</span></div>
         <div style="font-size:3rem;font-weight:600;letter-spacing:-0.05em;line-height:1">$79.99<span style="font-size:1rem;letter-spacing:0;color:#6B6B70;font-weight:500"> /mo</span></div>
         <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;margin:10px 0 28px">Your care team, every week</div>
-        <div style="display:flex;flex-direction:column;gap:10px;font-size:0.9375rem;line-height:1.45;color:#6B6B70;margin-bottom:32px"><div>Everything in Starter</div><div><span style="color:#0B0B0C;font-weight:600">8 consults</span> a month · $10 each</div><div>Proactive texting from Shifu</div><div>Extra consults $9.99</div></div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:0.9375rem;line-height:1.45;color:#6B6B70;margin-bottom:32px"><div>Everything in Starter</div><div><span style="color:#0B0B0C;font-weight:600">8 consults</span> a month · $10 each</div><div>Proactive texting from Shifu</div><div>Extra consults $9.99 · lifetime use</div></div>
         <a href="{{ startHref }}" style="display:block;margin-top:auto;padding:14px;border-radius:6px;background:#0B0B0C;color:#FFFFFF;font-weight:600;text-decoration:none;text-align:center" style-hover="background:#F1580D;color:#FFFFFF">Get Core</a>
       </div>
       <div style="{{ planPlusStyle }}">
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px"><span style="font-weight:600">Plus</span></div>
         <div style="font-size:3rem;font-weight:600;letter-spacing:-0.05em;line-height:1">$125.99<span style="font-size:1rem;letter-spacing:0;color:#6B6B70;font-weight:500"> /mo</span></div>
         <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;margin:10px 0 28px">More access · your coach first in line</div>
-        <div style="display:flex;flex-direction:column;gap:10px;font-size:0.9375rem;line-height:1.45;color:#6B6B70;margin-bottom:32px"><div>Everything in Core</div><div><span style="color:#0B0B0C;font-weight:600">14 consults</span> a month · $9 each</div><div>Priority routing to your starred coach</div><div>Extra consults $8.99</div></div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:0.9375rem;line-height:1.45;color:#6B6B70;margin-bottom:32px"><div>Everything in Core</div><div><span style="color:#0B0B0C;font-weight:600">14 consults</span> a month · $9 each</div><div>Priority routing to your starred coach</div><div>Extra consults $8.99 · lifetime use</div></div>
         <a href="{{ startHref }}" style="display:block;margin-top:auto;padding:14px;border-radius:6px;border:1px solid #0B0B0C;color:#0B0B0C;font-weight:600;text-decoration:none;text-align:center" style-hover="background:#0B0B0C;color:#FFFFFF">Get Plus</a>
       </div>
     </div>
@@ -398,6 +398,7 @@ class Component extends DCLogic {
       { q: "Who sees my information?", a: "Only the licensed professional handling your consult, and only what you've chosen to share. Every consult shows who saw it. Nothing is sold." },
       { q: "Can I cancel or delete my data?", a: "Yes, both from the app. Month to month; purchased consults stay yours." },
       { q: "Is this medical care?", a: "No. We provide general wellness coaching, not medical advice, diagnosis, or treatment. Registered dietitians provide medical nutrition therapy only in states where they are licensed." },
+      { q: "Does the app use my location?", a: "Only if you allow it. The app asks for your location once during setup and again when you open a consult, so we can record the city and state you are in. We keep the city and state on your profile and on the consult, nothing more precise, so you are matched with coaches licensed where you are and your care team knows where you asked from. You can decline and pick your state by hand instead, and you can change or remove it in your profile at any time. We never track your location in the background." },
     ];
     const open = this.state.open;
     return {
