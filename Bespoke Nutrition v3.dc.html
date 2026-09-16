@@ -230,25 +230,7 @@
 
 <section id="plans" data-screen-label="Plans" style="padding:120px 32px">
   <div style="max-width:1200px;margin:0 auto">
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px 64px;align-items:end;margin-bottom:48px">
-      <div>
-        <h2 style="font-weight:600;font-size:clamp(2rem,4.2vw,3.25rem);line-height:1.02;letter-spacing:-0.04em">A registered dietitian, for less than one session.</h2>
-      </div>
-      <p style="font-size:1.0625rem;line-height:1.5;color:#6B6B70">Month to month, no insurance. A written check-in is 1 consult; a 10-minute live video call is 2.</p>
-    </div>
-    <div style="border-top:1px solid #0B0B0C;padding:36px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px 64px;align-items:center">
-      <div>
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70;margin-bottom:16px">Plan your month</div>
-        <div style="font-size:1.25rem;font-weight:600;letter-spacing:-0.02em;line-height:1.25;margin-bottom:28px">How many expert check-ins a month?</div>
-        <div style="display:flex;align-items:center;gap:24px;margin-bottom:24px"><input type="range" min="0" max="16" step="1" value="{{ calcN }}" onChange="{{ onCalcN }}" style="flex:1;cursor:pointer"></input><div style="font-family:'IBM Plex Mono',monospace;font-size:2.5rem;line-height:1;min-width:2.2ch;text-align:right">{{ calcN }}</div></div>
-        <button onClick="{{ toggleCall }}" style="{{ callToggleStyle }}">+ one live video call a month · 2 consults</button>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;font-size:0.875rem">
-        <div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#F1580D;margin-bottom:12px">Recommended</div><div style="font-size:2.25rem;font-weight:600;letter-spacing:-0.04em;line-height:1">{{ calcPlan }}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.875rem;color:#6B6B70;margin-top:8px">{{ calcPrice }} / mo</div></div>
-        <div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70;margin-bottom:12px">Privately</div><div style="font-size:2.25rem;font-weight:600;letter-spacing:-0.04em;line-height:1;color:#6B6B70;text-decoration:line-through">{{ calcPrivate }}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.875rem;color:#F1580D;margin-top:8px">you keep {{ calcSavings }} / mo</div></div>
-        <div style="grid-column:1 / -1;line-height:1.5;color:#6B6B70">{{ calcDetail }}</div>
-      </div>
-    </div>
+    <div style="border-top:1px solid #0B0B0C;padding-top:36px;margin-bottom:28px;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70">Plans · month to month · no insurance</div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));border-top:1px solid #0B0B0C">
       <div style="{{ planFreeStyle }}">
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px"><span style="font-weight:600">Free</span></div>
@@ -426,7 +408,7 @@ class Component extends DCLogic {
       quote, quoteDots,
       calcN: n, onCalcN: e => this.setState({ calcN: +e.target.value }), toggleCall: () => this.setState(s => ({ calcCall: !s.calcCall })), callToggleStyle,
       calcPlan: plan, calcPrice: price ? "$" + price.toFixed(2) : "$0", calcDetail: detail, calcPrivate: "$" + priv.toLocaleString(), calcSavings: "$" + Math.round(Math.max(0, priv - price)).toLocaleString(),
-      recFree: plan === "Free", recCore: plan === "Core", recPlus: plan === "Plus", planFreeStyle: planStyle(plan === "Free"), planStarterStyle: planStyle(plan === "Starter"), planCoreStyle: planStyle(plan === "Core"), planPlusStyle: { ...planStyle(plan === "Plus"), borderRight: "none" },
+      recFree: plan === "Free", recCore: plan === "Core", recPlus: plan === "Plus", planFreeStyle: planStyle(false), planStarterStyle: planStyle(false), planCoreStyle: planStyle(true), planPlusStyle: { ...planStyle(false), borderRight: "none" },
       faqItems: faqs.map((f, i) => ({ q: f.q, a: f.a, toggle: () => this.setState({ open: open === i ? null : i }),
         plusStyle: { fontFamily: MONO, fontSize: "1.25rem", color: MUTED, transition: "transform 0.2s", transform: open === i ? "rotate(45deg)" : "none" },
         answerStyle: { overflow: "hidden", maxHeight: open === i ? 300 : 0, transition: "max-height 0.3s cubic-bezier(0.22,1,0.36,1)" } })),
