@@ -1206,7 +1206,7 @@ window.SHIFU_SITE_TEAM = [
     "liveImg": "https://shifu.health/assets/coach-spencer.jpeg",
     "profileUrl": "https://shifu.health/team/spencer-tate/",
     "background": [
-      "Division I cross country and track at Furman, coached by national champions. A 2:28 marathoner who has coached athletes from beginner to advanced, Spencer started Shifu to give everyone the kind of team that elite athletes take for granted: a coach, a dietitian, and someone watching the whole picture every day."
+      "Division I cross country and track at Furman, coached by national champions. A 2:28 marathoner who has coached athletes from beginner to advanced, Spencer started Bespoke Healthcare to give everyone the kind of team that elite athletes take for granted: a coach, a dietitian, and someone watching the whole picture every day."
     ],
     "education": [
       "Furman University"
@@ -1260,7 +1260,7 @@ window.SHIFU_SITE_TEAM = [
     "liveImg": "https://shifu.health/assets/alan.jpg",
     "profileUrl": "https://shifu.health/team/alan-bi/",
     "background": [
-      "Previously with Elliott Davis's Accounting Advisory division. Current History PhD student at UNC Chapel Hill studying the financial crashes, recessions, and Hedge Fund Implosions. Joined Shifu at the start of May, 2026 as head researcher and outreach recruiter."
+      "Previously with Elliott Davis's Accounting Advisory division. Current History PhD student at UNC Chapel Hill studying the financial crashes, recessions, and Hedge Fund Implosions. Joined Bespoke Healthcare at the start of May, 2026 as head researcher and outreach recruiter."
     ],
     "education": [
       "UNC Chapel Hill"

@@ -58,7 +58,7 @@
     bg.appendChild(eyebrow('Background', 'margin-bottom:12px'));
     (m.background || []).forEach(function (p) { bg.appendChild(el('p', 'font-size:0.9375rem;line-height:1.6;color:' + INK + ';margin:0 0 12px', p)); });
     if (m.advisorRole) {
-      bg.appendChild(eyebrow('Role at Shifu', 'margin:24px 0 8px'));
+      bg.appendChild(eyebrow('Role at Bespoke Healthcare', 'margin:24px 0 8px'));
       bg.appendChild(el('p', 'font-size:0.9375rem;line-height:1.6;color:' + INK + ';margin:0', m.advisorRole));
     }
     if (m.funFact) {
@@ -82,7 +82,7 @@
 
     if ((m.specs || []).length) {
       var sp = el('div', 'border-top:1px solid ' + LINE + ';margin-top:20px;padding-top:20px');
-      sp.appendChild(eyebrow('Handles on Shifu', 'margin-bottom:10px'));
+      sp.appendChild(eyebrow('Areas of expertise', 'margin-bottom:10px'));
       var chips = el('div', 'display:flex;flex-wrap:wrap;gap:6px');
       m.specs.forEach(function (s) { chips.appendChild(el('span', 'font-family:' + MONO + ';font-size:0.6875rem;line-height:1.3;padding:5px 9px;border-radius:4px;background:' + SURFACE + ';color:' + MUTED, s)); });
       sp.appendChild(chips); panel.appendChild(sp);
