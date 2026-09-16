@@ -331,7 +331,8 @@ class Component extends DCLogic {
     const rosterCards = team.map(m => ({ name: m.name, cardCred: m.role, img: m.img, href: "/coverage/?profile=" + m.id + "#team" }));
     const rosterLabel = team.length ? `${team.length} dietitians and nutritionists · live today` : "";
     // People shown in the live-call and written-reply mocks (illustrative consults, names from the roster)
-    const live = team[0] ? { name: team[0].name, cred: team[0].role, img: team[0].img } : { name: "", cred: "", img: "" };
+    const liveM = team.find(m => m.id === "emily-levin") || team[0]; // Emily Levin fronts the live-call mock
+    const live = liveM ? { name: liveM.name, cred: liveM.role, img: liveM.img } : { name: "", cred: "", img: "" };
     const liveMockStyle = { position: "relative", aspectRatio: "16/10", borderRadius: 12, overflow: "hidden", background: "#0B0B0C" + (live.img ? " url(" + live.img + ") center 30%/cover" : ""), boxShadow: "0 30px 80px rgba(11,11,12,0.25)" };
     const replyM = team.find(m => m.id === "kristina-bauer") || team[1] || team[0] || { name: "", img: "" };
     const reply = { name: replyM.name, img: replyM.img };
