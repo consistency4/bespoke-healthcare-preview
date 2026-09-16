@@ -254,7 +254,7 @@
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px"><span style="font-weight:600">Free</span></div>
         <div style="font-size:3rem;font-weight:600;letter-spacing:-0.05em;line-height:1">$0</div>
         <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;margin:10px 0 28px">Shifu, every day</div>
-        <div style="display:flex;flex-direction:column;gap:10px;font-size:0.9375rem;line-height:1.45;color:#6B6B70;margin-bottom:32px"><div>Shifu over text, every day</div><div>Your plan and logging</div><div>Buy a consult any time</div></div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:0.9375rem;line-height:1.45;color:#6B6B70;margin-bottom:32px"><div>Shifu over text, every day</div><div>Your plan and logging</div><div>Buy a consult any time · $15</div></div>
         <a href="{{ startHref }}" style="display:block;margin-top:auto;padding:14px;border-radius:6px;border:1px solid #0B0B0C;color:#0B0B0C;font-weight:600;text-decoration:none;text-align:center" style-hover="background:#0B0B0C;color:#FFFFFF">Start Today</a>
       </div>
       <div style="{{ planStarterStyle }}">
@@ -398,7 +398,7 @@ class Component extends DCLogic {
     // calc
     const n = this.state.calcN, call = this.state.calcCall, total = n + (call ? 2 : 0);
     let plan, price, detail;
-    if (total <= 3) { plan = "Free"; price = 0; detail = total === 0 ? "Shifu, plans and logging. Buy a consult whenever you want one." : `Buy ${total} consult${total === 1 ? "" : "s"} as you go; a plan pays off from 4 a month.`; }
+    if (total <= 3) { plan = "Free"; price = total * 15; detail = total === 0 ? "Shifu, plans and logging. Buy a consult whenever you want one, $15 each." : `${total} consult${total === 1 ? "" : "s"} at $15 each; a plan pays off from 4 a month.`; }
     else if (total <= 7) { plan = "Starter"; price = 49.99 + Math.max(0, total - 4) * 11.99; detail = total <= 4 ? `Uses ${total} of your 4 monthly consults.` : `4 included, plus ${total - 4} extra at $11.99 each.`; }
     else if (total <= 13) { plan = "Core"; price = 79.99 + Math.max(0, total - 8) * 9.99; detail = total <= 8 ? `Uses ${total} of your 8 monthly consults.` : `8 included, plus ${total - 8} extra at $9.99 each.`; }
     else { plan = "Plus"; price = 125.99 + Math.max(0, total - 14) * 8.99; detail = total <= 14 ? `Uses ${total} of your 14 monthly consults.` : `14 included, plus ${total - 14} extra at $8.99 each.`; }
@@ -410,7 +410,7 @@ class Component extends DCLogic {
       { q: "What is medical nutrition therapy?", a: "Nutrition care for a diagnosed condition such as diabetes, high blood pressure, high cholesterol, or a GI condition, delivered by a Registered Dietitian licensed in your state. Everyday nutrition coaching is available everywhere." },
       { q: "What if I also want an exercise coach?", a: "The full Bespoke Healthcare membership adds certified exercise coaches under the same plan, so one team sees your nutrition and training together." },
       { q: "What's the difference between a check-in and a call?", a: "A check-in is written: your dietitian reviews your context and replies with reasoning in 6 to 12 hours (1 consult). A call is 10 minutes of live video with the dietitian you choose (2 consults)." },
-      { q: "How do consults accumulate?", a: "Starter: 4 a month. Core: 8. Plus: 14. Unused consults bank for 3 months; consults you buy are yours to keep. Extra consults are $11.99 on Starter, $9.99 on Core and $8.99 on Plus." },
+      { q: "How do consults accumulate?", a: "Starter: 4 a month. Core: 8. Plus: 14. Unused consults bank for 3 months; consults you buy are yours to keep. One-time consults on the Free plan are $15; extra consults are $11.99 on Starter, $9.99 on Core and $8.99 on Plus." },
       { q: "Who sees my information?", a: "Only the licensed professional handling your consult, and only what you've chosen to share. Every consult shows who saw it. Nothing is sold." },
       { q: "Can I cancel or delete my data?", a: "Yes, both from the app. Month to month; purchased consults stay yours." },
       { q: "Is this medical care?", a: "No. We provide general wellness coaching, not medical advice, diagnosis, or treatment. Registered dietitians provide medical nutrition therapy only in states where they are licensed." },
