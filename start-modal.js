@@ -208,7 +208,7 @@
       var h = window.location.hostname;
       var preview = !(h === 'bespoke.healthcare' || h === 'www.bespoke.healthcare' || h === 'shifu.health' || h === 'www.shifu.health' || h === 'localhost' || h === '127.0.0.1' || /\.vercel\.app$/.test(h));
       statusEl.textContent = preview
-        ? 'This is a design preview, so sign-ups are off here. Email hello@shifu.health instead.'
+        ? 'This is a design preview, so sign-ups are off here. Email support@bespoke.healthcare instead.'
         : (err.message || 'Something went wrong. Try again.');
     });
   }
