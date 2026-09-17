@@ -19,6 +19,7 @@
     { label: 'Exercise', href: '/exercise/', sub: 'Certified coaches' },
     { label: 'Coverage', href: '/coverage/', sub: 'Every topic, every profile' },
     { label: 'Mission', href: '/mission/', sub: 'The problem and the team' },
+    { label: 'Support', href: '/support/', sub: 'Help with billing, consults, the app' },
     { label: 'Plans', href: '/#plans', sub: 'Free $0 · Starter $49.99 · Core $79.99 · Plus $125.99' }
   ];
 
