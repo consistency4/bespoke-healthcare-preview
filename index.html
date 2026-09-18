@@ -211,25 +211,25 @@
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px"><span style="font-weight:600">Starter</span></div>
         <div style="font-size:3rem;font-weight:600;letter-spacing:-0.05em;line-height:1">$49.99<span style="font-size:1rem;letter-spacing:0;color:#6B6B70;font-weight:500"> /mo</span></div>
         <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;margin:10px 0 28px">An expert in the loop every week</div>
-        <div style="display:flex;flex-direction:column;gap:10px;font-size:0.9375rem;line-height:1.45;color:#6B6B70;margin-bottom:32px"><div>Everything in Free</div><div><span style="color:#0B0B0C;font-weight:600">4 consults</span> a month · $12.25 each</div><div>Unused ones bank, up to 3 months’ worth</div><div>Extra consults $11.99 · good for 12 months</div></div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:0.9375rem;line-height:1.45;color:#6B6B70;margin-bottom:32px"><div>Everything in Free</div><div><span style="color:#0B0B0C;font-weight:600">4 consults</span> a month · $12.25 each</div><div>Unused ones bank, up to 3 months’ worth</div><div>Extra consults $11.99 · never expire</div></div>
         <a href="{{ startHref }}" style="display:block;margin-top:auto;padding:14px;border-radius:6px;border:1px solid #0B0B0C;color:#0B0B0C;font-weight:600;text-decoration:none;text-align:center" style-hover="background:#0B0B0C;color:#FFFFFF">Get Starter</a>
       </div>
       <div style="padding:32px 28px;display:flex;flex-direction:column;border-right:1px solid #E3E3E0;border-top:3px solid #F1580D;margin-top:-1px">
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px"><span style="font-weight:600">Core</span><span style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#F1580D">Most members</span></div>
         <div style="font-size:3rem;font-weight:600;letter-spacing:-0.05em;line-height:1">$79.99<span style="font-size:1rem;letter-spacing:0;color:#6B6B70;font-weight:500"> /mo</span></div>
         <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;margin:10px 0 28px">Your care team, every week</div>
-        <div style="display:flex;flex-direction:column;gap:10px;font-size:0.9375rem;line-height:1.45;color:#6B6B70;margin-bottom:32px"><div>Everything in Starter</div><div><span style="color:#0B0B0C;font-weight:600">8 consults</span> a month · $10 each</div><div>Proactive texting from Shifu</div><div>Extra consults $9.99 · good for 12 months</div></div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:0.9375rem;line-height:1.45;color:#6B6B70;margin-bottom:32px"><div>Everything in Starter</div><div><span style="color:#0B0B0C;font-weight:600">8 consults</span> a month · $10 each</div><div>Proactive texting from Shifu</div><div>Extra consults $9.99 · never expire</div></div>
         <a href="{{ startHref }}" style="display:block;margin-top:auto;padding:14px;border-radius:6px;background:#0B0B0C;color:#FFFFFF;font-weight:600;text-decoration:none;text-align:center" style-hover="background:#F1580D;color:#FFFFFF">Get Core</a>
       </div>
       <div style="padding:32px 28px;display:flex;flex-direction:column">
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px"><span style="font-weight:600">Plus</span></div>
         <div style="font-size:3rem;font-weight:600;letter-spacing:-0.05em;line-height:1">$125.99<span style="font-size:1rem;letter-spacing:0;color:#6B6B70;font-weight:500"> /mo</span></div>
         <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70;margin:10px 0 28px">More access · your expert first in line</div>
-        <div style="display:flex;flex-direction:column;gap:10px;font-size:0.9375rem;line-height:1.45;color:#6B6B70;margin-bottom:32px"><div>Everything in Core</div><div><span style="color:#0B0B0C;font-weight:600">14 consults</span> a month · $9 each</div><div>Priority routing to your starred expert</div><div>Extra consults $8.99 · good for 12 months</div></div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:0.9375rem;line-height:1.45;color:#6B6B70;margin-bottom:32px"><div>Everything in Core</div><div><span style="color:#0B0B0C;font-weight:600">14 consults</span> a month · $9 each</div><div>Priority routing to your starred expert</div><div>Extra consults $8.99 · never expire</div></div>
         <a href="{{ startHref }}" style="display:block;margin-top:auto;padding:14px;border-radius:6px;border:1px solid #0B0B0C;color:#0B0B0C;font-weight:600;text-decoration:none;text-align:center" style-hover="background:#0B0B0C;color:#FFFFFF">Get Plus</a>
       </div>
     </div>
-    <div style="margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70">Unused consults bank up to 3 months’ worth · consults you buy last 12 months · urgent questions are always free</div>
+    <div style="margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;color:#6B6B70">Unused consults bank up to 3 months’ worth · extra consults you buy never expire · urgent questions are always free</div>
   </div>
 </section>
 
@@ -291,7 +291,7 @@ class Component extends DCLogic {
     };
     const open = this.state.open;
     const faqs = [
-      { q: "How do consults work?", a: "A consult is one interaction with a licensed expert who can change your plan. A written check-in is 1 consult and a 10-minute live video call is 2. Free members buy consults at $15 each; Starter includes 4 a month, Core 8, Plus 14. Unused consults bank up to three months’ worth, and consults you buy last 12 months." },
+      { q: "How do consults work?", a: "A consult is one interaction with a licensed expert who can change your plan. A written check-in is 1 consult and a 10-minute live video call is 2. Free members buy consults at $15 each; Starter includes 4 a month, Core 8, Plus 14. Unused consults bank up to three months’ worth, and extra consults you buy never expire." },
       { q: "What's the difference between a check-in and a live call?", a: "Both end the same way. Whether you send a written check-in or book a live call, your dietitian or coach reviews your logs and context, then updates your goals, your plan, and how Shifu helps you day to day: the reminders it sends, the actions it takes for you (finding groceries, building the shopping list, ordering a meal), and the proactive rules it follows, like \"if lunch gets skipped, move the afternoon snack earlier and send a reminder.\" Every change is reviewed by the expert. A written check-in is answered in 6 to 12 hours and costs 1 consult. A live call is 10 minutes of face time with the health professional you choose and costs 2. The call gives you the conversation; the review is the same." },
       { q: "What does Shifu actually do?", a: "Shifu is your AI health assistant, and it works over SMS: it texts you and you text it back, no app to open. It sends the reminders your plan asked for, notices patterns before you do and nudges you proactively, and takes actions like building a grocery list, ordering lunch, or moving a session around your calendar. When a pattern needs judgment it becomes a consult request with the context attached. Shifu never diagnoses." },
       { q: "Are the dietitians licensed?", a: "Yes. Registered dietitians provide medical nutrition therapy only in the states where they are licensed, and the app confirms your state when you open a consult. Certified nutritionists cover everyday eating everywhere. License states are listed on every profile." },

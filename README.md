@@ -1,7 +1,7 @@
 # Handoff: Bespoke Healthcare marketing site
 
 ## Overview
-Marketing site for **Bespoke Healthcare**: a membership that pairs an AI assistant ("Shifu") with licensed human experts (registered dietitians, certified exercise coaches) under one plan. Sixteen pages: home, two discipline pages (Nutrition, Exercise), a Coverage page (topics + team profiles), and twelve goal landing pages. Plans (since 2026-09-16, matching the app; subscription credits bank up to 3 months’ worth, bought credits last 12 months): Free $0 (one-time consults $15) / Starter $49.99 (4 consults) / Core $79.99 (8) / Plus $125.99 (14) per month; unused consults bank for 3 months; extra consults $11.99 / $9.99 / $8.99. A written check-in costs 1 consult; a 10-minute live video call costs 2.
+Marketing site for **Bespoke Healthcare**: a membership that pairs an AI assistant ("Shifu") with licensed human experts (registered dietitians, certified exercise coaches) under one plan. Sixteen pages: home, two discipline pages (Nutrition, Exercise), a Coverage page (topics + team profiles), and twelve goal landing pages. Plans (since 2026-09-16, matching the app; subscription credits bank up to 3 months’ worth, bought credits never expire): Free $0 (one-time consults $15) / Starter $49.99 (4 consults) / Core $79.99 (8) / Plus $125.99 (14) per month; unused consults bank for 3 months; extra consults $11.99 / $9.99 / $8.99. A written check-in costs 1 consult; a 10-minute live video call costs 2.
 
 Also bundled: `Logo Ideas.dc.html`, an exploratory logo brainstorm (12 directions, none approved). The site ships with a plain text wordmark; do not build a logo from that file.
 
