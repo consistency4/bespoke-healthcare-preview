@@ -7,9 +7,9 @@
 <link rel="canonical" href="https://bespoke.healthcare/nutrition/">
 <script src="/shifu-team.js?v=32b7877d"></script>
 <script src="/support.js?v=2e38395c"></script>
-<script src="/start-modal.js?v=d390664f"></script>
+<script src="/start-modal.js?v=9e8cb6a3"></script>
 <script src="/site-nav.js?v=ab5c3fe2"></script>
-<script src="/profile-modal.js?v=aeb9b0e6"></script>
+<script src="/profile-modal.js?v=3dc108f7"></script>
 <!-- Crisp customer support chat -->
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="5be68af4-a236-4869-992f-bb276e95f667";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </head>
@@ -83,11 +83,8 @@
       </div>
     </sc-if>
     <div style="border-top:1px solid #E3E3E0;margin-top:24px;padding:28px 0 0;display:flex;flex-wrap:wrap;align-items:center;gap:14px 16px">
-      <a href="{{ startHref }}" style="padding:16px 26px;border-radius:6px;background:#0B0B0C;color:#FFFFFF;font-weight:600;font-size:1rem;text-decoration:none" style-hover="background:#F1580D;color:#FFFFFF">{{ startLabel }}</a>
-      <a href="{{ appStoreUrl }}" style="display:inline-flex;align-items:center;gap:10px;padding:15px 22px;border-radius:6px;border:1px solid #0B0B0C;color:#0B0B0C;font-weight:600;font-size:1rem;text-decoration:none" style-hover="background:#0B0B0C;color:#FFFFFF">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.365 1.43c0 1.14-.47 2.27-1.24 3.09-.8.86-2.1 1.5-3.2 1.42-.14-1.1.42-2.27 1.16-3.05.81-.86 2.2-1.5 3.28-1.46zM20.7 17.2c-.54 1.24-.8 1.8-1.5 2.9-.98 1.53-2.36 3.44-4.07 3.46-1.52.01-1.91-1-3.97-.99-2.06.01-2.5 1-4.02.98-1.71-.02-3.02-1.74-4-3.27C.4 16.02-.03 11.36 1.44 8.88c1.05-1.76 2.7-2.79 4.25-2.79 1.58 0 2.57.98 3.88.98 1.27 0 2.04-.98 3.87-.98 1.38 0 2.85.75 3.89 2.05-3.42 1.87-2.86 6.75.37 8.06z"></path></svg>
-        iOS app
-      </a>
+      <a href="{{ appStoreUrl }}" aria-label="Download on the App Store" style="display:inline-flex;align-items:center;gap:12px;padding:10px 22px 10px 16px;border-radius:12px;background:#0B0B0C;color:#FFFFFF;text-decoration:none;box-shadow:0 10px 30px rgba(11,11,12,0.18)" style-hover="background:#F1580D;color:#FFFFFF"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex-shrink:0"><path d="M16.365 1.43c0 1.14-.47 2.27-1.24 3.09-.8.86-2.1 1.5-3.2 1.42-.14-1.1.42-2.27 1.16-3.05.81-.86 2.2-1.5 3.28-1.46zM20.7 17.2c-.54 1.24-.8 1.8-1.5 2.9-.98 1.53-2.36 3.44-4.07 3.46-1.52.01-1.91-1-3.97-.99-2.06.01-2.5 1-4.02.98-1.71-.02-3.02-1.74-4-3.27C.4 16.02-.03 11.36 1.44 8.88c1.05-1.76 2.7-2.79 4.25-2.79 1.58 0 2.57.98 3.88.98 1.27 0 2.04-.98 3.87-.98 1.38 0 2.85.75 3.89 2.05-3.42 1.87-2.86 6.75.37 8.06z"></path></svg><span style="display:flex;flex-direction:column;line-height:1.1;text-align:left"><span style="font-size:0.6875rem;font-weight:500;opacity:0.85">Download on the</span><span style="font-size:1.3125rem;font-weight:600;letter-spacing:-0.02em">App Store</span></span></a>
+      <a href="{{ startHref }}" style="font-size:1rem;line-height:1.4;color:#0B0B0C;text-decoration:none" style-hover="color:#F1580D">or text <span style="font-weight:600;white-space:nowrap;border-bottom:1px solid #F1580D">+1 (628) 267-9212</span> to get started</a>
     </div>
     <div style="margin-top:56px;padding:24px 0;border-top:1px solid #E3E3E0;border-bottom:1px solid #E3E3E0;display:flex;flex-wrap:wrap;align-items:center;gap:16px 40px">
       <span style="font-family:'IBM Plex Mono',monospace;font-size:0.6875rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B6B70">Trusted by employees at</span>
@@ -303,7 +300,7 @@
   </div>
 </sc-if>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;smsNumber&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;+10000000000&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Start flow&quot;}, &quot;appStoreUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://apps.apple.com/&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Start flow&quot;}, &quot;leadFormAction&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Start flow&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;smsNumber&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;+16282679212&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Start flow&quot;}, &quot;appStoreUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://apps.apple.com/us/app/bespoke-healthcare/id6760034385&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Start flow&quot;}, &quot;leadFormAction&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Start flow&quot;}}">
 class Component extends DCLogic {
   state = { open: null, anchor: null, phone: "", sent: false, isMobile: false, isNarrow: false, dayIdx: 0, dayPausedUntil: 0, mode: "live", modeManual: false, callSec: 0, calcN: 4, calcCall: false, quoteIdx: 0 };
   componentDidMount() {
@@ -351,7 +348,7 @@ class Component extends DCLogic {
       style: { fontFamily: MONO, fontSize: "0.75rem", letterSpacing: "0.02em", cursor: "pointer", borderRadius: 6, padding: "9px 12px", transition: "all 0.15s", border: "1px solid " + (on ? INK : LINE), background: on ? INK : "#FFFFFF", color: on ? "#FFFFFF" : INK } }; });
     const goalWord = picked || "whatever you came for.";
     const goalWordStyle = { color: picked ? NAVY : INK, transition: "color 0.4s" };
-    const smsNumber = this.props.smsNumber ?? "+10000000000";
+    const smsNumber = this.props.smsNumber ?? "+16282679212";
     const startHref = `sms:${smsNumber}?&body=${encodeURIComponent(picked ? `Hi Shifu, I want to work on ${picked}.` : "Hi Shifu, I'd like to get started.")}`;
     const startLabel = "Start Today";
     // coach modes
@@ -407,7 +404,7 @@ class Component extends DCLogic {
     return {
       wideNav: !this.state.isNarrow, showStickyBar: this.state.isMobile,
       roster: rosterCards, rosterLabel, live, reply, liveMockStyle,
-      anchors, hasPick: !!picked, matchedTeam, teamHeadline, goalWord, goalWordStyle, startHref, startLabel, appStoreUrl: this.props.appStoreUrl ?? "https://apps.apple.com/",
+      anchors, hasPick: !!picked, matchedTeam, teamHeadline, goalWord, goalWordStyle, startHref, startLabel, appStoreUrl: this.props.appStoreUrl ?? "https://apps.apple.com/us/app/bespoke-healthcare/id6760034385",
       phone: this.state.phone, onPhone: e => this.setState({ phone: e.target.value }), sendLink: this.sendLink, sent: this.state.sent, notSent: !this.state.sent,
       isLive: mode === "live", isAsync: mode === "async", pickLive: () => this.setState({ mode: "live", modeManual: true }), pickAsync: () => this.setState({ mode: "async", modeManual: true }), liveTabStyle: tabStyle(mode === "live"), asyncTabStyle: tabStyle(mode === "async"), callClock,
       dayMoments, dayProgressStyle, dayActive: { time: am.time, msg: am.msg, r1: am.r1, r2: am.r2, title: am.title, note: am.note }, legendProactive: legend("Proactive"), legendAction: legend("Action"), legendReminder: legend("Reminder"),

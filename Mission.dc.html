@@ -157,7 +157,7 @@
   </div>
 </footer>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;smsNumber&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;+10000000000&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Start flow&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;smsNumber&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;+16282679212&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Start flow&quot;}}">
 class Component extends DCLogic {
   state = { open: null };
   componentDidMount() {
@@ -206,7 +206,7 @@ class Component extends DCLogic {
     return {
       people, totalCount: team.length,
       hasOpen: !!o, profile, closeProfile: () => this.closeProfile(),
-      startHref: `sms:${this.props.smsNumber ?? "+10000000000"}?&body=${encodeURIComponent("Hi Shifu, I'd like to get started.")}`,
+      startHref: `sms:${this.props.smsNumber ?? "+16282679212"}?&body=${encodeURIComponent("Hi Shifu, I'd like to get started.")}`,
     };
   }
 }

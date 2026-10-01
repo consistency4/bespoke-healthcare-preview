@@ -213,15 +213,8 @@
     });
   }
 
-  // the design files render client side, so catch clicks at the document level
-  document.addEventListener('click', function (e) {
-    // Start links (sms:) and App Store links both collect an email until launch
-    var link = e.target && e.target.closest ? e.target.closest('a[href^="sms:"], a[href^="https://apps.apple.com"], a[href^="http://apps.apple.com"]') : null;
-    if (!link) return;
-    e.preventDefault();
-    var href = link.getAttribute('href') || '';
-    show((link.textContent || '').trim(), href.indexOf('sms:') === 0 ? 'start' : 'app');
-  }, true);
+  // The app is on the App Store and the text line is live (2026-10-01), so Start (sms:) and App Store links
+  // now open normally. The launch-notification form stays available through window.ShifuStartModal.open().
 
   window.ShifuStartModal = { open: show, close: hide };
 })();

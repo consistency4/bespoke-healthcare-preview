@@ -69,9 +69,12 @@
       <p style="font-size:clamp(1.125rem,1.8vw,1.375rem);line-height:1.45;letter-spacing:-0.01em;color:#0B0B0C;text-wrap:balance">A personalized medical model that tailors treatments and services to a patient's biology, lifestyle, and preferences instead of a one-size-fits-all template.</p>
     </div>
     <div style="display:flex;justify-content:center">
-      <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
-        <a href="{{ startHref }}" style="padding:16px 26px;border-radius:6px;background:#0B0B0C;color:#FFFFFF;font-weight:600;font-size:1rem;text-decoration:none" style-hover="background:#F1580D;color:#FFFFFF">Start Today</a>
-        <a href="#disciplines" style="padding:16px 22px;border-radius:6px;border:1px solid #0B0B0C;color:#0B0B0C;font-weight:600;font-size:1rem;text-decoration:none" style-hover="background:#0B0B0C;color:#FFFFFF">Meet the team ↓</a>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:20px">
+        <div style="display:flex;flex-wrap:wrap;gap:16px 20px;justify-content:center;align-items:center">
+          <a href="{{ appStoreUrl }}" aria-label="Download on the App Store" style="display:inline-flex;align-items:center;gap:12px;padding:10px 22px 10px 16px;border-radius:12px;background:#0B0B0C;color:#FFFFFF;text-decoration:none;box-shadow:0 10px 30px rgba(11,11,12,0.18)" style-hover="background:#F1580D;color:#FFFFFF"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex-shrink:0"><path d="M16.365 1.43c0 1.14-.47 2.27-1.24 3.09-.8.86-2.1 1.5-3.2 1.42-.14-1.1.42-2.27 1.16-3.05.81-.86 2.2-1.5 3.28-1.46zM20.7 17.2c-.54 1.24-.8 1.8-1.5 2.9-.98 1.53-2.36 3.44-4.07 3.46-1.52.01-1.91-1-3.97-.99-2.06.01-2.5 1-4.02.98-1.71-.02-3.02-1.74-4-3.27C.4 16.02-.03 11.36 1.44 8.88c1.05-1.76 2.7-2.79 4.25-2.79 1.58 0 2.57.98 3.88.98 1.27 0 2.04-.98 3.87-.98 1.38 0 2.85.75 3.89 2.05-3.42 1.87-2.86 6.75.37 8.06z"></path></svg><span style="display:flex;flex-direction:column;line-height:1.1;text-align:left"><span style="font-size:0.6875rem;font-weight:500;opacity:0.85">Download on the</span><span style="font-size:1.3125rem;font-weight:600;letter-spacing:-0.02em">App Store</span></span></a>
+          <a href="{{ startHref }}" style="font-size:1rem;line-height:1.4;color:#0B0B0C;text-decoration:none" style-hover="color:#F1580D">or text <span style="font-weight:600;white-space:nowrap;border-bottom:1px solid #F1580D">+1 (628) 267-9212</span> to get started</a>
+        </div>
+        <a href="#disciplines" style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:#6B6B70;text-decoration:none" style-hover="color:#0B0B0C">Meet the team ↓</a>
       </div>
     </div>
     <div style="width:100%;margin-top:88px;padding:24px 0;border-top:1px solid #E3E3E0;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px 40px">
@@ -259,7 +262,7 @@
   </div>
 </footer>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;smsNumber&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;+10000000000&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Start flow&quot;}, &quot;appStoreUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://apps.apple.com/&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Start flow&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;smsNumber&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;+16282679212&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Start flow&quot;}, &quot;appStoreUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://apps.apple.com/us/app/bespoke-healthcare/id6760034385&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Start flow&quot;}}">
 class Component extends DCLogic {
   state = { d: 0, manual: false, open: null };
   componentDidMount() { this.t = setInterval(() => { if (this.state.manual) return; this.setState(s => ({ d: (s.d + 1) % 5 })); }, 4500); }
@@ -309,8 +312,8 @@ class Component extends DCLogic {
       nutritionStripLabel: countLabel("n", "dietitians and nutritionists"),
       exerciseStripLabel: countLabel("e", "certified exercise coaches"),
       disciplines, active: { status: a.status, who: a.who, headline: a.headline, body: a.body, hasLink: !!a.href, href: a.href, linkLabel: a.linkLabel },
-      startHref: `sms:${this.props.smsNumber ?? "+10000000000"}?&body=${encodeURIComponent("Hi Shifu, I'd like to get started.")}`,
-      appStoreUrl: this.props.appStoreUrl ?? "https://apps.apple.com/",
+      startHref: `sms:${this.props.smsNumber ?? "+16282679212"}?&body=${encodeURIComponent("Hi Shifu, I'd like to get started.")}`,
+      appStoreUrl: this.props.appStoreUrl ?? "https://apps.apple.com/us/app/bespoke-healthcare/id6760034385",
     };
   }
 }
