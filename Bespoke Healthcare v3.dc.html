@@ -311,7 +311,7 @@ class Component extends DCLogic {
       nutritionStripLabel: countLabel("n", "dietitians and nutritionists"),
       exerciseStripLabel: countLabel("e", "certified exercise coaches"),
       disciplines, active: { status: a.status, who: a.who, headline: a.headline, body: a.body, hasLink: !!a.href, href: a.href, linkLabel: a.linkLabel },
-      startHref: `sms:${this.props.smsNumber ?? "+16282679212"}?&body=${encodeURIComponent("Hi Shifu, I'd like to get started.")}`,
+      startHref: `sms:${this.props.smsNumber ?? "+16282679212"}?&body=${encodeURIComponent("Hey Shifu, I want to work on a health goal and need help")}`,
       appStoreUrl: this.props.appStoreUrl ?? "https://apps.apple.com/us/app/bespoke-healthcare/id6760034385",
     };
   }

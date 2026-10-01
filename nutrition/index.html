@@ -9,7 +9,7 @@
 <script src="/support.js?v=2e38395c"></script>
 <script src="/start-modal.js?v=9e8cb6a3"></script>
 <script src="/site-nav.js?v=ab5c3fe2"></script>
-<script src="/profile-modal.js?v=3dc108f7"></script>
+<script src="/profile-modal.js?v=e9a346b8"></script>
 <!-- Crisp customer support chat -->
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="5be68af4-a236-4869-992f-bb276e95f667";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </head>
@@ -349,7 +349,7 @@ class Component extends DCLogic {
     const goalWord = picked || "whatever you came for.";
     const goalWordStyle = { color: picked ? NAVY : INK, transition: "color 0.4s" };
     const smsNumber = this.props.smsNumber ?? "+16282679212";
-    const startHref = `sms:${smsNumber}?&body=${encodeURIComponent(picked ? `Hi Shifu, I want to work on ${picked}.` : "Hi Shifu, I'd like to get started.")}`;
+    const startHref = `sms:${smsNumber}?&body=${encodeURIComponent(picked ? `Hi Shifu, I want to work on ${picked}.` : "Hey Shifu, I want to work on a health goal and need help")}`;
     const startLabel = "Start Today";
     // coach modes
     const mode = this.state.mode;

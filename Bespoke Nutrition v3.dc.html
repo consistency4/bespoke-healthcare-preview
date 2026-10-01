@@ -347,7 +347,7 @@ class Component extends DCLogic {
     const goalWord = picked || "whatever you came for.";
     const goalWordStyle = { color: picked ? NAVY : INK, transition: "color 0.4s" };
     const smsNumber = this.props.smsNumber ?? "+16282679212";
-    const startHref = `sms:${smsNumber}?&body=${encodeURIComponent(picked ? `Hi Shifu, I want to work on ${picked}.` : "Hi Shifu, I'd like to get started.")}`;
+    const startHref = `sms:${smsNumber}?&body=${encodeURIComponent(picked ? `Hi Shifu, I want to work on ${picked}.` : "Hey Shifu, I want to work on a health goal and need help")}`;
     const startLabel = "Start Today";
     // coach modes
     const mode = this.state.mode;

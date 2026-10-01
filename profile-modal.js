@@ -31,7 +31,7 @@
     return a;
   }
   function startHref() {
-    return 'sms:+16282679212?&body=' + encodeURIComponent("Hi Shifu, I'd like to get started.");
+    return 'sms:+16282679212?&body=' + encodeURIComponent("Hey Shifu, I want to work on a health goal and need help");
   }
 
   function render(m) {

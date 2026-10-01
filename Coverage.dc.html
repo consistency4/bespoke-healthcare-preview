@@ -340,7 +340,7 @@ class Component extends DCLogic {
     const lc = (x) => x.split(" ").map(w => (/\d/.test(w) || /^[A-Z&/()]+$/.test(w) || /[a-z][A-Z]/.test(w)) ? w : w.toLowerCase()).join(" ");
     const teamCount = filter === "n" ? `${nCount} in nutrition` : filter === "e" ? `${eCount} in exercise` : filter === "r" ? `${eCount} coaches cover rehab` : filter === "m" ? `${nCount + eCount} people cover mind` : `${nCount + eCount} people`;
     return {
-      startHref: `sms:${this.props.smsNumber ?? "+16282679212"}?&body=${encodeURIComponent(topic ? `Hi Shifu, I want to work on ${lc(topic)}.` : "Hi Shifu, I'd like to get started.")}`,
+      startHref: `sms:${this.props.smsNumber ?? "+16282679212"}?&body=${encodeURIComponent(topic ? `Hi Shifu, I want to work on ${lc(topic)}.` : "Hey Shifu, I want to work on a health goal and need help")}`,
       filterAll: () => this.setState({ filter: "all", topic: null }), filterN: () => this.setState({ filter: "n", topic: null }), filterE: () => this.setState({ filter: "e", topic: null }), filterR: () => this.setState({ filter: "r", topic: null }), filterM: () => this.setState({ filter: "m", topic: null }),
       tabAll: tab(filter === "all"), tabN: tab(filter === "n"), tabE: tab(filter === "e"), tabR: tab(filter === "r"), tabM: tab(filter === "m"),
       groups, team: teamOut, teamCount,

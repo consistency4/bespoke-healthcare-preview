@@ -97,7 +97,7 @@
 <script type="text/x-dc" data-dc-script data-props="{&quot;smsNumber&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;+16282679212&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Start flow&quot;}}">
 class Component extends DCLogic {
   renderVals() {
-    return { startHref: `sms:${this.props.smsNumber ?? "+16282679212"}?&body=${encodeURIComponent("Hi Shifu, I'd like to get started.")}` };
+    return { startHref: `sms:${this.props.smsNumber ?? "+16282679212"}?&body=${encodeURIComponent("Hey Shifu, I want to work on a health goal and need help")}` };
   }
 }
 </script>
