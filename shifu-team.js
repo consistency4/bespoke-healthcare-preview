@@ -1193,33 +1193,6 @@ window.SHIFU_SITE_TEAM = [
   },
   /* ---------- Founding team (from shifu.health/about; data in team-overlay.json "person") ---------- */
   {
-    "id": "spencer-tate",
-    "kind": "f",
-    "name": "Spencer Tate",
-    "cred": "Co-Founder, CEO · exercise coach · D1 runner · 2:28 marathon",
-    "cardCred": "Co-Founder, CEO",
-    "role": "Co-Founder, CEO",
-    "states": "Furman University · cross country & track",
-    "bio": "Division I cross country and track at Furman, coached by national champions. A 2:28 marathoner who has coached athletes from beginner to advanced.",
-    "specs": [],
-    "img": "/assets/team/coach-spencer.jpeg",
-    "liveImg": "https://shifu.health/assets/coach-spencer.jpeg",
-    "profileUrl": "https://shifu.health/team/spencer-tate/",
-    "background": [
-      "Division I cross country and track at Furman, coached by national champions. A 2:28 marathoner who has coached athletes from beginner to advanced, Spencer started Bespoke Healthcare to give everyone the kind of team that elite athletes take for granted: a coach, a dietitian, and someone watching the whole picture every day."
-    ],
-    "education": [
-      "Furman University"
-    ],
-    "credentials": [],
-    "links": {},
-    "dietitian": false,
-    "licensedStates": [],
-    "advisorRole": "",
-    "funFact": "Aspires to one day compete in the U.S. Olympic Trials.",
-    "disclaimer": ""
-  },
-  {
     "id": "nemath-ahmed",
     "kind": "f",
     "name": "Nemath Ahmed",

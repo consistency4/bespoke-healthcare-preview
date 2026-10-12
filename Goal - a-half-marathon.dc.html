@@ -140,8 +140,8 @@ class Component extends DCLogic {
   renderVals() {
     // Care team for this goal, by id from shifu-team.js (the live shifu.health roster). The first person
     // answers the consult mock below. Pick people whose Coverage topics match the goal.
-    const ids = ["spencer-tate","isabel-zimmermann"];
-    const extras = { "spencer-tate": { id: "spencer-tate", name: "Spencer Tate", cred: "Exercise coach · D1 runner · 2:28 marathon", img: "/assets/team/coach-spencer.jpeg", dietitian: false } };
+    const ids = ["jerome-bacon-iii","isabel-zimmermann"];
+    const extras = {};
     const roster = (typeof window !== "undefined" && window.SHIFU_SITE_TEAM) || [];
     const people = ids.map(id => roster.find(m => m.id === id) || extras[id]).filter(Boolean);
     const card = (m) => ({ name: m.name, cred: m.cred, img: m.img, href: m.href || ("/coverage/?profile=" + m.id + "#team"),
